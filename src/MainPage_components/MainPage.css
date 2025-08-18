@@ -224,7 +224,7 @@ body{
 .newproduct-box{
   display: flex;
   gap: 4rem 3.5rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 5rem auto;
   justify-content: center;
   align-items: center;
@@ -240,7 +240,7 @@ body{
 
 .newproduct-item{
   width: 250px;
-  height: 360px;   
+  height: 370px;   
   display: flex;
   flex-direction: column;
 }
@@ -251,7 +251,7 @@ body{
   height: 280px;   
   cursor: pointer;
   border-radius: 4px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
 }
 
 .newproduct-item-container img:hover{
@@ -264,14 +264,21 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.3rem;
+  gap: 3px;
 }
 
 .newproduct-text h3 {
+  font-weight: 400;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+}
+
+.newproduct-text h4 {
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .newproduct-text h5 {
@@ -293,7 +300,7 @@ body{
 }
 
 .newproduct-item-container{
-  gap: 4rem 4rem;
+  margin: 0 20px;
 }
 
 }
