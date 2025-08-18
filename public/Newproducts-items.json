@@ -1,0 +1,68 @@
+{
+  "Newproducts": [
+    {
+      "brand": "라곰",
+      "name": "셀럽 마이크로 폼 클렌저 듀오 (150mL*2)",
+      "price": "32,400원",
+      "상품등록번호": 1,
+      "상품 설명": "24시간 지속되는 수분 클렌저",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250710/5239730/5239730_17522025452009_big.png?w=1200"
+    },
+    {
+      "brand": "이라큐어",
+      "name": "너리싱 클렌즈 샴푸",
+      "price": "39,450원",
+      "상품등록번호": 2,
+      "상품 설명": "손상모를 위한 더 특별한 헤어 케어",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20240729/4279710/4279710_17222346518801_big.jpg?w=1200"
+    },
+    {
+      "brand": "라운드랩",
+      "name": "1025 독도 토너 500ml(+워터겔 마스크 2매 증정)",
+      "price": "24,000원",
+      "상품등록번호": 3,
+      "상품 설명": "달아오른 피부 열기를 식혀줄 토너",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20191108/1218467/1218467_17548907478489_big.jpg?w=1200"
+    },
+    {
+      "brand": "스침",
+      "name": "사워베리 섬유 공간 향수 200ml",
+      "price": "14,400원",
+      "상품등록번호": 4,
+      "상품 설명": "찰리가 심은 덜 익은 딸기향",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20241205/4651958/4651958_17333887947558_big.jpg?w=1200"
+    },
+    {
+      "brand": "파티온",
+      "name": "노스카나인 트러블 세럼 30ml",
+      "price": "18,500원",
+      "상품등록번호": 5,
+      "상품 설명": "여드름성 피부 트러블 강력 진정",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20220711/2657438/2657438_17497137170207_big.jpg?w=1200"
+    },
+    {
+      "brand": "라운드랩",
+      "name": "소나무 진정 시카 선크림 40ml (2 PACK)",
+      "price": "48,000원",
+      "상품등록번호": 6,
+      "상품 설명": "집중진정 산뜻밀착 선크림",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250428/5069062/5069062_17494538731843_big.jpg?w=1200"
+    },
+    {
+      "brand": "쿤달",
+      "name": "사철쑥 수딩 클리어 패드 60매",
+      "price": "15,500원",
+      "상품등록번호": 7,
+      "상품 설명": "진정이 필요한 순간 한 장으로 케어",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20221213/2980765/2980765_2_big.jpg?w=1200"
+    },
+    {
+      "brand": "플리프",
+      "name": "시카-알로에 프레쉬 수분크림 150ml",
+      "price": "21,000원",
+      "상품등록번호": 8,
+      "상품 설명": "가볍고 산뜻한 수분크림",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20220524/2577831/2577831_16874913891400_big.jpg?w=1200"
+    }
+  ]
+}
