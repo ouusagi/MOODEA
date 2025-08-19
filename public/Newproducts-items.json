@@ -63,6 +63,22 @@
       "상품등록번호": 8,
       "상품 설명": "가볍고 산뜻한 수분크림",
       "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20220524/2577831/2577831_16874913891400_big.jpg?w=1200"
+    },
+    {
+      "brand": "토리든",
+      "name": "밸런스풀 시카 마스크 25ml 10매",
+      "price": "30,000원",
+      "상품등록번호": 9,
+      "상품 설명": "울긋불긋 붉어진 피부 밀착 진정",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20230227/3110777/3110777_16891349231818_big.jpg?w=1200"
+    },
+    {
+      "brand": "유이크",
+      "name": "바이옴 레미디 바디 워시 300ml",
+      "price": "17,000원",
+      "상품등록번호": 10,
+      "상품 설명": "스킨 마이크로바이옴 장벽케어",
+      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250716/5251862/5251862_17542929115382_big.jpg?w=1200"
     }
   ]
 }

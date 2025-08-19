@@ -4,23 +4,24 @@ import './MainPage.css';
 
 function HeadSection(){
 
+    let Categoryitem = ['스킨케어','클렌징','메이크업','헤어케어','바디케어']
+
     return(
 
         <div>
 
-            {/* 헤더 타이틀 + 상품카테고리창 */}
         <div className="title-container">
             <a href="./mainpage.html">MOODÉA</a>
         </div>
 
-        <div className="Kategorie-container">
-            <a href="#">스킨케어</a>
-            <a href="#">클렌징</a>
-            <a href="#">메이크업</a>
-            <a href="#">헤어케어</a>
-            <a href="#">바디케어</a>
+        <div className='Category-container'>
+            {Categoryitem.map((item,i)=>(
+                <div className='Category-item' key={i}>
+                    <a href="#">{item}</a>
+                    <div className='underline'></div>
+                </div>
+            ))}
         </div>
-    {/* 헤더 타이틀 + 상품카테고리창 */}
 
         </div>
 
