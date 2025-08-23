@@ -1,0 +1,44 @@
+{
+ "Category": [
+  {
+   "Product": "#스킨케어",
+   "num": 1,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20240419\/4069713\/4069713_17524508779232_big.jpg?w=1200"
+  },
+  {
+   "Product": "#클렌징",
+   "num": 2,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20200619\/1491169\/1491169_17522111030147_big.png?w=1200"
+  },
+  {
+   "Product": "#메이크업",
+   "num": 3,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20250409\/5007785\/5007785_17441865634299_big.jpg?w=1200"
+  },
+  {
+   "Product": "#헤어케어",
+   "num": 4,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20210930\/2156021\/2156021_17392463587827_big.jpg?w=1200"
+  },
+  {
+   "Product": "#바디케어",
+   "num": 5,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20250312\/4886634\/4886634_17419412393590_big.jpg?w=1200"
+  },
+  {
+   "Product": "#향수",
+   "num": 6,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20250722\/5262678\/5262678_17549829360715_big.png?w=1200"
+  },
+  {
+   "Product": "#선케어",
+   "num": 7,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/prd_img\/20220418\/2496324\/detail_2496324_17259586854871_big.jpg?w=1200"
+  },
+  {
+   "Product": "#마스크팩",
+   "num": 8,
+   "photo": "https:\/\/image.msscdn.net\/thumbnails\/images\/goods_img\/20220525\/2580391\/2580391_17103056419303_big.jpg?w=1200"
+  }
+ ]
+}
