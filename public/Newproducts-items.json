@@ -1,84 +1,84 @@
 {
   "Newproducts": [
     {
-      "brand": "라곰",
-      "name": "셀럽 마이크로 폼 클렌저 듀오 (150mL*2)",
-      "price": "32,400원",
+      "brand": "헬라코",
+      "name": "보타니컬 배스 소크 500ml 블루베리,키위,자몽향",
+      "price": "19,800원",
       "상품등록번호": 1,
-      "상품 설명": "24시간 지속되는 수분 클렌저",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250710/5239730/5239730_17522025452009_big.png?w=1200"
+      "상품 설명": "자연의 과일 향을 담은 힐링 입욕제. 피로한 하루 끝, 따뜻한 물에 부어주는 순간 은은한 과일 향이 욕실 가득 퍼져나가며 몸과 마음을 감싸줍니다.",
+      "photo": "https://images.unsplash.com/photo-1615041273737-0f71b155cfa9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "이라큐어",
-      "name": "너리싱 클렌즈 샴푸",
-      "price": "39,450원",
+      "brand": "보틀듀오",
+      "name": "블랙 듀오 리프레싱 오일 세트",
+      "price": "45,000원",
       "상품등록번호": 2,
-      "상품 설명": "손상모를 위한 더 특별한 헤어 케어",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20240729/4279710/4279710_17222346518801_big.jpg?w=1200"
+      "상품 설명": "자연의 비밀을 담은, 당신만의 시크릿 에센셜 듀오 가벼운 사용감으로 산뜻한 수분감을 채워주는 데이 오일과, 깊은 보습과 진정 효과를 제공하는 나이트 오일로 구성되어 있습니다. 바쁜 하루의 시작과 편안한 밤의 마무리를 이 특별한 오일과 함께하세요.",
+      "photo": "https://images.unsplash.com/photo-1711985220368-52ff7f7b1cc3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "라운드랩",
-      "name": "1025 독도 토너 500ml(+워터겔 마스크 2매 증정)",
+      "brand": "스프루스",
+      "name": "에코 아쿠아 프렌들리 시그니처 퍼퓸 500ml",
       "price": "24,000원",
       "상품등록번호": 3,
-      "상품 설명": "달아오른 피부 열기를 식혀줄 토너",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20191108/1218467/1218467_17548907478489_big.jpg?w=1200"
+      "상품 설명": "자연에서 온 상쾌함, 집 안 가득 퍼지는 스프루스 향. 프리미엄 에코 향수로 하루의 시작과 끝을 특별하게 만들어보세요. 가볍게 뿌려도 오래 지속되는 은은한 향이 당신의 일상을 감싸줍니다.",
+      "photo": "https://images.unsplash.com/photo-1624377225030-f0bb343eaa4d?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "스침",
-      "name": "사워베리 섬유 공간 향수 200ml",
+      "brand": "에스케원",
+      "name": "오로라 B5 듀얼 베리어 토너 80ml",
       "price": "14,400원",
       "상품등록번호": 4,
-      "상품 설명": "찰리가 심은 덜 익은 딸기향",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20241205/4651958/4651958_17333887947558_big.jpg?w=1200"
+      "상품 설명": "피부를 감싸는 오로라 같은 보호막, 오로라 듀얼 베리어 토너 글리세린과 아데노신이 피부에 이중 수분 보호막을 형성하여 하루 종일 촉촉함을 유지해 줍니다. ",
+      "photo": "https://images.unsplash.com/photo-1738721796968-bc0c4a55960d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "파티온",
-      "name": "노스카나인 트러블 세럼 30ml",
-      "price": "18,500원",
+      "brand": "엠에프",
+      "name": "멜로우 듀얼 립밤",
+      "price": "10,500원",
       "상품등록번호": 5,
-      "상품 설명": "여드름성 피부 트러블 강력 진정",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20220711/2657438/2657438_17497137170207_big.jpg?w=1200"
+      "상품 설명": "매일매일 부드럽고 생기 있는 입술을 위한 멜로우 듀얼 립밤 낮에는 가볍고 산뜻한 보습을, 밤에는 쫀쫀하고 깊은 영양을 선사하는 듀얼 포뮬라로 하루 종일 촉촉하게 입술을 지켜줍니다. 이제 멜로우 듀얼 립밤으로 완벽한 립 케어를 경험하세요.",
+      "photo": "https://images.unsplash.com/photo-1695820632747-ff255f976c3d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "라운드랩",
-      "name": "소나무 진정 시카 선크림 40ml (2 PACK)",
-      "price": "48,000원",
+      "brand": "코스메틱",
+      "name": "골든 엘릭서 리바이탈 세럼 150ml",
+      "price": "38,000원",
       "상품등록번호": 6,
-      "상품 설명": "집중진정 산뜻밀착 선크림",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250428/5069062/5069062_17494538731843_big.jpg?w=1200"
+      "상품 설명": "황금빛 오라를 담은 골든 엘릭서 리바이탈 세럼으로, 피부에 생명력을 불어넣으세요. 지치고 힘없는 피부에 깊은 영양을 공급하여 탄력을 되찾아주고, 맑고 건강한 광채를 선사합니다. 피부 속부터 차오르는 촉촉함으로 빛나는 아름다움을 경험해 보세요.",
+      "photo": "https://images.unsplash.com/photo-1635870224947-8ce9fd728344?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "쿤달",
-      "name": "사철쑥 수딩 클리어 패드 60매",
-      "price": "15,500원",
+      "brand": "오순",
+      "name": "일렉트로라이트 샴푸 & 컨디셔너 세트 800ml",
+      "price": "42,000원",
       "상품등록번호": 7,
-      "상품 설명": "진정이 필요한 순간 한 장으로 케어",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20221213/2980765/2980765_2_big.jpg?w=1200"
+      "상품 설명": "오순 일렉트로라이트 세트로 바다의 생명력을 두피와 모발에 선물하세요. 풍부한 미네랄과 전해질 성분이 두피를 깨끗하게 정화하고, 모발에 깊은 보습과 영양을 공급하여 건강하고 윤기나는 머릿결로 가꿔줍니다. 샴푸와 컨디셔너를 함께 사용해 찰랑거리는 머릿결을 경험해 보세요.",
+      "photo": "https://images.unsplash.com/photo-1714761693838-e58d9b8677cc?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "플리프",
-      "name": "시카-알로에 프레쉬 수분크림 150ml",
-      "price": "21,000원",
+      "brand": "오브랩",
+      "name": "네츄럴 프레시 그린티 패드 60매",
+      "price": "23,800원",
       "상품등록번호": 8,
-      "상품 설명": "가볍고 산뜻한 수분크림",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20220524/2577831/2577831_16874913891400_big.jpg?w=1200"
+      "상품 설명": "피부에 편안함을 더하는 네츄럴 프레시 그린티 패드입니다. 자연의 생명력이 담긴 녹차 성분이 민감해진 피부를 부드럽게 진정시키고, 유수분 밸런스를 맞춰 건강한 피부 환경을 만들어줍니다. 토너처럼 닦아내거나 팩처럼 올려두는 것만으로도 피부에 상쾌한 휴식을 선사합니다.",
+      "photo": "https://plus.unsplash.com/premium_photo-1732280996293-5206828ce44d?q=80&w=851&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "토리든",
+      "brand": "엘데퓨어",
       "name": "밸런스풀 시카 마스크 25ml 10매",
       "price": "30,000원",
       "상품등록번호": 9,
-      "상품 설명": "울긋불긋 붉어진 피부 밀착 진정",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20230227/3110777/3110777_16891349231818_big.jpg?w=1200"
+      "상품 설명": "민감해진 피부를 위한 진정한 휴식, 숲의 생명력을 담은 마스크팩 하루 종일 지친 피부에 엘데퓨어 밸런스풀 시카 마스크로 깊은 진정의 시간을 선물하세요. 숲속에서 찾은 순수한 시카 성분이 민감해진 피부를 편안하게 감싸고, 자극받은 피부 장벽을 튼튼하게 가꾸어 줍니다.",
+      "photo": "https://images.unsplash.com/photo-1746904305806-a9ce08b33dc2?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "brand": "유이크",
-      "name": "바이옴 레미디 바디 워시 300ml",
+      "brand": "유브이",
+      "name": "바이올렛 글래스 앰플 50ml",
       "price": "17,000원",
       "상품등록번호": 10,
-      "상품 설명": "스킨 마이크로바이옴 장벽케어",
-      "photo": "https://image.msscdn.net/thumbnails/images/goods_img/20250716/5251862/5251862_17542929115382_big.jpg?w=1200"
+      "상품 설명": "자외선으로부터 피부를 보호해주는 바이올렛 글래스 앰플입니다. 빛에 민감한 유효 성분을 보존하기 위해 특별히 제작된 보라색 용기가, 앰플의 신선함과 효능을 그대로 지켜줍니다. 외부 환경으로부터 자극받은 피부를 진정시키고, 잃어버린 탄력을 되찾아주는 프리미엄 솔루션입니다.",
+      "photo": "https://images.unsplash.com/photo-1631390573311-3bb5329df0d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }

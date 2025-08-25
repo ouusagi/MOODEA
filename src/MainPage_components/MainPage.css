@@ -250,6 +250,7 @@ body{
 }
 
 .CategoryBar-box img{
+  margin-bottom: 0.5rem;
   border-radius: 50%;
   height: 100px;
   width: 100%;
@@ -380,6 +381,21 @@ body{
 
 .slide-img{
   height: 550px;
+}
+
+}
+
+@media screen and (min-width:1800px) {
+  .slider-container{
+  height: 550px;
+}
+
+.slide-img{
+  height: 550px;
+}
+
+.CategoryBar-box{
+  padding: 0 250px;
 }
 
 }
