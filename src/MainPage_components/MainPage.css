@@ -303,6 +303,7 @@ body{
 }
 /* 메인 신상품 섹션창 */
 
+/* 신상품 리스트창 */
 .newproduct-box{
   display: flex;
   gap: 1rem;
@@ -370,6 +371,32 @@ body{
   cursor: pointer;
 }
 
+.btn-container{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.showbtn{
+  width: 20rem;
+  height: 3.5rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+}
+
+.showbtn:hover{
+  background-color: white;
+  color: black;
+}
+/* 신상품 리스트창 */
 
 
 
