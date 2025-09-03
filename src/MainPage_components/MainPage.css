@@ -10,6 +10,7 @@ a{
 body{
     margin-top: 3rem;
     overflow-x: hidden;
+    height: 9999px;
 }
 
 
@@ -267,7 +268,7 @@ body{
 /* 카테고리 섹션 */
 
 
-/* 메인 신상품 섹션창 */
+/* 신상품 타이틀창 */
 .newproduct-title-container{
   display: flex;
   justify-content: center;
@@ -301,7 +302,7 @@ body{
   line-height: 1;
   margin-top: 5px;
 }
-/* 메인 신상품 섹션창 */
+/* 신상품 타이틀창 */
 
 /* 신상품 리스트창 */
 .newproduct-box{
@@ -397,6 +398,105 @@ body{
   color: black;
 }
 /* 신상품 리스트창 */
+
+/* 비디오 섹션 */
+
+.newproduct-title-container-margin{
+  margin-top: 8rem;
+}
+
+.video-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f5f5f5;
+  margin-top: 3.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+}
+
+.video-container.up{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-container video{
+  width: 50%;
+  flex: 1;
+}
+
+.newproduct-title-container .hr-mood{
+  border-color: #5CE1E6;
+} 
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.text-container.up{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hr-class{
+  height: 2px;
+  width: 0;
+  background-color: #ccc;
+  transition: width 0.8s ease;
+}
+
+.hr-class.up{
+  width: 100%;
+  margin-top: 4px;
+  transition-delay: 0.8s;
+}
+
+.video-btn{
+  display: flex;
+  gap: 30px;
+}
+
+.video-btn button{
+  width: 10rem;
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.video-btn .btn1{
+  background-color: transparent;
+  color: black;
+}
+
+.video-btn .btn2{
+  background-color: black;
+  color: white;
+}
+
+.video-btn .btn1:active{
+  transform: scale(0.95);
+}
+
+.video-btn .btn2:active{
+  transform: scale(0.95);
+}
+
+
+/* 비디오 섹션 */
 
 
 

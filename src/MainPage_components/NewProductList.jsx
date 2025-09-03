@@ -31,6 +31,14 @@ function NewProductList(){
 
     return(
 
+    <div>
+
+        <div className="newproduct-title-container">
+            <hr/>
+            <h1>New Product</h1>
+            <h2>새롭게 입고된 신상품들을 만나보세요</h2>
+        </div>
+
         <div className='newproduct-box'>
             {products.slice(0, pluscount).map((item,i)=>(
             <div className='newproduct-item-container' key={i}>
@@ -52,6 +60,7 @@ function NewProductList(){
             )}
 
         </div>
+    </div>
 
     )
     
