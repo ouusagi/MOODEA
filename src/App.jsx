@@ -6,6 +6,7 @@ import HeaderSection from './MainPage_components/HeaderSection'
 import CarouselSlider from './MainPage_components/CarouselSlider'
 import CategoryBar from './MainPage_components/CategoryBar'
 import NewProductList from './MainPage_components/NewProductList'
+import Bestseller from './MainPage_components/Bestseller'
 import Video from './MainPage_components/Video'
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
     <CategoryBar />
 
     <NewProductList />
+
+    <Bestseller />
 
     <Video />
 
