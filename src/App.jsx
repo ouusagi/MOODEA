@@ -7,6 +7,7 @@ import CarouselSlider from './MainPage_components/CarouselSlider'
 import CategoryBar from './MainPage_components/CategoryBar'
 import NewProductList from './MainPage_components/NewProductList'
 import Bestseller from './MainPage_components/Bestseller'
+import GiftSet from './MainPage_components/GiftSet'
 import Video from './MainPage_components/Video'
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
     <NewProductList />
 
     <Bestseller />
+
+    <GiftSet />
 
     <Video />
 

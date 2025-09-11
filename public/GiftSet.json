@@ -1,0 +1,68 @@
+{
+  "Gifts": [
+  {
+    "name": "네이처 베이직 케어 세트",
+    "bio": "자연을 담아낸 완벽한 피부 솔루션",
+    "price": "129,000",
+    "num": "1",
+    "photo": "https://img.freepik.com/premium-psd/set-skin-care-package-design_53876-113632.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "플랜트 테라피 스페셜 세트",
+    "bio": "식물의 생명력으로 채워지는 특별한 피부 활력",
+    "price": "115,000",
+    "num": "2",
+    "photo": "https://img.freepik.com/premium-psd/disc-top-cap-cosmetic-bottle-mockup_69509-3022.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "파스텔 드롭 하이드레이션 세트",
+    "bio": "촉촉한 수분이 피부를 감싸는 파스텔빛 수분 케어",
+    "price": "135,000",
+    "num": "3",
+    "photo": "https://img.freepik.com/premium-psd/skincare-bottle-mockups-psd-pastel-cosmetic-business-branding-design_53876-677295.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "더 에센셜 크림 세트",
+    "bio": "미니멀리즘과 순수한 성분의 만남",
+    "price": "58,000",
+    "num": "4",
+    "photo": "https://img.freepik.com/premium-photo/mockup-box-jar-advertising_463488-5494.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "멜로우 터치 스킨케어 세트",
+    "bio": "자연의 터치로 완성되는 데일리 루틴",
+    "price": "110,000",
+    "num": "5",
+    "photo": "https://img.freepik.com/premium-photo/display-products-including-bottle-cream-cream_1199278-4995.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "퓨어 드롭 리추얼 세트",
+    "bio": "황금빛 영양으로 우아한 스킨케어",
+    "price": "215,000",
+    "num": "6",
+    "photo": "https://img.freepik.com/premium-photo/mockup-set-facial-treatment-products_940435-5078.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "플로럴 퓨어징 세트",
+    "bio": "촉촉한 수분 방울과 플로럴 향의 조화",
+    "price": "62,800",
+    "num": "7",
+    "photo": "https://img.freepik.com/premium-psd/skin-care-cosmetic-tube-mockup_23-2149315101.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  },
+  {
+    "name": "클린 앤 이지 데일리 세트",
+    "bio": "피부 본연의 깨끗함을 되찾아주는 미니멀 케어",
+    "price": "130,000",
+    "num": "8",
+    "photo": "https://img.freepik.com/premium-psd/skin-care-cosmetic-product-packaging-mockup_347514-74.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80",
+    "": ""
+  }
+           ]
+}

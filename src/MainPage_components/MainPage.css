@@ -592,6 +592,7 @@ body{
   width: 100%;
   height: 200px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .bannertext-container{
@@ -615,8 +616,204 @@ body{
 }
 /* 베스트셀러 섹션 */
 
+/* 기프트셋 섹션 */
 
+.GiftSet-text-container{
+  margin: 8rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
+  height: 5rem;
+}
 
+.GiftSet-text-container h1{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.GiftSet-text-container h2{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.GiftSet-container{
+  margin: 1rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 1300px;
+  height: 450px;
+}
+
+.GiftSet-img-container{
+  position: relative;
+  display: flex;
+  width: 65%;
+  height: 450px;
+  overflow: hidden;
+  align-items: stretch;
+  flex: 2;
+  border-radius: 20px;
+  transform-origin: center;
+}
+
+.GiftSet-img-container img{
+  width: 100%;
+  object-fit:cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.GiftSet-img-container img:hover{
+  transform: scale(1.05);
+}
+
+.GiftSet-img-container h2{
+  left: 5rem;
+  top: 4rem;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.GiftSet-img-container p{
+  left: 5rem;
+  top: 11rem;
+  position: absolute;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.GiftSet-img-container button{
+  left: 5rem;
+  top: 17rem;
+  position: absolute;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff, #f9f9f9);
+  width: 160px;
+  height: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px #B76E79 solid;
+  color: #B76E79;
+  box-shadow: 0 4px 12px rgba(183, 110, 121, 0.15);
+}
+
+.GiftSet-img-container button:hover {
+  border: 2px white solid;
+  background: #B76E79;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(183, 110, 121, 0.3);
+}
+
+.GiftSet-item-container{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-left: 2rem;
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  gap: 1rem;
+}
+
+.GiftSet-item{
+  display: flex;
+  width: 100%;
+}
+
+.GiftSet-item-img-wrapper{
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  width: 9rem;
+  height: 130px;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.GiftSet-item img{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.GiftSet-item img:hover{
+  transform: scale(1.1);
+}
+
+.GiftSet-text{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-left: 1rem;
+  min-width: 0;
+  margin-top: 4.5px;
+}
+
+.GiftSet-text h3{
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.GiftSet-text p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.GiftSet-text h4{
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.GiftSet-text2{
+  width: 6rem;
+  display: flex;
+  gap: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.GiftSet-text2 h5:nth-child(1){
+  width: 3rem;
+  background-color: green;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.GiftSet-text2 h5:nth-child(2){
+  width: 3rem;
+  background-color: gray;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* 기프트셋 섹션 */
 
 @media screen and (min-width:1600px) {
   .slider-container{
@@ -634,6 +831,14 @@ body{
 .swiper {
   max-width: 1500px;
   width: 70%;
+}
+
+.GiftSet-text-container{
+  max-width: 1350px;
+}
+
+.GiftSet-container{
+  max-width: 1350px;
 }
 
 }
