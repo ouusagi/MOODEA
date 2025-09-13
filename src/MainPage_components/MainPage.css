@@ -7,10 +7,18 @@
 a{
     text-decoration: none;
 }
+
 body{
     margin-top: 3rem;
     overflow-x: hidden;
     height: 9999px;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 
@@ -576,6 +584,10 @@ body{
   text-overflow: ellipsis;
 }
 
+.infobox-container p{
+  color: orange;
+}
+
 .infobox-container h4{
   font-size: 14px;
   font-weight: 800;
@@ -768,7 +780,7 @@ body{
   gap: 9px;
   margin-left: 1rem;
   min-width: 0;
-  margin-top: 4.5px;
+  margin-top: 3px;
 }
 
 .GiftSet-text h3{
@@ -815,6 +827,153 @@ body{
 
 /* 기프트셋 섹션 */
 
+/* 리뷰 섹션 */
+
+.Review-title-container{
+  margin: 8rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  width: 100%;
+  height: 5rem;
+}
+
+.Review-title-box h1{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.Review-title-box h2{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.Reviwmore-btn{
+  height: 40%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: auto 0;
+  padding: 15px 20px;
+  background-color: #FFFFFF;
+  color: #929292;
+  font-size: 14px;
+  border: 2px solid #E7E7E7;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-solid{
+  font-size: 15px;
+  /* position: relative;
+  margin-top: 2px; */
+}
+
+.Reviwmore-btn:hover{
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+
+.Review-container{
+  display: flex;
+  margin: 0rem auto;
+  max-width: 1300px;
+  width: 100%;
+  height: auto;
+}
+
+.Review-box{
+  width: 250px;
+  margin: 0 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Review-imgbox{
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.Review-imgbox img{
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.Review-imgbox img:hover{
+  transform: scale(1.05);
+}
+
+.Review-textbox{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.Review-textbox h3{
+  font-size: 1rem;
+  font-weight: 800;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Review-textbox h4{
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.Review-textbox h5{
+  font-size: 14px;
+  font-weight: 400;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Review-textbox p{
+  color: red;
+}
+
+.Review-textbox-miniimg img{
+  display: flex;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  right: 0;
+  bottom: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 리뷰섹션 */
+
 @media screen and (min-width:1600px) {
   .slider-container{
   height: 550px;
@@ -833,12 +992,24 @@ body{
   width: 70%;
 }
 
-.GiftSet-text-container{
+.GiftSet-title-container{
   max-width: 1350px;
 }
 
 .GiftSet-container{
   max-width: 1350px;
+}
+
+.Review-title-container{
+  max-width: 1350px;
+}
+
+.Review-container{
+  max-width: 1350px;
+}
+
+.Review-box{
+  width: 260px;
 }
 
 }
@@ -854,6 +1025,14 @@ body{
 
 .CategoryBar-box{
   padding: 0 250px;
+}
+
+.GiftSet-text-container{
+  max-width: 1350px;
+}
+
+.Review-box{
+  width: 260px;
 }
 
 }
