@@ -282,7 +282,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 5rem;
   position: relative;
   width: 100%;
   height: 5rem;
@@ -317,7 +317,7 @@ img {
   display: flex;
   gap: 1rem;
   max-width: 1400px;
-  margin: 3.5rem auto;
+  margin: 2rem auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -419,7 +419,7 @@ img {
   display: flex;
   justify-content: flex-start;
   background-color: #f5f5f5;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease-in-out;
@@ -512,7 +512,7 @@ img {
 } 
 
 .swiper {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   max-width: 1500px;
   width: 90%;
   height: 350px;
@@ -631,7 +631,7 @@ img {
 /* 기프트셋 섹션 */
 
 .GiftSet-text-container{
-  margin: 8rem auto 0 auto;
+  margin: 5rem auto 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -830,7 +830,7 @@ img {
 /* 리뷰 섹션 */
 
 .Review-title-container{
-  margin: 8rem auto 0 auto;
+  margin: 5rem auto 0 auto;
   display: flex;
   justify-content: space-between;
   max-width: 1300px;
@@ -880,11 +880,12 @@ img {
   color: white;
   background-color: black;
   font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .Review-container{
   display: flex;
-  margin: 0rem auto;
+  margin: auto;
   max-width: 1300px;
   width: 100%;
   height: auto;
@@ -974,6 +975,101 @@ img {
 
 /* 리뷰섹션 */
 
+/* 소셜미디어 섹션 */
+.Social .hr-Social{
+  border-color: brown;
+}
+
+.Social-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 170px;
+  gap: 10px;
+  width: 100%;
+  height: 350px;
+  max-width: 1300px;
+  margin: 1rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.Socialbox{
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.Socialbox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.Socialbox img:hover{
+  transform: scale(1.05);
+}
+
+.item1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item3 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.Link-container{
+  max-width: 1300px;
+  height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Link-container h1{
+  margin: auto 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.Link-container i{
+  margin-left: 5px;
+  position: absolute;
+  top: 3px;
+}
+
+.Link-container a{
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  height: 55px;
+  text-align: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #222;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border: 2px solid #E7E7E7;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Link-container a:hover{
+  background-color: #222;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 소셜미디어 섹션 */
+
 @media screen and (min-width:1600px) {
   .slider-container{
   height: 550px;
@@ -1012,6 +1108,14 @@ img {
   width: 260px;
 }
 
+.Social-container{
+  max-width: 1350px;
+}
+
+.Link-container{
+  max-width: 1350px;
+}
+
 }
 
 @media screen and (min-width:1800px) {
@@ -1035,4 +1139,11 @@ img {
   width: 260px;
 }
 
+.Social-container{
+  max-width: 1350px;
+}
+
+.Link-container{
+  max-width: 1350px;
+}
 }

@@ -10,6 +10,7 @@ import Bestseller from './MainPage_components/Bestseller'
 import GiftSet from './MainPage_components/GiftSet'
 import Video from './MainPage_components/Video'
 import Review from './MainPage_components/Review'
+import SocialMedia from './MainPage_components/SocialMedia'
 
 function App() {
   
@@ -36,6 +37,8 @@ function App() {
     <Video />
 
     <Review />
+
+    <SocialMedia />
 
     </div>
   )
