@@ -31,7 +31,7 @@ function NewProductList(){
 
     return(
 
-    <div>
+    <div className='newproduct-bg'>
 
         <div className="newproduct-title-container">
             <hr/>

@@ -1,6 +1,7 @@
 import React, { useState,useEffect,useRef } from "react";
 import './MainPage.css';
 
+
 function Video(){
 
   let [show, setshow] = useState(false)
@@ -29,17 +30,17 @@ function Video(){
 
         
 
-        <div>
-    <div className="newproduct-title-container-margin">
-        <div className="newproduct-title-container">
+        <div className="Video-container">
+          
+        <div className="Brand">
             <hr className="hr-mood"/>
             <h1>BRAND STORY</h1>
             <h2>당신의 일상에 감각적인 무드를 더하세요.</h2>
         </div>
-    </div>
+
 
             <div className={`video-container ${show ? "up" : ''}`} ref={containerRef}>
-            <video src="https://videos.pexels.com/video-files/7815963/7815963-hd_1920_1080_25fps.mp4" controls autoPlay muted loop></video>
+            <video src="https://www.pexels.com/ko-kr/download/video/6663340/" controls autoPlay muted loop></video>
             
               <div className={`text-container ${show ? "up" : ''}`}>
                 <h1 style={{fontSize : "40px"}}>“당신의 일상에 머무는 가장 섬세한 무드.” <div className={`hr-class ${show ? "up" : ''}`}></div></h1>

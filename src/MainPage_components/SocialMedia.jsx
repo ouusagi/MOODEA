@@ -7,9 +7,9 @@ function SocialMedia(){
 
     return(
 
-    <div>
+    <div className='Social'>
 
-        <div className="newproduct-title-container Social">
+        <div className="Social-text-container">
             <hr className="hr-Social"/>
             <h1>Social Media</h1>
             <h2>소셜미디어를 통해 더 많은 소식을 들어보세요 !</h2>

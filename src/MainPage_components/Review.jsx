@@ -21,7 +21,7 @@ function Review(){
 
     
     return(
-        <div>
+        <div className="Review-bg">
 
             <div className="Review-title-container">
                 <div className="Review-title-box">

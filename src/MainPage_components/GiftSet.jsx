@@ -19,7 +19,7 @@ function GiftSet(){
 
 
     return(
-        <div>
+        <div className="Gift">
 
             <div className="GiftSet-text-container">
                 <h1>Gift Set</h1>

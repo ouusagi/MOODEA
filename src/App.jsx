@@ -11,6 +11,7 @@ import GiftSet from './MainPage_components/GiftSet'
 import Video from './MainPage_components/Video'
 import Review from './MainPage_components/Review'
 import SocialMedia from './MainPage_components/SocialMedia'
+import Footer from './MainPage_components/Footer'
 
 function App() {
   
@@ -39,6 +40,8 @@ function App() {
     <Review />
 
     <SocialMedia />
+
+    <Footer />
 
     </div>
   )

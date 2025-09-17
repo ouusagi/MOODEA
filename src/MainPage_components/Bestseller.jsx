@@ -27,9 +27,9 @@ function Bestseller(){
 
 
     return(
-        <div>
+        <div className="Best-bg">
 
-        <div className="newproduct-title-container Best">
+        <div className="Best">
             <hr className="hr-Bestseller"/>
             <h1>Best Seller</h1>
             <h2>모두에게 사랑받는 제품 지금 바로 확인 해 보세요 !</h2>
