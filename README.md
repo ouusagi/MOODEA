@@ -9,13 +9,6 @@
 - React & Vite 기반으로 빠른 개발 환경 구축
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
-## 기획
-
-| 와이어프레임 | 시안 |
-|---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
-
-
 ## 업데이트 내역
 ### 2025-09-17
 - 푸터 섹션: 푸터 섹션 구현 
@@ -45,6 +38,11 @@
 - **Font Awesome & Google Fonts**: 아이콘 및 폰트 적용  
 - **JSON**: 로컬 데이터 바인딩 (상품 정보)  
 
+## 기획
+
+| 와이어프레임 | 시안 |
+|---|---|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 ## 설치 및 실행
 ```bash
@@ -56,3 +54,6 @@ npm run dev
 
 
 ⚠️ 현재 프로젝트는 미완성 상태이며, 일부 UI/기능은 구현 중입니다.
+
+
+
