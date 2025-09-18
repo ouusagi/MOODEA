@@ -10,8 +10,10 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 기획
-|와이어프레임|시안|
-|<img width="500" alt="image" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/Wireframe-mainpage.png?raw=true" />|<img width="500" alt="스크린샷 2025-07-30 오후 9 52 31" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/mainpage.png?raw=true" />|
+
+| 와이어프레임 | 시안 |
+|---|---|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 
 ## 업데이트 내역
