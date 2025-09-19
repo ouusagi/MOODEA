@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+
+/* 스킨케어 타이틀창 */
+
+.SkincareList-bg{
+  padding: 4rem 0;
+}
+
+.SkincareList-title-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+}
+
+.SkincareList-title-container hr{
+  border-color: aqua;
+  width: 5rem;
+  margin-bottom: 10px;
+}
+
+.SkincareList-title-container h1{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.SkincareList-title-container h2{
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1;
+  margin-top: 5px;
+}
+/* 스킨케어 타이틀창 */
+
+
+
+
+
+/* 신상품 리스트창 */
+/* .newproduct-box{
+  display: flex;
+  gap: 1rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.newproduct-item-container{
+  flex: 0 0 250px;       
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newproduct-item{
+  width: 250px;
+  height: 370px;   
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.newproduct-item-container img{
+  object-fit: cover;
+  width: 100%;
+  height: 280px;   
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.newproduct-item-container img:hover{
+  transform: scale(1.05);
+}
+
+.newproduct-text {
+  flex: 1;
+  margin-top: 0.5rem;        
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+.newproduct-text h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.newproduct-text h4 {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.newproduct-text h5 {
+  color: #888;
+  cursor: pointer;
+}
+
+.btn-container{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.showbtn{
+  width: 20rem;
+  height: 3.5rem;
+  text-align: center;
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+}
+
+.showbtn:hover{
+  background-color: white;
+  color: black;
+} */
+/* 신상품 리스트창 */
+

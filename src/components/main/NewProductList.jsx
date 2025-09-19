@@ -18,7 +18,7 @@ function NewProductList(){
         .catch(err=>{
             console.log(err)
         })
-    })
+    },[])
 
     const plusbtn = ()=> {
         setpluscount(now=> Math.min(now + count, Maxcount))
