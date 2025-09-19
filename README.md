@@ -63,8 +63,9 @@ src/
 - **JSON**: 로컬 데이터 바인딩 (상품 정보)  
 
 ## 기획
-|와이어프레임|디자인시안|
-|<img width="500" alt="image" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/Wireframe-mainpage.png?raw=true" />|<img width="500" alt="스크린샷 2025-07-30 오후 9 52 31" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/mainpage.png?raw=true" />|
+| 와이어프레임 | 디자인시안 |
+|---|---|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 ## 설치 및 실행
 ```bash
