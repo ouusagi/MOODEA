@@ -1,5 +1,4 @@
 import { useState,useEffect } from 'react'
-import './MainPage.css';
 
 
 function CategoryBar(){

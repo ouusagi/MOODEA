@@ -1,50 +1,44 @@
-import { useState } from 'react'
-import './MainPage_components/MainPage.css'
-import AdPopup from './MainPage_components/AdPopup'
-import TopMenu from './MainPage_components/TopMenu'
-import HeaderSection from './MainPage_components/HeaderSection'
-import CarouselSlider from './MainPage_components/CarouselSlider'
-import CategoryBar from './MainPage_components/CategoryBar'
-import NewProductList from './MainPage_components/NewProductList'
-import Bestseller from './MainPage_components/Bestseller'
-import GiftSet from './MainPage_components/GiftSet'
-import Video from './MainPage_components/Video'
-import Review from './MainPage_components/Review'
-import SocialMedia from './MainPage_components/SocialMedia'
-import Footer from './MainPage_components/Footer'
+import { Routes, Route } from 'react-router-dom';
+
+// pages
+import {
+  MainPage,
+  SkincarePage,
+  CleansingPage,
+  MakeupPage,
+  HaircarePage,
+  BodycarePage
+} from './pages';
+
+// common components
+import AdPopup from './components/common/AdPopup'
+import HeaderSection from './components/common/HeaderSection';
+import Footer from './components/common/Footer';
+
+// css
+import './components/common/HeaderFooter.css'
+import TopMenu from './components/common/TopMenu';
+
 
 function App() {
-  
-
   return (
-    <div className='App'>
+    <div className="App">
 
-    <AdPopup />
+      <AdPopup/>
+      <TopMenu/>
+      <HeaderSection />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/skincare" element={<SkincarePage />} />
+        <Route path="/cleansing" element={<CleansingPage />} />
+        <Route path="/makeup" element={<MakeupPage />} />
+        <Route path="/haircare" element={<HaircarePage />} />
+        <Route path="/bodycare" element={<BodycarePage />} />
+      </Routes>
 
-    <TopMenu />
-
-    <HeaderSection />
-
-    <CarouselSlider />
-
-    <CategoryBar />
-
-    <NewProductList />
-
-    <Bestseller />
-
-    <GiftSet />
-
-    <Video />
-
-    <Review />
-
-    <SocialMedia />
-
-    <Footer />
-
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

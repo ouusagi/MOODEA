@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import './MainPage.css';
 
 
 function SocialMedia(){
@@ -25,7 +24,7 @@ function SocialMedia(){
         </div>
 
         <div className="Link-container">
-            <h1>From Instargram <i class="fa-brands fa-instagram"></i></h1>
+            <h1>From Instargram <i className="fa-brands fa-instagram"></i></h1>
             <a href="https://www.instagram.com/moodea_beauty25/" target="_blank">#MOODEA 해시태그 이벤트 참여하기</a>
         </div>
 

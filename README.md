@@ -10,8 +10,32 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 업데이트 내역
-### 2025-09-17
-- 푸터 섹션: 푸터 섹션 구현 
+### 2025-09-19
+- 와이어프레임 제작 업로드 + 디자인 시안 업로드 + 리액트 라우터 설치 + 파일 구조 조정
+
+## 파일 구조 변경
+src/
+ ├─ pages/
+ │    ├─ MainPage.jsx
+ │    ├─ SkincarePage.jsx
+ │    ├─ CleansingPage.jsx
+ │    └─ ...
+ ├─ components/
+ │    ├─ main/                <-- 메인페이지용 기능별 컴포넌트
+ │    │    ├─ CarouselSlider.jsx
+ │    │    ├─ NewProductList.jsx
+ │    │    └─ ...
+ │    └─ category/            <-- 카테고리 페이지별 기능 컴포넌트
+ │         ├─ Skincare/
+ │         │    ├─ ProductList.jsx
+ │         │    ├─ Banner.jsx
+ │         │    └─ ...
+ │         ├─ Cleansing/
+ │         │    ├─ ProductList.jsx
+ │         │    └─ ...
+ │         └─ ...
+ └─ pages/index.js             <-- App.jsx에서 한 번에 import
+
 
 ## 구현 기능 (완성)
 - 상단 메뉴: 회원가입, 로그인, 주문조회, 찜한상품, 고객지원 등  
@@ -39,10 +63,8 @@
 - **JSON**: 로컬 데이터 바인딩 (상품 정보)  
 
 ## 기획
-
-| 와이어프레임 | 시안 |
-|---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|와이어프레임|디자인시안|
+|<img width="500" alt="image" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/Wireframe-mainpage.png?raw=true" />|<img width="500" alt="스크린샷 2025-07-30 오후 9 52 31" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/mainpage.png?raw=true" />|
 
 ## 설치 및 실행
 ```bash
@@ -54,6 +76,3 @@ npm run dev
 
 
 ⚠️ 현재 프로젝트는 미완성 상태이며, 일부 UI/기능은 구현 중입니다.
-
-
-

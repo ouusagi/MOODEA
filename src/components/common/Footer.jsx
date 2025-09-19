@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import './MainPage.css';
+import { Link } from 'react-router-dom'
 
 
 function Footer(){
@@ -14,7 +14,7 @@ function Footer(){
           <div className='Footer-top-container'>
 
             <div className='Footer-top1'>
-               <a href="./mainpage.html">MOODÉA</a>
+               <Link to="/">MOODÉA</Link>
             </div>
 
             <div className='Footer-top2'>
