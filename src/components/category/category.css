@@ -24,7 +24,7 @@ img {
 /* 스킨케어 타이틀창 */
 
 .SkincareList-bg{
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .SkincareList-title-container{
@@ -35,12 +35,6 @@ img {
   position: relative;
   width: 100%;
   height: 5rem;
-}
-
-.SkincareList-title-container hr{
-  border-color: aqua;
-  width: 5rem;
-  margin-bottom: 10px;
 }
 
 .SkincareList-title-container h1{
@@ -61,12 +55,36 @@ img {
 }
 /* 스킨케어 타이틀창 */
 
+/* 상품 정렬 섹션 */
+.itemarray-container{
+  display: flex;
+  max-width: 1300px;
+  margin: 0.5rem auto;
+  justify-content:space-between;
+}
+
+.itemarray-box{
+  display: flex;
+  gap: 1rem;
+}
+
+.itemarray{
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* .items-hr{
+  border: 1px solid #f5f5f5;
+  display: flex;
+  max-width: 1300px;
+  margin: 0px auto 20px auto;
+} */
+
+/* 상품 정렬 섹션 */
 
 
-
-
-/* 신상품 리스트창 */
-/* .newproduct-box{
+/* 스킨케어 리스트창 */
+.skincare-box{
   display: flex;
   gap: 1rem;
   max-width: 1400px;
@@ -76,14 +94,14 @@ img {
   flex-wrap: wrap;
 }
 
-.newproduct-item-container{
+.skincare-item-container{
   flex: 0 0 250px;       
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.newproduct-item{
+.skincare-item{
   width: 250px;
   height: 370px;   
   display: flex;
@@ -91,7 +109,7 @@ img {
   overflow: hidden;
 }
 
-.newproduct-item-container img{
+.skincare-item-container img{
   object-fit: cover;
   width: 100%;
   height: 280px;   
@@ -101,11 +119,11 @@ img {
   transform-origin: bottom;
 }
 
-.newproduct-item-container img:hover{
+.skincare-item-container img:hover{
   transform: scale(1.05);
 }
 
-.newproduct-text {
+.skincare-text {
   flex: 1;
   margin-top: 0.5rem;        
   display: flex;
@@ -114,7 +132,7 @@ img {
   gap: 3px;
 }
 
-.newproduct-text h3 {
+.skincare-text h3 {
   font-weight: 400;
   font-size: 1rem;
   white-space: nowrap;
@@ -123,12 +141,12 @@ img {
   cursor: pointer;
 }
 
-.newproduct-text h4 {
+.skincare-text h4 {
   font-size: 14px;
   font-weight: 800;
 }
 
-.newproduct-text h5 {
+.skincare-text h5 {
   color: #888;
   cursor: pointer;
 }
@@ -139,25 +157,27 @@ img {
   display: flex;
   margin-top: 1.5rem;
 }
+/* 스킨케어 리스트창 */
 
-.showbtn{
-  width: 20rem;
-  height: 3.5rem;
-  text-align: center;
-  background-color: black;
-  border-radius: 8px;
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid #ccc;
+@media screen and (min-width:1600px) {
+.itemarray-container{
+  max-width: 1400px;
 }
 
-.showbtn:hover{
-  background-color: white;
-  color: black;
+/* .items-hr{
+  max-width: 1400px;
 } */
-/* 신상품 리스트창 */
+
+}
+
+@media screen and (min-width:1800px) {
+.itemarray-container{
+  max-width: 1400px;
+}
+
+/* .items-hr{
+  max-width: 1400px;
+} */
+
+}
 
