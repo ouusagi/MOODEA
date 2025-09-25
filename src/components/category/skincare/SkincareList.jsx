@@ -41,8 +41,9 @@ function SkincareList(){
         <div className="SkincareList-bg">
 
         <div className="SkincareList-title-container">
+            <hr />
             <h1>Skincare</h1>
-            <h2>피부를 촉촉하게 가꾸어 보세요.</h2>
+            <h2>피부를 위한 작은 쉼표를 더해보세요.</h2>
         </div>
 
         <div className="itemarray-container">
