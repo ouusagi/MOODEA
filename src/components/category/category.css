@@ -37,12 +37,6 @@ img {
   height: 5rem;
 }
 
-.SkincareList-title-container hr{
-  border-color: #7FDBFF;
-  width: 5rem;
-  margin-bottom: 10px;
-}
-
 .SkincareList-title-container h1{
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 400;
@@ -61,10 +55,18 @@ img {
 }
 /* 스킨케어 타이틀창 */
 
+
+/* 스킨케어 베스트 제품 섹션창 */
+.Best-bg2 .swiper{
+  max-width: 1400px;
+  padding: 0 2.5rem;
+}
+/* 스킨케어 베스트 제품 섹션창 */
+
 /* 상품 정렬 섹션 */
 .itemarray-container{
   display: flex;
-  max-width: 1310px;
+  max-width: 82.5rem;
   margin: 2rem auto;
   justify-content:space-between;
   border: 1px solid #ddd;
@@ -161,14 +163,43 @@ img {
 }
 /* 스킨케어 리스트창 */
 
+.tag{
+  display: flex;
+  justify-content: center;
+}
+
+
 
 
 
 @media screen and (min-width:1600px) {
 
+.Best-bg2 .swiper{
+  padding: 0 1.5rem;
+}
+
+.itemarray-container{
+  max-width: 84.5rem;
+}
+
+.skincare-box{
+  gap: 1.5rem;
+}
+
 }
 
 @media screen and (min-width:1800px) {
 
+.Best-bg2 .swiper{
+  padding: 0 1.5rem;
 }
 
+.itemarray-container{
+  max-width: 84.5rem;
+}
+
+.skincare-box{
+  gap: 1.5rem;
+}
+
+}

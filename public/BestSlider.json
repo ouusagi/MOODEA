@@ -1,0 +1,44 @@
+{
+    "BestSlider": [
+  {
+    "brand": "아쿠아텍",
+    "name": "하이드로 쉴드 젤 60ml",
+    "price": 42000,
+    "id": 1,
+    "info": "워터 드롭 제형으로 바르는 즉시 피부에 빠르게 흡수되어 수분막을 형성하며, 강력한 UVA/UVB 차단 기능을 제공합니다.",
+    "photo": "https://img.freepik.com/premium-photo/two-bottles-white-shampoo-cream-table_961348-2465.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "brand": "루멘",
+    "name": "비타-C 래디언스 에멀젼 180ml",
+    "price": 35000,
+    "id": "2",
+    "info": "순수 비타민 C 유도체와 제주산 감귤 추출물을 고농축으로 담아 피부에 맑고 환한 생기를 부여합니다. 가볍고 산뜻하게 흡수되어 피부 톤을 고르게 정돈해 주는 브라이트닝 기능성 로션입니다.",
+    "photo": "https://img.freepik.com/premium-photo/natural-skincare-products-with-orange-green-leaves_639785-165644.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "brand": "이루케",
+    "name": "하이드로 포켓 수분크림 50ml",
+    "price": 26000,
+    "id": "3",
+    "info": "가볍게 발리지만 깊은 보습력을 제공하는 데일리 수분 크림. 8종 히알루론산과 자작나무 수액을 함유하여 피부 속 깊은 곳까지 촉촉함을 채워줍니다.",
+    "photo": "https://img.freepik.com/premium-psd/skincare-pack-clean-elegant-beauty-products_1329844-186.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "brand": "솔린스",
+    "name": "어스 미네랄 아크로 토너 150ml",
+    "price": 30000,
+    "id": "4",
+    "info": "지하 암반수와 천연 미네랄 솔트를 주성분으로 하여 피부 속 깊은 곳부터 수분과 영양을 공급합니다. 피부의 pH 균형을 맞추고, 외부 환경으로부터 자극받은 피부를 편안하게 진정시키는 약산성 워터 토너입니다.",
+    "photo": "https://img.freepik.com/premium-photo/minimalist-skincare-bottle-placed-decorative-stones-natural-light-creating-serene-ambiance_465573-3484.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "brand": "아리아",
+    "name": "릴리프 에어즈 로션 250ml",
+    "price": 28000,
+    "id": "5",
+    "info": "민감한 피부를 위한 저자극 로션입니다. 쑥, 병풀 등의 식물성 진정 성분을 함유하여 피부를 편안하게 감싸줍니다. 공기처럼 가벼운 텍스처로 빠르게 흡수되어 끈적임 없이 촉촉함만 남깁니다.",
+    "photo": "https://img.freepik.com/premium-psd/tube-mockup_1279103-75.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  }
+]
+}

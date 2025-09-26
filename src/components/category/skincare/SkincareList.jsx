@@ -1,9 +1,11 @@
 import React, { useState,useEffect } from "react";
+import BestSlider from "../../main/BestSlider";
 
 
 function SkincareList(){
 
     let [skincareitem,setskincareitem] = useState([]) 
+    let [slider,setslider] = useState([])
 
     useEffect(()=>{
         fetch('/Skincare.json')
@@ -15,6 +17,19 @@ function SkincareList(){
             console.log(err)
         })
     },[])
+
+    useEffect(()=>{
+        fetch('/BestSlider.json')
+        .then(res=> res.json())
+        .then(data=>{
+            setslider(data.BestSlider)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    })
+
+
 
     const Products = ()=>{
         let copy = [...skincareitem].sort((a,b)=> a.name.localeCompare(b.name))
@@ -41,10 +56,11 @@ function SkincareList(){
         <div className="SkincareList-bg">
 
         <div className="SkincareList-title-container">
-            <hr />
             <h1>Skincare</h1>
             <h2>피부를 위한 작은 쉼표를 더해보세요.</h2>
         </div>
+
+        <BestSlider items={slider}/>
 
         <div className="itemarray-container">
 
@@ -58,9 +74,6 @@ function SkincareList(){
         </div>
 
         </div>
-
-        {/* <div className="items-hr"></div> */}
-
 
 
         <div className='skincare-box'>
@@ -77,6 +90,14 @@ function SkincareList(){
             </div>
             ))}
 
+        </div>
+
+                <div className="tag">
+            <p>1 2 3</p>
+        </div>
+
+                <div className="tag">
+            <p>1 페이지</p>
         </div>
 
 

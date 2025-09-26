@@ -314,8 +314,8 @@ img {
 
 .swiper {
   margin-top: 2rem;
-  max-width: 1350px;
-  width: 90%;
+  max-width: 1300px;
+  width: 100%;
   height: 350px;
 }
 
@@ -1053,7 +1053,7 @@ img {
 
 .swiper {
   max-width: 1350px;
-  width: 70%;
+  width: 100%;
 }
 
 .GiftSet-title-container{
