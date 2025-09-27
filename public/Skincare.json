@@ -319,6 +319,46 @@
     "id": "40",
     "info": "민감해진 피부를 부드럽게 진정시키고, 촉촉하게 가꿔주는 토너 패드입니다. 간편하게 한 장씩 꺼내어 사용하는 제품으로, 바쁜 일상 속에서 피부에 휴식을 선물한다는 이미지를 강조합니다.",
     "photo": "https://img.freepik.com/premium-psd/white-bottle-black-cream-with-white-label-that-saysnourishon-it_484256-3019.jpg?ga=GA1.1.358440641.1756050848&semt=ais_incoming&w=740&q=80"
+  },
+    {
+    "brand": "선키스트",
+    "name": "리바이탈라이징 비타민 드롭 세럼 30ml",
+    "price": 25400,
+    "id": "41",
+    "info": "자연의 활력, 광채 충전 비타민 세럼 싱그러운 햇살을 머금은 듯, 칙칙한 피부에 투명하고 건강한 광채를 선사하는 고농축 비타민 세럼입니다. 순수 비타민 C 유도체와 화이트 플라워 추출물이 만나 피부 톤을 맑게 가꾸고, 생기 넘치는 활력을 채워줍니다.",
+    "photo": "https://img.freepik.com/premium-psd/top-view-vitamin-c-serum-mockup_23-2150966284.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+    {
+    "brand": "베르뎀",
+    "name": "엑셀 밸런스 포지션 로션 120ml",
+    "price": 27000,
+    "id": "42",
+    "info": "자연의 평온함을 담은 순한 수분 진정 민감해진 피부를 위해 꼭 필요한 성분만을 엄선하여 담았습니다. 푸른 잎사귀처럼 싱그러운 자연 유래 진정 성분이 외부 자극으로 지친 피부에 깊은 편안함과 촉촉함을 선사합니다.",
+    "photo": "https://img.freepik.com/premium-photo/skin-care-product-bottle-table-surrounded-by-decorative-stones-green-leaves-touch-natu_606187-26846.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+    {
+    "brand": "허비",
+    "name": "더 마일드 리파이닝 로션 150ml",
+    "price": 33500,
+    "id": "43",
+    "info": "흔들림 없이 편안한, 저자극 수분 장벽 강화 자연 속 돌처럼 견고하고 잎처럼 싱그러운 보습 진정 로션입니다. 민감하고 건조한 피부 장벽을 편안하게 감싸주며, 불필요한 성분을 최소화한 마일드 포뮬러로 피부 본연의 힘을 길러줍니다.",
+    "photo": "https://img.freepik.com/premium-photo/sustainable-natural-skincare-ingredients-collage-design_23-2150945258.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+    {
+    "brand": "벨벳휴",
+    "name": "릴로즈 래디언스 앰플 세럼 25ml",
+    "price": 42000,
+    "id": "44",
+    "info": "시간의 흔적을 지우는, 고귀한 장미빛 탄력 시간이 멈춘 듯한 우아함, 고농축 탄력 성분이 피부 깊숙이 스며들어 탄탄한 힘을 채워줍니다. 밤사이 피부에 풍부한 영양을 공급하고, 다음 날 아침 벨벳처럼 부드러운 광채를 선사합니다.",
+    "photo": "https://img.freepik.com/premium-psd/skincare-products-mock-up-arrangement_23-2149083637.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+  },
+    {
+    "brand": "유캄",
+    "name": "딥 모이스처 컴웨이 수분 크림 80ml",
+    "price": 26500,
+    "id": "45",
+    "info": "자연의 싱그러움 그대로, 견고한 수분 장벽 유칼립투스 잎의 순수한 진정 에너지와 세라마이드의 견고함이 만나, 피부 깊숙이 수분을 채우고 오랫동안 촉촉함을 지켜주는 수분 크림입니다.",
+    "photo": "https://img.freepik.com/premium-photo/bottle-shampoo-is-stone-block_1133484-6031.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
   }
  ]
 }
