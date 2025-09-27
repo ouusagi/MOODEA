@@ -1,8 +1,12 @@
 import React, { useState,useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import BestSlider from "../../main/BestSlider";
 
 
 function SkincareList(){
+
+    const {page} = useParams()
+    const nowpage = Number(page)
 
     let [skincareitem,setskincareitem] = useState([]) 
     let [slider,setslider] = useState([])
@@ -27,7 +31,7 @@ function SkincareList(){
         .catch(err=>{
             console.log(err)
         })
-    })
+    },[])
 
 
 
@@ -50,6 +54,10 @@ function SkincareList(){
         let copy = [...skincareitem].sort(()=> Math.random() - 0.5)
         setskincareitem(copy)
     }
+
+    const pageproductcount = 15
+    const totalpage = Math.ceil(skincareitem.length / pageproductcount)
+    const sliceditem = skincareitem.slice((nowpage - 1) * pageproductcount, nowpage * pageproductcount)
 
 
     return(
@@ -77,7 +85,7 @@ function SkincareList(){
 
 
         <div className='skincare-box'>
-            {skincareitem.map((item,i)=>(
+            {sliceditem.map((item,i)=>(
             <div className='skincare-item-container' key={i}>
                 <div className='skincare-item'>
                     <img src={item.photo} alt="상품 이미지" />
@@ -92,12 +100,14 @@ function SkincareList(){
 
         </div>
 
-                <div className="tag">
-            <p>1 2 3</p>
-        </div>
-
-                <div className="tag">
-            <p>1 페이지</p>
+        <div className="pagination">
+            <div className="page-num">
+            {Array.from({length : totalpage}, (_,i)=>{
+               return <Link className="link" key={i} to={`/skincare/${i+1}`}>{i+1}</Link>
+            })}
+            </div>
+            
+            <div className="page-info">- {nowpage} 페이지 -</div>
         </div>
 
 

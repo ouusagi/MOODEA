@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 // pages
 import {
@@ -31,7 +31,10 @@ function App() {
       <HeaderSection />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/skincare" element={<SkincarePage />} />
+
+        <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
+        <Route path="/skincare/:page" element={<SkincarePage />} />
+        
         <Route path="/cleansing" element={<CleansingPage />} />
         <Route path="/makeup" element={<MakeupPage />} />
         <Route path="/haircare" element={<HaircarePage />} />

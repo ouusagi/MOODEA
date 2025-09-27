@@ -39,7 +39,7 @@ function TopMenu(){
         </div>
 
         <div className="menuicon-container">
-        <div class="gtranslate_wrapper"></div>
+        <div className="gtranslate_wrapper"></div>
         <a href="#"><i className="fa-regular fa-user"></i></a>
         <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
         <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
