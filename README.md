@@ -10,35 +10,61 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 업데이트 내역
-### 2025-09-27
+### 2025-09-29
 - 페이지네이션 구현 : 리액트 라우터를 이용한 페이지네이션 구현 (1,2,3페이지)
 
 ## 파일 구조 변경
 
 ```
 src/
- ├─ pages/
- │    ├─ MainPage.jsx
- │    ├─ SkincarePage.jsx
- │    ├─ CleansingPage.jsx
- │    └─ ...
  ├─ components/
- │    ├─ main/                <-- 메인페이지용 기능별 컴포넌트
- │    │    ├─ CarouselSlider.jsx
- │    │    ├─ NewProductList.jsx
- │    │    └─ ...
- │    └─ category/            <-- 카테고리 페이지별 기능 컴포넌트
- │         ├─ Skincare/
- │         │    ├─ ProductList.jsx
- │         │    ├─ Banner.jsx
- │         │    └─ ...
- │         ├─ Cleansing/
- │         │    ├─ ProductList.jsx
- │         │    └─ ...
- │         └─ ...
- └─ pages/index.js             <-- App.jsx에서 한 번에 import
+ │    ├─ main/               # 메인 페이지 전용
+ │    │   ├─ CarouselSlider.jsx
+ │    │   ├─ NewProductList.jsx
+ │    │   └─ ...
+ │    ├─ HeaderSectionCategory/           # 헤더섹션 카테고리 컴포넌트 (컴포넌트 제작소)
+ │    │   ├─ Skincare/
+ │    │   │   └─ SkincareList.jsx
+ │    │   └─ category.css
+ │    │   
+ │    ├─ common/             # 공용 UI
+ │    │   ├─ AdPopup.jsx
+ │    │   ├─ Footer.jsx
+ │    │   └─ ...
+ │    └─ Recycling/          # 재활용 컴포넌트
+ │        └─ BestSlider.jsx
+ │        └─ HeaderSectionCategory.jsx
+ │
+ └─ pages/                # 컴포넌트 대표 페이지 
+     ├─ MainPage.jsx
+     ├─ SkincarePage.jsx
+     ├─ CleansingPage.jsx
+     └─ ...
+
 ```
 
+## 컴포넌트 제작 흐름
+
+```
+
+컴포넌트 제작 흐름
+
+1. 컴포넌트 제작소 (특정 전용 컴포넌트 제작)
+- 각 페이지/기능에 맞는 전용 컴포넌트 제작
+- 예: SkincareList.jsx
+
+2. 제작된 컴포넌트 재활용 (범용성 확보)
+- 공통 UI/로직을 추출해서 props 기반 컴포넌트로 리팩터링
+- 불필요한 중복 코드를 줄이고, 여러 페이지에서 사용할 수 있도록 수정
+- 예: HeaderSectionCategory.jsx
+- props: categoryName, categoryBio, jsonFile, arrayName, basePath 등
+
+3. 컴포넌트 대표 페이지에서 데이터 바인딩 (화면 구성)
+- 실제 페이지 단에서 데이터 주입
+- JSON 파일에서 데이터를 불러와 Recycling 컴포넌트에 props 전달
+- 여러 개의 공용 컴포넌트를 조합해서 하나의 완성된 페이지를 구성
+
+```
 
 ## 구현 기능 (메인페이지)
 - 상단 메뉴: 회원가입, 로그인, 주문조회, 찜한상품, 고객지원 등  
@@ -57,9 +83,10 @@ src/
 - 푸터 섹션: 푸터 섹션 구현 
 - 반응형 레이아웃: 화면 크기에 따라 캐러셀 및 상품 섹션 높이와 배치 조정  
 
-## 구현 기능 (스킨케어 페이지)
+## 구현 기능 (헤더 섹션)
 - 상품 정렬 기능: 상품명순, 낮은가격순, 높은가격순, 추천순 정렬필터 기능 구현
 - 페이지네이션 기능: 리액트 라우터를 이용한 페이지네이션 구현 (1,2,3페이지)
+- 스킨케어, 클렌징 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
 
 ## 사용 기술
 - **React**: UI 컴포넌트 기반 개발  
@@ -73,7 +100,7 @@ src/
 ## 기획
 | 와이어프레임 | 디자인시안 |
 |---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="400" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 ## 설치 및 실행
 ```bash

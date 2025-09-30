@@ -1,0 +1,44 @@
+{
+  "BestSliderCleansing": [
+    {
+      "brand": "제로베이스",
+      "name": "마일드 제로 밸런싱 젤 클렌저 180ml",
+      "price": 23000,
+      "id": "1",
+      "info": "피부 pH와 유사한 약산성 포뮬러의 산뜻한 젤 타입 클렌저로, 피부 자극 없이 메이크업 잔여물과 노폐물을 깔끔하게 제거함과 동시에 세안 후에도 피부의 유수분 밸런스를 건강하게 지켜주어 땅김 없이 촉촉하고 매끈한 피부 바탕을 완성해 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-tubes-mockup-pedestal_414991-389.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "휴어즈",
+      "name": "시카 올인원 폼 클렌저 150ml",
+      "price": 25000,
+      "id": "2",
+      "info": "피부 자극을 최소화한 약산성 pH 포뮬러와 고함량 병풀 추출물(시카)을 담아, 민감해진 피부를 부드럽게 진정시키면서도, 조밀하고 풍성한 거품이 노폐물을 깨끗하게 제거하여 세안 후에도 땅김 없이 편안하고 촉촉한 마무리감을 선사하는 데일리 진정 클렌징 폼입니다.",
+      "photo": "https://img.freepik.com/premium-psd/skincare-tube-mockup-product-packaging-psd_53876-526430.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "세븐데이즈",
+      "name": "앱솔루트 포어 블랙 클리어 밤 80g",
+      "price": 42000,
+      "id": "3",
+      "info": "피부 온도에 부드럽게 녹아드는 고농축 오일 밤 제형이 묵은 각질, 블랙헤드, 메이크업 잔여물을 강력하게 흡착하고 정화하며, 노블 블랙 컴플렉스 성분을 담아 클렌징 후에도 피부에 고급스러운 영양감과 매끄러움을 남기는 프리미엄 딥 클렌징 밤입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-tube-mockup_1247017-386.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "브레킹맨",
+      "name": "쿨링 맨즈 딥 클렌징 폼 150g",
+      "price": 18000,
+      "id": "4",
+      "info": "면도 후의 자극받은 피부를 편안하게 해주는 시원한 쿨링 성분과 강력한 세정 효과를 결합하여, 과도한 피지와 땀, 미세먼지로 인한 번들거림을 단번에 제거하고 세안 후에도 피부를 상쾌하고 활력 있게 리프레시해 주는 남성 전용 딥 클렌저입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetics-tube-mockup_540116-1464.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "르미라",
+      "name": "오일 인퓨전 클렌징 에센스 100ml",
+      "price": 22500,
+      "id": "5",
+      "info": "3가지 귀한 오일과 에센스 성분을 황금 비율로 배합한 럭셔리 클렌징 제품으로, 피부에 닿는 순간 짙은 메이크업과 모공 속 노폐물을 부드럽게 녹여내고 클렌징 후에도 피부에 촉촉하고 우아한 윤광을 남겨 세안만으로도 탄탄한 영양 케어를 완성하는 프리미엄 클렌저입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-tube-mockup-design_649162-948.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    }
+  ]
+}

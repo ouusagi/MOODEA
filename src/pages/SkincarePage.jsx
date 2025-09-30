@@ -1,5 +1,5 @@
-import SkincareList from "../components/category/skincare/SkincareList";
-import '../components/category/category.css'
+import SkincareList from "../components/HeaderSectionCategory/skincare/SkincareList";
+import '../components/HeaderSectionCategory/category.css'
 
 
 function SkincarePage() {

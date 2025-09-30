@@ -35,7 +35,9 @@ function App() {
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
         <Route path="/skincare/:page" element={<SkincarePage />} />
         
-        <Route path="/cleansing" element={<CleansingPage />} />
+        <Route path="/cleansing" element={<Navigate to="/cleansing/1"/>} />
+        <Route path="/cleansing/:page" element={<CleansingPage />} />
+
         <Route path="/makeup" element={<MakeupPage />} />
         <Route path="/haircare" element={<HaircarePage />} />
         <Route path="/bodycare" element={<BodycarePage />} />

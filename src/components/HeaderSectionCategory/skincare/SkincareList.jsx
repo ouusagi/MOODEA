@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import BestSlider from "../../main/BestSlider";
+import BestSlider from "../../Recycling/BestSlider";
 
 
 function SkincareList(){
@@ -23,10 +23,10 @@ function SkincareList(){
     },[])
 
     useEffect(()=>{
-        fetch('/BestSlider.json')
+        fetch('/BestSliderSkincare.json')
         .then(res=> res.json())
         .then(data=>{
-            setslider(data.BestSlider)
+            setslider(data.BestSliderSkincare)
         })
         .catch(err=>{
             console.log(err)
