@@ -1,0 +1,364 @@
+{
+  "Makeup": [
+    {
+      "brand": "루미아",
+      "name": "에센셜 커버 파운데이션 35ml",
+      "price": 35000,
+      "id": "1",
+      "info": "피부에 완벽하게 밀착되어 오랜 시간 무너짐 없이 결점 없는 커버력을 선사하는 고밀착 리퀴드 파운데이션입니다. 가볍지만 강력한 커버력으로 원하는 피부 표현을 완성하세요. 세미-매트 피니쉬로 끈적임 없이 산뜻합니다.",
+      "photo": "https://img.freepik.com/premium-psd/still-life-foundation-advertising-mockup_23-2150046710.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아쿠아티크",
+      "name": "워터-핏 세팅 팩트 12g",
+      "price": 32000,
+      "id": "2",
+      "info": "미세한 입자가 피부에 얇게 밀착되어 건조함 없이 메이크업을 고정해주는 수분 세팅 컴팩트입니다. 피부 속 수분은 잡아주고 겉의 유분만 산뜻하게 컨트롤하여, 방금 화장한 듯 투명하고 보송한 피부를 오래 유지시켜 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/brown-compact-powder-container-mockup-psd_53876-599924.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "베잇",
+      "name": "에이리 픽스 컨실러 6ml",
+      "price": 18000,
+      "id": "3",
+      "info": "마치 얇은 베일처럼 피부에 가볍게 스며들어 국소 부위의 잡티와 다크서클을 정교하게 커버합니다. 한 번의 터치로 하루 종일 무너짐 없이 완벽하게 밀착되어, 내 피부처럼 편안하고 자연스러운 커버를 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/packaging-cosmetic-concealer-mock-up_73621-1077.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "라오리브",
+      "name": "에어리 매트 피팅 틴트 4.5ml",
+      "price": 21000,
+      "id": "4",
+      "info": "공기처럼 가볍고 부드러운 텍스처가 입술에 얇게 밀착되어, 바른 듯 안 바른 듯 편안한 세미-매트 립을 연출합니다. 시간이 지나도 건조함이나 묻어남 없이 선명한 컬러를 오랫동안 자석처럼 고정시켜 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/logo-mockup-foundations_145275-448.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아트마",
+      "name": "마스터-핏 포트 컨실러 5g",
+      "price": 25000,
+      "id": "5",
+      "info": "극소 부위의 잡티, 점, 요철까지 완벽하게 커버하는 고밀착 밤 타입 컨실러입니다. 피부 온도에 부드럽게 녹아들어 얇고 정교하게 밀착되며, 시간이 지나도 끼임 없이 깔끔하게 커버력을 유지해줍니다. 베이스 메이크업 전후, 브러쉬나 손가락을 이용해 섬세한 커버가 필요한 곳에 사용하세요.",
+      "photo": "https://img.freepik.com/premium-psd/psd-luxurious-beauty-face-cream-cosmetic-mockup_977291-55.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "톤앤톤",
+      "name": "믹스앤픽스 컨실러 5.5ml",
+      "price": 17000,
+      "id": "6",
+      "info": "피부 톤에 꼭 맞는 컬러를 찾을 수 있도록 밝은 톤부터 어두운 톤까지 세분화된 쉐이드로 출시되었습니다. 가볍지만 높은 커버력을 자랑하며, 잡티, 홍조, 다크서클 등 다양한 피부 결점을 자연스럽게 커버하고 하루 종일 깔끔하게 고정됩니다. 두 가지 이상의 쉐이드를 믹스하여 사용하면 더욱 완벽한 맞춤 커버가 가능합니다.",
+      "photo": "https://img.freepik.com/premium-psd/comsetic-foundation-mockup_78090-8683.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "가든에센스",
+      "name": "퓨어 커버 세럼 파운데이션 30ml",
+      "price": 42000,
+      "id": "7",
+      "info": "피부가 편안한 자연 유래 성분을 듬뿍 담은 스킨케어 베이스 파운데이션입니다. 가벼운 세럼 텍스처가 피부에 촉촉하게 스며들어 얇고 균일한 커버를 완성합니다. 시간이 지나도 들뜸 없이 매끄러운 피부 결을 유지하며, 마치 내 피부처럼 숨 쉬는 듯 건강한 윤광을 선사합니다. 민감성 피부에도 안심하고 사용하세요.",
+      "photo": "https://img.freepik.com/premium-psd/foundation-mock-up-product_23-2149738420.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "로얄드레서",
+      "name": "골드-벨벳 립 틴트 6ml",
+      "price": 45000,
+      "id": "8",
+      "info": "왕족의 드레스처럼 부드럽고 풍부한 벨벳 텍스처가 입술에 빈틈없이 밀착됩니다. 금빛 광채를 담은 듯 선명한 컬러가 하루 종일 우아함을 유지하며, 건조함 없이 편안한 매트 피니쉬를 선사합니다. 단 한 번의 터치로 강렬하고 럭셔리한 립 메이크업을 완성하세요.",
+      "photo": "https://img.freepik.com/premium-psd/liquid-lipstick-mockup_710940-1145.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "모먼트",
+      "name": "볼룸 스킨 글로우 40ml",
+      "price": 31000,
+      "id": "9",
+      "info": "마치 꽃이 피어나는 듯 화사한 생기를 부여하는 톤-업 글로우 베이스입니다. 얇고 촉촉하게 발려 피부 속부터 차오르는 듯한 맑고 투명한 광채를 연출합니다. 칙칙한 피부 톤을 자연스럽게 보정하고 다음 단계 메이크업의 밀착력과 지속력을 높여줍니다. 생기 가득한 피부로 하루를 시작하세요.",
+      "photo": "https://img.freepik.com/premium-psd/product-bottle-pink-background_23-2149917291.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "클리어로",
+      "name": "에어-핏 피니싱 팩트 9g",
+      "price": 22000,
+      "id": "10",
+      "info": "공기처럼 가벼운 초미세 입자가 피부에 얇게 밀착되어, 하루 종일 유분을 잡아주고 모공과 요철을 매끈하게 커버합니다. 피부 톤을 방해하지 않는 투명한 피니쉬로, 베이스 메이크업의 지속력을 극대화하고 번들거림 없이 보송하고 맑은 피부를 유지시켜 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-product-packaging-mockup_366969-1193.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "네오아쿠아",
+      "name": "모이스트-세팅 팩트 14g",
+      "price": 34000,
+      "id": "11",
+      "info": "피부 수분은 지켜주고 겉의 유분만 잡아주는 촉촉한 반전 파우더 팩트입니다. 미세한 입자가 피부에 얇게 스며들어 건조함 없이 메이크업을 오랫동안 유지시켜 줍니다. 마치 물을 머금은 듯 맑고 깨끗한 피부 결을 연출하며, 하루 종일 편안한 보송함을 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/eye-shadow-studio-mockup_23-2151761969.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "블로썸데이",
+      "name": "톤-업 믹스 팔레트 12g",
+      "price": 38000,
+      "id": "12",
+      "info": "화사한 파스텔 톤의 네 가지 컬러로 구성되어, 하이라이터, 치크, 톤 보정을 한 번에 끝낼 수 있는 멀티 유즈 팔레트입니다. 미세한 쉬머 펄이 피부에 은은하게 밀착되어 과하지 않은 입체감과 맑은 생기를 부여합니다. 네 가지 컬러를 믹스하거나 단독으로 사용하여, 그날의 분위기에 맞는 다채로운 룩을 연출하세요.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-product-mock-up-design-with-female-model_23-2151707625.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "라파엘",
+      "name": "벨벳 아틀리에 립스틱 3.5g",
+      "price": 55000,
+      "id": "13",
+      "info": "파리지앵의 세련된 감성을 담은 프리미엄 세미-매트 립스틱입니다. 입술에 닿는 순간 부드러운 벨벳처럼 감기며, 한 번의 터치만으로도 풍부하고 깊은 누드 컬러를 선명하게 발색합니다. 각질 부각 없이 편안한 밀착력과 오래 지속되는 컬러감으로, 우아하고 시크한 데일리 룩을 완성하세요.",
+      "photo": "https://img.freepik.com/premium-psd/lipstick-mockup_669874-3243.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "데르마랩",
+      "name": "멜팅 베리어 파운데이션 30ml",
+      "price": 48000,
+      "id": "14",
+      "info": "피부 건강을 생각한 더마(Derma) 성분을 함유하여, 하루 종일 편안한 보습 장벽을 형성해주는 고기능성 파운데이션입니다. 피부 온도에 부드럽게 멜팅되어 얇고 매끈하게 밀착되며, 결점 커버와 스킨케어 효과를 동시에 선사합니다. 민감한 피부도 안심하고 사용할 수 있는 저자극 베이스입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-face-cream-container-branding-mockup_439185-8886.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "올영가든",
+      "name": "소프트 블룸 싱글 섀도우 2.5g",
+      "price": 15000,
+      "id": "15",
+      "info": "자연의 색을 담은 듯 은은하고 부드러운 컬러가 눈가에 편안하게 밀착되는 데일리 싱글 섀도우입니다. 가루 날림 없이 맑고 투명하게 발색되어, 깊이감 있는 음영 메이크업부터 생기 있는 **치크(볼 터치)**까지 활용 가능합니다. 식물성 오일 성분을 함유하여 건조함 없이 부드럽게 유지됩니다.",
+      "photo": "https://img.freepik.com/premium-psd/close-up-eye-shadow-mockup_23-2151317778.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "엔지",
+      "name": "0.01mm 쉐도우-핏 펜슬 라이너 0.1g",
+      "price": 19000,
+      "id": "16",
+      "info": "마치 그림자처럼 눈가에 얇고 섬세하게 밀착되어, 타고난 듯 깊은 눈매를 완성합니다. 0.01mm 초슬림 심으로 점막부터 꼬리까지 빈틈없이 정교한 라인을 연출할 수 있습니다. 번짐 없는 강력한 워터프루프 포뮬러가 땀과 유분에도 하루 종일 시크한 아이라인을 완벽하게 고정시켜 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/stationery-pencils-abstract-honeycomb-shape_23-2148700177.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "롤링레쉬",
+      "name": "BM 마스터-픽스 컨투어 브러쉬 3종세트",
+      "price": 45000,
+      "id": "17",
+      "info": "아티스트의 정교함을 담은 플랫 쉐입 전문가용 브러쉬 3종 세트입니다. 고급 인조모를 사용하여 피부에 자극 없이 부드럽게 발리며, 뭉침 없이 액상 및 밤 타입 제품을 얇고 균일하게 밀착시켜 줍니다. 넓은 면은 파운데이션/광대 컨투어에, 작은 면은 국소 부위 컨실러/립 등에 활용하여 빈틈없는 완벽한 메이크업을 완성하세요.",
+      "photo": "https://img.freepik.com/premium-psd/numbers-1-2-yellow-stick_1268577-617.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "티키타카",
+      "name": "포어 쉴드 세팅 팩트 11g",
+      "price": 32000,
+      "id": "18",
+      "info": "물을 머금은 듯 건조함 없이 피부에 얇게 밀착되어, 메이크업을 오랫동안 고정해줍니다. 모공과 잔주름을 매끈하게 커버하는 포어 블러 효과와 함께, 수분 보호막 성분이 피부 속 촉촉함을 지켜주는 반전 세팅 파우더입니다.",
+      "photo": "https://img.freepik.com/premium-psd/still-life-foundation-advertising-mockup_23-2150046740.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "모던티",
+      "name": "볼드 매트 섀도우/블러셔 4g",
+      "price": 54000,
+      "id": "19",
+      "info": "채도 높은 컬러와 부드러운 매트 질감이 완벽한 조화를 이루는 멀티 유즈 팩트입니다. 눈가에 깊이 있는 음영을 연출하거나, 볼에 생기 있는 치크로 활용 가능합니다. 선명한 발색과 가루 날림 없는 밀착력으로 대담하고 트렌디한 메이크업 룩을 완성하세요.",
+      "photo": "https://img.freepik.com/premium-psd/close-up-eye-shadow-mockup_23-2151317762.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "브로우핏",
+      "name": "내추럴-터치 픽싱 마스카라 5g",
+      "price": 16000,
+      "id": "20",
+      "info": "한 올 한 올 눈썹 결을 자연스럽게 살려주고 하루 종일 흐트러짐 없이 고정하는 컬러 픽싱 브로우 마스카라입니다. 뭉침 없이 얇게 코팅되어, 눈썹 색상을 원하는 톤으로 손쉽게 바꿔주고 풍성한 볼륨감을 더해줍니다. 뛰어난 지속력으로 땀과 유분에도 깔끔한 눈썹을 유지하세요.",
+      "photo": "https://img.freepik.com/premium-psd/eyebrow-pencil-branding-packaging-mockup_439185-8693.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "세븐이너",
+      "name": "1770 소프트-글로우 시크 립스틱 3.8g",
+      "price": 31000,
+      "id": "21",
+      "info": "바르는 순간 입술에 부드럽게 녹아들어 맑은 광택을 선사하는 세미-글로우 립스틱입니다. 선명한 발색과 촉촉한 보습감을 동시에 담아 각질 부각 없이 편안하게 밀착됩니다. 사선 컷팅 디자인이 입술 라인을 따라 정교한 발림성을 더해, 모던하고 세련된 립 메이크업을 완성합니다.",
+      "photo": "https://img.freepik.com/premium-psd/lipstick-mockup-cosmetic-branding_475259-4787.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "라우카우",
+      "name": "쉬폰 키스 립 3.5g",
+      "price": 25000,
+      "id": "22",
+      "info": "텁텁함 없이 맑고 섬세하게 발색되는 블러시 컬러는 사랑스러운 장미 꽃잎을 입술에 물들인 듯 자연스럽고 깊이 있는 핑크 톤을 연출합니다. 고급스러운 실버 메탈 디자인과 브랜드 특유의 부드러운 핑크 패키지는 파우치 속에서도 당신의 특별함을 드러냅니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-lipstick-packaging-purple-lipstick-with-gold-trim-gold-trim-lipstick-cosmetic-mockup_981215-213.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아틀리에",
+      "name": "부알 로제 사틴 쿠션 15g",
+      "price": 65000,
+      "id": "23",
+      "info": "고밀착 새틴 피니쉬 텍스처가 시간이 지나도 무너짐 없이 하루 종일 우아하고 매끈한 피부결을 유지해 줍니다. 덧바를수록 맑게 쌓이는 커버력과 은은하게 감도는 로제빛 광채가 당신의 얼굴을 가장 세련된 캔버스로 완성합니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-packaging-mockup-scene_69509-2971.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "씨엘블루",
+      "name": "에어리 베인즈 팩트 9g",
+      "price": 35000,
+      "id": "24",
+      "info": "초미세 입자가 피부 요철과 유분을 섬세하게 잡아주어 마치 포토샵 필터를 씌운 듯 깨끗하고 매끈한 피부결을 완성합니다. 뭉침이나 들뜸 없이 피부에 가볍게 밀착되며, 산뜻한 하늘색과 화이트의 모던한 케이스는 언제 어디서든 당신의 메이크업을 깔끔하게 유지시켜 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/eye-shadow-studio-mockup_23-2151762002.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "헬리오스",
+      "name": "아쿠아 클라우드 듀즈 팩트 12g",
+      "price": 48000,
+      "id": "25",
+      "info": "수분 에센스를 머금은 듯 촉촉하게 밀착되지만, 마무리는 구름처럼 가볍고 보송하여 마스크에도 묻어남이 적습니다. 라벤더 컬러 패키지가 연상시키듯, 칙칙한 피부톤을 화사하게 보정하고 하루 종일 무너짐 없는 완벽한 커버력을 유지해 줍니다. ",
+      "photo": "https://img.freepik.com/premium-psd/eye-shadow-studio-mockup_23-2151761942.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "시멍",
+      "name": "아틀란트 에센셜 세트",
+      "price": 99000,
+      "id": "26",
+      "info": "전문가들이 엄선한 최적의 모로 제작되어, 파우더 타입 제품의 발색력과 블렌딩 능력을 극대화합니다. 모던한 화이트 핸들과 시크한 실버 마감은 시멘트 질감의 용기와 어우러져 당신의 화장대를 가장 세련된 아틀란트로 변신시킵니다. 군더더기 없는 6종의 필수 구성으로 매일의 메이크업을 예술의 경지로 끌어올리세요.",
+      "photo": "https://img.freepik.com/premium-psd/ceramic-pottery-mockup_23-2151746469.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "마리아",
+      "name": "에어-스컬프 파운데이션 30ml",
+      "price": 55000,
+      "id": "27",
+      "info": "공기처럼 얇고 가볍게 펴 발리지만, 바르는 순간 피부에 견고하게 밀착되어 마치 조각한 듯 얼굴의 윤곽을 살려줍니다. 유분을 섬세하게 컨트롤하는 '오일-프리 롱웨어' 포뮬러가 하루 종일 번들거림 없이 처음 메이크업 그대로의 매끈하고 깨끗한 피부를 유지해 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetics-bottle-mockup-product-packaging-psd_53876-282935.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "그래파이트",
+      "name": "쉐도우 앤 라이트 듀얼 스틱 4g",
+      "price": 28000,
+      "id": "28",
+      "info": "Shadow 쪽의 차분한 웜 브라운 컬러는 광대 아래, 턱선 등 얼굴 윤곽에 자연스러운 그림자를 드리워 얼굴을 작아 보이게 합니다. Light 쪽의 은은한 샴페인 베이지 하이라이터는 콧대와 이마 등에 빛을 더해 입체감을 극대화합니다.",
+      "photo": "https://img.freepik.com/premium-psd/dual-ended-contour-highlighter-stick-face-makeup_1025130-275.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "누아브",
+      "name": "루즈 압솔루 글로우 3.5g",
+      "price": 45000,
+      "id": "29",
+      "info": "단 한 번의 터치로도 농축된 피그먼트가 입술에 완벽하게 밀착되어, 시간이 지나도 생기를 잃지 않는 강렬한 풀-컬러를 선사합니다. 가볍고 부드러운 텍스처는 건조함 없이 입술을 감싸며, 마치 새틴을 덮은 듯 고급스러운 광택감으로 당신의 룩을 완성합니다. 시크한 블랙 케이스처럼, 거부할 수 없는 매력을 입술에 새기세요.",
+      "photo": "https://img.freepik.com/premium-psd/lipstick-isolated-realistic-cosmetic-makeup-background_1173158-2545.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "뤼앙스",
+      "name": "에어리 스머지 라이너 1g",
+      "price": 25000,
+      "id": "30",
+      "info": "립 베이스 컬러를 옅게 채워 넣어 공기처럼 가벼운 그라데이션을 손쉽게 완성합니다. 크리미하지만 보송하게 마무리되는 포뮬러로 오랜 시간 흔들림 없는 립 메이크업을 경험하세요.",
+      "photo": "https://img.freepik.com/premium-psd/double-side-lip-highlighter-cosmetic-product-mockup_475259-3444.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "테르",
+      "name": "스컬프트 앤 락 브로우 마스카라 4g",
+      "price": 23000,
+      "id": "31",
+      "info": "초슬림 브러시가 눈썹 털 한 올 한 올에 섬세하게 밀착되어, 뭉침 없이 자연스러운 컬러를 입히고 눈썹 결을 완벽하게 살려줍니다. 테라코타 컬러처럼 차분하고 따뜻한 색감은 부드러운 인상을 연출하며, 강력한 '락킹' 포뮬러는 땀과 유분에도 번짐 없이 하루 종일 눈썹 형태와 컬러를 견고하게 고정합니다.",
+      "photo": "https://img.freepik.com/premium-psd/eyebrow-pencil-with-box-packaging-mockup_439185-2198.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "플레티넘",
+      "name": "페탈 듀 밤 4g",
+      "price": 16000,
+      "id": "32",
+      "info": "시어버터와 자연 유래 오일을 가득 담아, 바르는 순간 입술에 부드럽게 녹아들어 갈라진 각질을 잠재우고 촉촉함을 채워줍니다. 투명한 듯 은은한 핑크빛이 본연의 입술색을 더욱 생기 있게 돋보이게 합니다. 핸드백 속에서도 빛나는 플로럴 디자인처럼, 당신의 입술을 항상 맑고 건강하게 가꿔보세요.",
+      "photo": "https://img.freepik.com/premium-psd/lip-balm-mock-up-with-floral-design-soft-background_922863-588.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "슬랭",
+      "name": "시트러스 버스트 립밤 4g",
+      "price": 12000,
+      "id": "33",
+      "info": "신선한 레몬과 오렌지에서 추출한 비타민 C 유도체와 풍부한 시어버터를 담아, 칙칙하고 거칠어진 입술에 즉각적인 생기와 촉촉한 윤기를 부여합니다. 바르는 순간 느껴지는 톡톡 터지는 시트러스 향은 기분까지 리프레시 시켜줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/lip-balm-packaging-mockup_23-2150093047.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "라우브",
+      "name": "누아 퍼펙션즈 팩트 10g",
+      "price": 49000,
+      "id": "34",
+      "info": "가볍지만 강력한 커버력을 지닌 이 파우더 파운데이션은 얇게 밀착되어 피부 결점과 유분을 동시에 잡아줍니다. 시간이 지나도 뭉침 없이 보송하고 매끈한 피부 상태를 유지하며, 하루 종일 무너짐 없는 하이-커버 포뮬러를 경험할 수 있습니다. ",
+      "photo": "https://img.freepik.com/premium-psd/logo-mockup-face-powder-bronzer_145275-446.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "끌리띠에",
+      "name": "라벤더 아우라 라이트 팩트 8g",
+      "price": 32000,
+      "id": "35",
+      "info": "라벤더 컬러 보정 효과를 담은 초미세 파우더 입자가 피부에 얇게 밀착되어, 노란 기를 즉각적으로 잡아 생기 있고 화사한 톤업 효과를 선사합니다. 번들거리는 유분을 보송하게 흡수하지만 건조하지 않아, 시간이 지나도 투명하고 깨끗한 아우라를 유지해 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/powder-mockup-with-peachy-background_23-2150004162.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "루팡소",
+      "name": "에이리 실크 페이스 브러시",
+      "price": 39000,
+      "id": "36",
+      "info": "최고급 합성모로 제작된 이 브러시는 피부에 닿는 순간 실크처럼 부드럽게 미끄러지며, 파우더, 블러셔, 파운데이션 등 모든 페이스 제품을 공기처럼 얇고 균일하게 밀착시킵니다. 풍성하고 탄력 있는 모는 뭉침 없이 자연스러운 블렌딩을 가능하게 하며, 시크한 블랙 핸들은 잡는 순간 전문가의 손길을 느끼게 합니다.",
+      "photo": "https://img.freepik.com/premium-psd/make-up-packaging-mockup-design_23-2151241258.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "메종",
+      "name": "더 스칼렛 레인 3.5g",
+      "price": 42000,
+      "id": "37",
+      "info": "입술 위에 펼쳐지는 가장 대담한 붉음, 왕좌를 차지한 여왕의 색입니다. 고밀도 피그먼트가 한 번의 터치만으로도 압도적인 풀 커버를 선사하며, 벨벳처럼 부드럽게 밀착되어 오랜 시간 강렬함을 유지합니다.",
+      "photo": "https://img.freepik.com/premium-psd/set-lipstick-mockup_1119-3200.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "악시옴",
+      "name": "매트 비프 틴트 4.5g",
+      "price": 29000,
+      "id": "38",
+      "info": "바르는 순간 완벽하게 밀착되는 시크한 벨벳 틴트입니다. 고발색 피그먼트가 이미지처럼 생기 있는 비비드 코랄 컬러를 입술에 선명하게 표현합니다. 공기처럼 가볍지만 강력하게 고정되어 묻어남 없이 오랜 시간 지속됩니다. 모던한 블랙 케이스처럼, 가장 시크하고 대담한 립을 연출하세요.",
+      "photo": "https://img.freepik.com/premium-psd/lipgloss-mockup_1262240-2478.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "래시아틀리에",
+      "name": "아티잔 래시 스타터 키트",
+      "price": 39000,
+      "id": "39",
+      "info": "집에서도 완벽한 아이돌 속눈썹을 연출하세요. 가장 자연스러운 곡률의 인조 속눈썹과, 정교한 부착을 돕는 4가지 필수 도구가 모두 담겨 있습니다. 초보자도 쉽게 길고 풍성한 속눈썹을 완성할 수 있도록 설계되었으며, 핑크 패키지처럼 사랑스러운 눈매를 완성해 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/false-eyelashes-packaging-top-view_23-2150159378.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "크로마틱",
+      "name": "바이닐 플럼프 듀 4.5ml",
+      "price": 24000,
+      "id": "40",
+      "info": "선명한 푸시아 컬러가 칙칙함 없이 입술에 생기를 더하며, 도톰하고 촉촉한 유리알 광택이 입술 볼륨을 극대화합니다. 끈적임 없이 가볍게 밀착되어, 바르는 순간 시선을 사로잡는 탱글탱글한 립을 완성합니다.",
+      "photo": "https://img.freepik.com/premium-psd/lip-gloss-glass-bottle-mockup_147069-1839.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "바니라",
+      "name": "에어 픽스 리퀴드 파운데이션 30ml",
+      "price": 18900,
+      "id": "41",
+      "info": "땀과 피지에 강한 지성/복합성 피부를 위한 초경량 고정 파운데이션입니다. 피부에 닿는 순간 공기처럼 가볍게 밀착되어 하루 종일 번들거림 없이 매끈한 피부를 유지합니다. 강력한 롱웨어 포뮬러가 다크닝 없이 처음의 깨끗한 커버력을 이어갑니다.",
+      "photo": "https://img.freepik.com/premium-psd/bottle-brown-liquid-with-black-cap_1028533-2810.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "샤로얀",
+      "name": "펍 벨벳 쇼크 립스틱 3.5g",
+      "price": 32000,
+      "id": "42",
+      "info": "보는 순간 시선을 강탈하는 대담한 컬러와 고급스러운 벨벳 피니쉬의 만남입니다. 입술에 얇게 밀착되어 뭉침 없이 하루 종일 선명한 푸시아 퍼플 컬러를 유지합니다. 파우더리 매트 텍스처는 입술을 편안하게 감싸주며, 블랙과 퍼플의 모던한 디자인처럼 당신의 룩에 결정적인 존재감을 더해줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-beauty-lipstick-mockup_338742-3358.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "프루티",
+      "name": "애플 펀치 립 밤 4g",
+      "price": 11000,
+      "id": "43",
+      "info": "바르는 순간 상큼한 과일 펀치! 건조한 입술에 즉각적인 활력과 촉촉한 수분을 채워주는 데일리 립밤입니다. 사과 추출물이 입술 각질을 부드럽게 케어하고, 끈적임 없이 맑은 광택을 선사합니다. 귀여운 과일 패턴으로 가방 속에서도 상큼함을 뽐내세요.",
+      "photo": "https://img.freepik.com/premium-psd/lip-balm-packaging-mockup_23-2150093109.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "테르두스",
+      "name": "퓨즈 리프 컴포트 파운데이션 40ml",
+      "price": 33500,
+      "id": "44",
+      "info": "피부가 편안하게 숨 쉬는 자연 유래 성분 파운데이션입니다. 가벼운 텍스처가 피부에 순하게 밀착되어, 결점을 자연스럽게 커버하면서도 답답함 없이 하루 종일 촉촉한 편안함을 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/still-life-foundation-advertising-mockup_23-2150046680.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "듄누아",
+      "name": "매트 슈프림 누아 파운데이션 35ml",
+      "price": 65000,
+      "id": "45",
+      "info": "피부에 완벽하게 밀착되어 무결점 매트 피니쉬를 선사하는 프리미엄 파운데이션입니다. 깃털처럼 가볍지만 강력한 커버력을 자랑하며, 피지와 유분을 효과적으로 컨트롤하여 장시간 무너짐 없이 견고한 피부 표현을 유지합니다. 모래 언덕처럼 부드러운 텍스처와 시크한 디자인으로 최고의 럭셔리 베이스를 경험하세요.",
+      "photo": "https://img.freepik.com/premium-psd/elegant-cosmetic-bottle-mockups-stunning-product-presentations_1020495-63365.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    }
+  ]
+}

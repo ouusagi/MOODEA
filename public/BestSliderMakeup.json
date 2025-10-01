@@ -1,0 +1,44 @@
+{
+  "BestSliderMakeup": [
+    {
+      "brand": "우카우",
+      "name": "클리어 웨이브 워터 컨실러 6.5ml",
+      "price": 22000,
+      "id": "1",
+      "info": "메마른 땅에 단비가 스며들 듯, 농밀한 활성 성분이 피부 깊숙한 곳부터 빈틈없이 수분과 영양을 채워줍니다. 오랜 시간 잠들어 있던 피부 본연의 생기와 빛을 깨워, 치밀하고 탄탄한 피부 밀도를 완성합니다. 가장 이상적인 균형을 되찾은 피부가 선사하는 섬세하고 우아한 광채를 매일 아침 느껴보세요.",
+      "photo": "https://img.freepik.com/premium-psd/still-life-foundation-advertising-mockup_23-2150046731.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "오덤노트",
+      "name": "멜로우 터치 립 스틱 3.5g",
+      "price": 35000,
+      "id": "2",
+      "info": "단순한 컬러를 넘어, 내면에 숨겨진 가장 고혹적인 분위기를 완성하는 감각적인 터치입니다. 계절의 온기를 머금은 듯 깊고 풍부한 누드 톤 컬러들이 당신의 일상에 은은하고 고급스러운 색감을 더해줍니다. 메이크업을 넘어선 하나의 작품처럼, 당신의 매일을 더욱 특별하게 채워보세요.",
+      "photo": "https://img.freepik.com/free-photo/make-up-concept-with-lipstick_23-2149030342.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "페탈",
+      "name": "9구 무드 레이어 팔레트 1.0g X 9ea",
+      "price": 38000,
+      "id": "3",
+      "info": "당신의 하루를 아름다운 색감으로 채워줄 가장 완벽한 아이템입니다. 부드러운 베이스 핑크부터 깊이 있는 음영 브라운, 그리고 눈부시게 빛나는 글리터까지, 9가지 색상 조합으로 청순한 데일리 메이크업부터 화려한 파티 룩까지 모두 연출해 보세요.",
+      "photo": "https://img.freepik.com/free-photo/view-eyeshadow-palette-with-brush-applicator_23-2150260892.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "어반페일즈",
+      "name": "시티 스모크 아이 팔레트 1.2g X 6ea",
+      "price": 32000,
+      "id": "4",
+      "info": "도시의 밤처럼 깊고 매혹적인 눈빛을 연출해 보세요. 차분하고 세련된 쿨 그레이, 모던 브라운, 쉬머링 실버 등 6가지 컬러 조합은 어떤 룩에도 완벽하게 어우러져 당신의 개성을 더욱 돋보이게 합니다. 낮에는 은은한 음영으로, 밤에는 시크한 스모키 룩으로 변신하며 다채로운 매력을 발산해 보세요.",
+      "photo": "https://img.freepik.com/free-photo/still-life-cosmetic-products_23-2149163139.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "피치스",
+      "name": "에어  피치 핑크즈 쿠션 15g",
+      "price": 45000,
+      "id": "5",
+      "info": "텁텁한 커버 대신 얇지만 강력한 밀착력으로 잡티와 모공을 정교하게 커버하고, 은은한 피치 톤의 마이크로 파우더가 피부에 닿는 빛을 반사하여 시간이 지날수록 더욱 화사한 복숭아빛 광채를 끌어냅니다. 다크닝 걱정 없이 아침의 우아함을 저녁까지 그대로 유지하며, 수시로 덧발라도 뭉치거나 들뜨지 않아 수정 화장에도 완벽합니다.",
+      "photo": "https://img.freepik.com/premium-photo/powder-compact-beauty-makeup-cosmetic-primer-foundation-isolated-product-packaging_42100-6764.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ function CleansingPage() {
     <div>
       <HeaderSectionCategory
       categoryName= "Cleansing"
-      categoryBio= "촉촉한 피부를 만들어 보세요."
+      categoryBio= "피부가 원하는 맑음을 선물해 보세요."
       jsonFile="/Cleansing.json"
       arrayName= "Cleansing"
       bestSliderFile= "/BestSliderCleansing.json"
