@@ -1,0 +1,364 @@
+{
+  "Haircare": [
+    {
+      "brand": "포션글로리",
+      "name": "퓨처 드롭 에센스 120ml",
+      "price": 23000,
+      "id": "1",
+      "info": "지구상 가장 깨끗한 원천으로 알려진 스위스 빙하수를 정제수 대신 70% 이상 담았습니다. 피부와 유사한 미네랄 밸런스를 가진 빙하수가 건조함으로 지친 피부 깊숙이 빠르게 침투하여, 겉돌지 않는 근본적인 수분감을 채워줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/beauty-cosmetic-packaging-product-mockup-body-lotion_418302-3966.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "마르",
+      "name": "딥 리스토어 샴푸 400ml",
+      "price": 17500,
+      "id": "2",
+      "info": "푸른 바다의 깊은 에너지를 담아 극손상 모발을 근본부터 회복시키는 전문 리페어 샴푸입니다. 갈색 용기는 빛을 차단하여 귀한 마린 콜라겐 성분의 신선함을 지켜줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/top-view-packaging-water-mockup_23-2150645285.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "이데아",
+      "name": "센트럴 리페어 헤어 로션 300ml",
+      "price": 32000,
+      "id": "3",
+      "info": "모발의 근원적인 힘을 강화하는 화이트 루핀 유래 단백질을 고농축으로 담았습니다. 손상된 모발에 집중적으로 영양을 공급하여 갈라짐과 푸석거림을 개선하고, 뿌리부터 끝까지 탄탄한 건강함을 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/abstract-pump-bottle-cosmetic-psd-mockup-with-natural-elements_931249-115.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "르누아",
+      "name": "블랙 트러스트 스칼프 세럼 150ml",
+      "price": 46900,
+      "id": "4",
+      "info": "두피에 영양을 공급하는 제품은 끈적인다는 편견을 깨드립니다. 워터리한 세럼 제형이 두피에 빠르게 흡수되어 떡짐 없이 산뜻하며, 시원한 쿨링감을 제공하여 두피의 열감을 효과적으로 완화하고 진정시킵니다.",
+      "photo": "https://img.freepik.com/premium-psd/dark-glass-pump-bottle-with-black-metallic-pump-closure-mockup-templates_69509-5323.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "베르크",
+      "name": "구조 컨디셔너 02 500ml",
+      "price": 45000,
+      "id": "5",
+      "info": "모발 표면의 지질 성분인 세라마이드를 저분자화하여 흡수력을 극대화했습니다. 손상된 큐티클 층 사이를 치밀하게 메워주어 수분과 단백질이 빠져나가지 않도록 강력한 장벽을 강화하고, 모발에 부드러운 유연성을 부여합니다.",
+      "photo": "https://img.freepik.com/premium-psd/box-cosmetic-bottle-psd-mockup_463257-178.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "브레쓰",
+      "name": "데일리 밸런싱 샴푸 500ml",
+      "price": 28000,
+      "id": "6",
+      "info": "코코넛 유래의 순한 자연 성분 계면활성제를 사용하여, 잦은 샴푸에도 두피에 자극을 주지 않습니다. 미세하고 풍부한 거품이 하루 동안 쌓인 피지, 미세먼지, 노폐물을 남김없이 부드럽게 세정해 주어, 매일 사용해도 **건강한 약산성 밸런스(pH 5.5)**를 지켜줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/pump-bottle-mockup-shampoo-dispenser-psd-product-label_53876-565596.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "오브우드",
+      "name": "딥 인텐시브 트리트먼트 400ml",
+      "price": 39000,
+      "id": "7",
+      "info": "모발의 80%를 차지하는 단백질을 가장 작은 형태인 저분자 케라틴으로 만들어, 샴푸 후 큐티클이 열린 모발 속으로 빠르게 침투합니다. 단 3분의 방치만으로도 모발의 빈 공간을 채워 넣어, 잦은 시술로 인한 푸석거림과 빗질 시의 엉킴을 즉각적으로 개선합니다.",
+      "photo": "https://img.freepik.com/premium-psd/bottle-pump-mockup_1091662-57.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "리부트",
+      "name": "스칼프 클리어 샴푸 350ml",
+      "price": 35000,
+      "id": "8",
+      "info": "피부과 성분으로 알려진 살리실산(BHA)과 AHA 성분이 함유되어 두피 모공 속에 쌓인 과잉 피지, 샴푸 잔여물, 묵은 각질을 효과적으로 녹여내고 깨끗하게 정돈합니다. 막힌 모공을 비워내 트러블과 냄새의 원인을 차단합니다.",
+      "photo": "https://img.freepik.com/premium-psd/dispenser-bottle-mockup-design_1160319-28.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "바이탈로",
+      "name": "시트러스 비타 볼륨 샴푸",
+      "price": 29000,
+      "id": "9",
+      "info": "상큼한 레몬/라임 유래 비타민 C 유도체가 두피의 유수분 밸런스를 상쾌하게 정돈합니다. 여기에 저분자 히알루론산을 더해, 모발에 무겁지 않고 가벼우면서도 충분한 수분을 공급하여 탄력을 높입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-products-arrangement-mockup_23-2149917343.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "오르비드",
+      "name": "퓨어 아쿠아 컨디셔너 300ml",
+      "price": 38000,
+      "id": "10",
+      "info": "모발의 수분 자석이라 불리는 판테놀 성분을 풍부하게 담아, 건조한 모발 깊숙이 수분을 침투시키고 꽉 잡아줍니다. 샤워 후에도 모발이 쉽게 건조해지지 않도록 수분 유지력을 높여주어 오래도록 촉촉함을 유지합니다.",
+      "photo": "https://img.freepik.com/premium-psd/logo-mockup-hair-conditioner-bottle_206274-201.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "포트폴리오",
+      "name": "미라클 리페어 밤 59ml",
+      "price": 12000,
+      "id": "11",
+      "info": "수많은 오일 중에서도 뛰어난 보습력과 복구력을 자랑하는 모로코산 아르간 오일을 고농축으로 담아냈습니다. 물에 쉽게 씻겨 내려가는 일반 컨디셔너와 달리, 밤(Balm) 제형이 모발 한 올 한 올에 밀착되어 깊은 영양을 심어줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/2-oz-hair-conditioner-mockup-floating_1332-8268.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "일루미네",
+      "name": "딥 앰버 샴푸 450ml",
+      "price": 42000,
+      "id": "12",
+      "info": "동백 오일을 포함한 7가지 귀한 식물성 오일이 모발 세정 중에도 영양 손실을 최소화하고, 두피와 모발의 약산성 보호막을 지켜줍니다. 풍성하고 미세한 거품이 두피 노폐물은 깨끗하게 제거하고, 유효 성분은 모발 깊숙이 전달합니다.",
+      "photo": "https://img.freepik.com/premium-psd/trigger-spray-bottle-mockup-highquality-packaging-design-template_984027-286669.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "노블오",
+      "name": "오로라 라이트 오일 150ml",
+      "price": 33000,
+      "id": "13",
+      "info": "일반 캐스터 오일보다 미네랄과 리시놀레산이 풍부한 블랙 캐스터 오일을 베이스로, 동백 오일을 블렌딩했습니다. 이 고농축 포뮬러는 모발의 끊어짐과 극심한 푸석함을 집중적으로 개선하며, 특히 나이트 케어 시 사용하면 아침에 확연히 달라진 부드러움을 느낄 수 있습니다.",
+      "photo": "https://img.freepik.com/premium-psd/3d-cosmetic-glossy-mockup-3d-rendering-plastic-bottle-realistic-cosmetic-mockup_429578-8497.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "옵제",
+      "name": "앰버글로우 헤어 오일 100ml",
+      "price": 39000,
+      "id": "14",
+      "info": "해바라기씨 오일과 마카다미아 오일 등 빛나는 골든 오일을 최적의 비율로 블렌딩했습니다. 이 영양 성분이 건조하고 손상된 모발에 깊이 스며들어, 단 한 번의 사용만으로도 푸석함을 잠재우고 눈부신 광택을 부여합니다.",
+      "photo": "https://img.freepik.com/premium-psd/amber-glass-cosmetic-bottle-mockup_69509-2739.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "노보",
+      "name": "딥 씨 솔루션 샴푸 500ml",
+      "price": 32000,
+      "id": "15",
+      "info": "미네랄이 풍부한 마린 워터와 해양 추출물이 두피에 쌓인 과도한 피지와 미세먼지를 자극 없이 깨끗하게 제거합니다. 강력한 세정력에도 불구하고, 약산성 포뮬러로 두피 본연의 유수분 밸런스를 무너뜨리지 않아 매일 사용해도 부담이 없습니다.",
+      "photo": "https://img.freepik.com/premium-psd/realistic-shampoo-bottle-mockup_358279-1906.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아케트",
+      "name": "리스토어 펙토리 샴푸 250ml",
+      "price": 22000,
+      "id": "16",
+      "info": "잦은 화학적 시술과 스트레스로 약해진 두피에 마린 콜라겐과 블랙 씨위드 성분을 집중 공급합니다. 모발의 성장 주기에 필요한 필수 영양분을 채워 모발의 굵기와 모근의 밀도를 강화하여 탈모 증상 완화에 도움을 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/skincare-beauty-product-bottle-mock-up-design_23-2150006037.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "포뮬라47",
+      "name": "젠틀 밸런스 샴푸 500ml",
+      "price": 35000,
+      "id": "17",
+      "info": "잦은 염색, 펌, 강한 알칼리성 샴푸로 무너진 두피의 pH 밸런스를 가장 건강한 상태인 4.7로 되돌립니다. 모발의 큐티클을 닫아주어 단백질과 수분의 손실을 막고, 두피 장벽을 튼튼하게 강화하여 외부 자극으로부터 두피를 보호합니다.",
+      "photo": "https://img.freepik.com/premium-psd/public-bathroom-soap-dispenser-mockup-with-floral-theme-elegant-psd-template-your-skincare-des_869433-753.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "브라씨",
+      "name": "아쿠아 실크 트로프 에센스 120ml",
+      "price": 27000,
+      "id": "18",
+      "info": "모발에 답답함 없이 순수한 수분과 빛을 공급하는 미니멀리스트 솔루션입니다. 끈적이는 잔여감 없이 모발이 실크처럼 매끄럽게 흐르도록 디자인되었습니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-bottle-fabric-background-mockup-front-view_1332-40225.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "실버문",
+      "name": "세린 아틀리에 샴푸 420ml",
+      "price": 55000,
+      "id": "19",
+      "info": "핀란드산 자작나무 수액을 70% 이상 담아낸 pH 약산성 포뮬러로, 마치 돌 틈을 스며든 수액처럼 피부 깊숙이 풍부한 수분을 채워 외부 자극으로 민감해진 피부를 마데카소사이드와 판테놀로 부드럽게 진정시키고, 끈적임 없이 산뜻하게 스며드는 우디 허브향의 마일드한 마무리감으로 사계절 온 가족의 피부에 편안한 안정을 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/cream-bottle-cosmetic-product-mockup-with-stone-podium_10376-1810.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "루멘트",
+      "name": "리페어 헤어 에센스 샴푸 500ml",
+      "price": 29600,
+      "id": "20",
+      "info": "손상된 모발에 필요한 저분자 히알루론산과 실크 아미노산을 고농축으로 담아내어, 샴푸만으로도 엉킴 없이 부드러운 에센스 케어 효과를 선사하며, 두피 자극을 줄인 약산성 포뮬러가 모발 속부터 채워주는 촉촉함과 눈부시게 빛나는 자연 광채를 선사합니다.",
+      "photo": "https://img.freepik.com/premium-psd/pump-bottle-mockup_358694-1033.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "모근",
+      "name": "템푸스 부스팅 앰플 30ml",
+      "price": 18500,
+      "id": "21",
+      "info": "두피에 활력을 불어넣는 귀한 블랙 트러플 발효 추출물과 비오틴, 펩타이드 복합체를 고농축으로 담아내어, 얇아지고 힘없이 처지는 모발의 모근에 직접적인 에너지를 공급하고, 스포이드로 정교하게 한 방울씩 케어하는 동안 두피 본연의 건강한 환경을 조성하여 탈모 증상 완화와 풍성한 볼륨감을 선사하는 전문 부스팅 앰플입니다.",
+      "photo": "https://img.freepik.com/premium-psd/dropper-bottle-mockup-design_173864-1461.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아키",
+      "name": "미네랄 블랙 스케일링 딥 샴푸 450ml",
+      "price": 35000,
+      "id": "22",
+      "info": "두피의 불필요한 노폐물과 과다 피지를 흡착하는 사해 블랙 클레이와 살리실산을 함유한 두피 스케일링 특화 포뮬러로, 샴푸하는 순간부터 두피 딥 클렌징 효과를 선사하며, 블랙 푸드 콤플렉스가 모근에 활력을 부여하고 티트리 오일의 시원함으로 두피를 빠르게 리프레시하여 하루 종일 청결하고 건강한 두피 환경을 유지해 줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/minimalist-bottle-mockup-with-natural-rock-backdrop_984027-284120.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "잎새",
+      "name": "골든 리프 하이드로 리페어 트리트먼트 250ml",
+      "price": 25000,
+      "id": "23",
+      "info": "모발 깊숙이 침투하는 저분자 단백질과 골든 호호바 오일의 황금빛 영양을 고농축으로 담아내어, 잦은 열 스타일링과 염색으로 손상된 모발에 풍부한 수분과 탄력을 공급하고, 무겁지 않고 산뜻하게 마무리되어 엉킴 없이 찰랑거리는 부드러운 머릿결을 매일 선사하는 데일리 리페어 트리트먼트입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-press-screw-cap-bottle-mockup_718877-709.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "모멘텀",
+      "name": "큐티클 코팅 미스트 오일 스프레이 50ml",
+      "price": 17000,
+      "id": "24",
+      "info": "손상된 모발에 즉각적인 윤기와 영양을 공급하는 동백 오일과 실크 프로틴을 최적의 비율로 배합하여, 무겁거나 끈적임 없이 머리카락 한 올 한 올에 가볍게 밀착되는 미세 분사 기술을 적용했으며, 건조함이나 정전기가 느껴지는 순간마다 수시로 분사하여 모발의 큐티클을 매끄럽게 코팅하고 은은한 플로럴 우디 향을 더해주는 휴대용 퍼펙팅 오일 미스트입니다.",
+      "photo": "https://img.freepik.com/premium-psd/frosted-amber-glass-throat-spray-bottle-mockups_69509-4033.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "포에시아",
+      "name": "로즈 릴리 퍼퓸 인텐스 샴푸 500ml",
+      "price": 31000,
+      "id": "25",
+      "info": "전문 조향사가 블렌딩한 우아하고 섬세한 로즈와 릴리의 향을 담아내어, 샴푸 후에도 잔향이 오랜 시간 지속되는 지속력 높은 퍼퓸 샴푸이며, 다마스크 로즈 추출물과 5가지 식물성 오일 성분이 모발을 촉촉하고 윤기 있게 가꿔주어 향기와 영양을 동시에 선사하며 당신의 일상에 은은한 우아함을 더해줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/psd-cosmetic-plastic-bottle_532357-696.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "스랩",
+      "name": "저분자 볼륨 리프트 샴푸 300ml",
+      "price": 39000,
+      "id": "26",
+      "info": "가늘고 힘없는 모발을 위해 특별히 고안된 모발 강화 2단계 시스템의 첫 단계로, 모발보다 작은 저분자 케라틴과 펩타이드 부스터 성분을 담아내어 샴푸하는 것만으로도 모발 깊은 곳까지 영양을 침투시키고, 두피와 모근에 힘을 더해 뿌리 볼륨을 살려주며, 모발을 묵직하게 만들지 않아 산뜻한 사용감과 함께 하루 종일 풍성한 볼륨감을 유지시켜주는 고기능성 약산성 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/hair-cream-bottle-with-pump-mockup-low-angle-view_1332-24013.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "테일즈퓨어",
+      "name": "황토 pH 약산성 마일드 샴푸 350ml",
+      "price": 27000,
+      "id": "27",
+      "info": "pH 5.5 약산성 포뮬러에 미네랄이 풍부한 국내산 황토 추출물과 온천수 미네랄을 담아내어, 두피의 자극은 최소화하고 유수분 균형을 섬세하게 맞춰주며, 매일 사용해도 부담 없이 모발과 두피에 순한 세정력을 제공하여 민감한 두피를 가진 온 가족이 본연의 건강함과 편안함을 되찾을 수 있도록 도와주는 저자극 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/soap-bottle-mockup-stone-display_1046872-494.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "아우렐",
+      "name": "실크 글로우 극광 코팅 린스 400ml",
+      "price": 26000,
+      "id": "28",
+      "info": "골든 실크 단백질과 5가지 씨앗 발효 오일의 농축 영양을 담아내어, 샴푸 후 엉키기 쉬운 모발을 헹구는 순간부터 미끄러지듯 부드럽게 풀어주고, 모발 표면에 극광 코팅 막을 형성하여 드라이 후에도 빗질 없이 찰랑거리는 윤기와 부드러움을 오래도록 유지시켜주는 데일리 컨디셔닝 린스입니다.",
+      "photo": "https://img.freepik.com/premium-psd/plastic-transparent-dispenser-bottle-with-packaging-label-mockup_718877-1158.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "레수티아",
+      "name": "PPL 5000 고단백 집중 트리트먼트 350ml",
+      "price": 34000,
+      "id": "29",
+      "info": "펌, 염색, 탈색 등으로 극도로 손상된 모발을 위해 개발된 전문 포뮬러로, 모발 침투력이 뛰어난 저분자 단백질 5,000ppm과 7가지 아미노산 복합체가 텅 빈 모발 속을 빈틈없이 채워 인스턴트 필러 효과를 선사하며, 단 5분 사용만으로도 푸석하고 거친 머릿결을 부드럽고 탄탄하게 구조적으로 복구해주는 극손상모 전용 집중 케어 트리트먼트입니다.",
+      "photo": "https://img.freepik.com/premium-psd/pump-bottle-mockup_69509-2313.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "알투스",
+      "name": "퍼플 오키드 인퓨전 광채 오일 100ml",
+      "price": 49000,
+      "id": "30",
+      "info": "진귀한 퍼플 오키드 에센셜 오일과 보석 같은 호박 추출 오일을 블렌딩하여, 모발에 깊고 풍부한 영양을 공급하고 손상된 큐티클 층을 부드럽게 감싸는 극강의 윤기를 선사하며, 무겁거나 끈적이지 않고 빠르게 흡수되어 깊은 우디 플로럴 향만 남기고 모발을 하루 종일 찰랑거리는 보석 광채로 완성하는 프리미엄 헤어 오일입니다.",
+      "photo": "https://img.freepik.com/premium-psd/amber-glass-bottle-mockup_358694-5052.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "미세스",
+      "name": "아이스 헌터 딥 쿨링 샴푸 200ml",
+      "price": 34600,
+      "id": "31",
+      "info": "과도한 피지와 노폐물로 쉽게 지치고 열이 오르는 남성 두피를 위해 개발된 강력한 딥 클렌징 샴푸로, 페퍼민트와 멘톨 성분이 샴푸하는 즉시 두피에 얼음을 댄 듯한 강력한 쿨링감을 선사하며, 씨솔트 성분이 두피 구석구석을 깨끗하게 스케일링하고 그린 허브 추출물이 두피에 활력을 더해 끈적임 없이 청량하고 상쾌한 두피 상태를 오래도록 유지시켜줍니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-packaging-mockup-branding-design_28616-764.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "시그네스",
+      "name": "블랙 다이아몬드 앱솔루트 리페어 세럼 150ml",
+      "price": 79000,
+      "id": "32",
+      "info": "모발에 차원이 다른 윤기와 탄력을 부여하는 진귀한 블랙 다이아몬드 추출물과 골드 펩타이드를 담아낸 럭셔리 고농축 세럼으로, 잦은 시술과 외부 환경으로 인해 손상된 모발에 특급 영양을 공급하여 끊어짐과 갈라짐을 즉각적으로 개선하고, 무중력처럼 가볍고 빠르게 흡수되어 끈적임 없이 광택 필터를 입힌 듯한 독보적인 흑조의 윤기를 선사하는 프리미엄 홈 에스테틱 세럼입니다.",
+      "photo": "https://img.freepik.com/premium-psd/plastic-pump-bottle-mockup_358694-4965.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "프레디",
+      "name": "맘&키즈 에브리데이 약산성 샴푸 1L",
+      "price": 39000,
+      "id": "33",
+      "info": "민감한 어른 두피부터 연약한 아이 두피까지 모두 안심하고 사용할 수 있도록 pH 5.5 약산성으로 설계되었으며, EWG 그린 등급의 순한 식물 유래 세정 성분이 두피 자극 없이 미세먼지와 노폐물을 깨끗하게 세정하고, 보습 성분인 판테놀과 귀리 추출물이 세정 후에도 건조하지 않게 모발과 두피를 촉촉하게 지켜주는 온 가족용 대용량 데일리 마일드 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/extra-large-pump-bottle-mockup_69509-4428.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "푸르른",
+      "name": "딥 오션 수분 진정 쿨 샴푸 400ml",
+      "price": 28000,
+      "id": "34",
+      "info": "해양 심층수와 빙하수 추출물의 풍부한 미네랄 수분을 담아내어, 샴푸하는 즉시 두피에 청량한 쿨링감과 촉촉함을 선사하며, 과도한 유분을 깔끔하게 씻어내고 외부 자극으로 붉어진 두피를 알로에베라 성분으로 순하게 진정시켜 하루 종일 산뜻하고 건강한 수분 밸런스를 유지시켜주는 아쿠아 쿨링 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/shampoo-bottle-mockup_542792-11.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "논브랜드",
+      "name": "멜로우 코튼 저자극 수분 린스 300ml",
+      "price": 29000,
+      "id": "35",
+      "info": "EWG 그린 등급의 순한 성분들로만 구성되어 민감한 두피에도 자극 없이 안심하고 사용할 수 있으며, 목화씨 추출물의 순한 보습 성분과 저자극 코팅 복합체가 엉킨 모발을 부드럽게 감싸주어 물에 닿는 순간부터 실크처럼 미끄러지듯 풀리게 하고, 헹굼 후에도 두피에 잔여물 없이 산뜻하고 촉촉한 마무리감을 선사하는 데일리 저자극 린스입니다.",
+      "photo": "https://img.freepik.com/premium-psd/product-branding-packaging_1173158-2577.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "멜랑가든",
+      "name": "인텐시브 리페어 헤어 크림 250ml",
+      "price": 42700,
+      "id": "36",
+      "info": "시어버터와 5가지 식물성 단백질을 농축한 크림 제형으로, 극도로 건조하고 손상된 모발에 바르는 순간 깊숙이 흡수되어 열 손상을 방지하고 모발 속부터 채워주는 강력한 보습막을 형성하여 부드러운 영양감을 선사하는 데일리 고농축 트리트먼트입니다.",
+      "photo": "https://img.freepik.com/premium-psd/facial-soap-bottle-with-pump-container-mockup-right-view_1332-22915.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "폴루스",
+      "name": "퓨어 멘톨 드라이 샴푸 350ml",
+      "price": 29000,
+      "id": "37",
+      "info": "두피의 피지와 노폐물을 강력하게 세정하고 천연 멘톨 성분이 샴푸하는 즉시 두피 전체에 시원한 쿨링 효과를 선사하며, 불쾌한 두피 냄새까지 잡아주어 하루의 시작과 끝을 청량하고 산뜻하게 마무리하는 데일리 쿨링 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/glossy-plastic-cosmetic-pump-bottle-branding-mockup_47987-6894.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "엑터",
+      "name": "5분 기적 단백질 주사 헤어 팩 180g",
+      "price": 18000,
+      "id": "38",
+      "info": "샵에서 받는 클리닉처럼 손상된 모발에 초저분자 단백질과 아미노산을 고농축으로 주입하여, 푸석하고 건조한 모발을 즉각적으로 회복시키고, 샤워 중 단 5분 사용만으로도 미용실에 다녀온 듯 윤기나고 찰랑거리는 머릿결을 선사하며, 스탠딩 파우치 형태로 내용물을 끝까지 깔끔하게 사용할 수 있는 극손상모 집중 회복 헤어 팩입니다.",
+      "photo": "https://img.freepik.com/premium-psd/plastic-doypack-mockup_69509-5137.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "플레즈",
+      "name": "아이언 락 익스트림 홀드 헤어 스프레이 473ml",
+      "price": 24500,
+      "id": "39",
+      "info": "미세한 분사 입자가 모발에 빠르게 밀착되어 젖은 듯한 느낌 없이 스타일을 강력하게 고정하며, 습도와 땀에도 하루 종일 흔들림 없는 아이언 락 같은 고정력과 은은한 윤기를 선사하는 전문가용 초강력 헤어 스프레이입니다.",
+      "photo": "https://img.freepik.com/premium-psd/hair-salon-stationery-mockup-with-comb_1332-27697.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "에이펙스",
+      "name": "골든 드롭 리커버리 오일 에센스 150ml",
+      "price": 14500,
+      "id": "40",
+      "info": "아르간 오일과 마룰라 오일이 황금 비율로 블렌딩된 고농축 오일 타입으로, 잦은 탈색과 염색으로 손상된 극손상모에 깊은 영양을 공급하고 모발 끝 갈라짐을 즉각적으로 봉인하여 무거운 윤기와 탄탄함을 부여하는 리커버리 오일 에센스입니다.",
+      "photo": "https://img.freepik.com/premium-psd/hair-care-bottle-mockup_481637-460.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "비박스",
+      "name": "오렌지 바탈리티 스칼프 앰플 샴푸 500ml",
+      "price": 32000,
+      "id": "41",
+      "info": "만다린 오렌지 추출물과 카페인, 나이아신아마이드 성분을 고농축으로 담아내어, 샴푸하는 것만으로도 두피에 앰플 한 병의 강력한 활력을 공급하고, 모근을 강화하여 가늘고 힘없는 모발에 탄력과 볼륨을 부여하며, 산뜻한 오렌지 시트러스 향이 두피의 불쾌감을 해소하고 생기 넘치는 하루를 선사하는 에너지 부스팅 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/natural-cosmetic-mockup_23-2151494766.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "인벤토리",
+      "name": "제로 웨이트 노세범 드라이 샴푸 150ml",
+      "price": 19000,
+      "id": "42",
+      "info": "초미세 옥수수 전분 파우더가 과도한 피지와 유분을 즉각적으로 흡수하고, 두피에 뿌리는 순간 백탁 현상 없이 공기처럼 가볍게 스며들어 떡진 머리를 보송하게 만들어주며, 시트러스 민트 향이 정수리 냄새까지 시원하게 잡아주어 물 없이도 방금 감은 듯 산뜻하고 청량한 상태로 모발을 리셋시켜주는 필수 긴급 처방 드라이 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/glossy-cosmetic-spray-container-bottle-branding-mockup_439185-11285.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+        {
+      "brand": "루시드랩",
+      "name": "골든 드롭 벨벳 엘릭서 오일 100ml",
+      "price": 45000,
+      "id": "43",
+      "info": "극손상모를 위한 고농축 텍스처로, 황금빛 아르간과 7가지 식물성 오일을 블렌딩하여 모발에 깊은 영양과 실크 같은 윤기를 부여하고, 푸석한 모발 끝 갈라짐을 즉각적으로 개선하는 프리미엄 리커버리 오일입니다.",
+      "photo": "https://img.freepik.com/free-photo/hair-oil-bottle-with-blonde-hair-background_23-2151968647.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+        {
+      "brand": "픽서노바",
+      "name": "메탈 락 익스트림 홀드 스프레이 300ml",
+      "price": 29000,
+      "id": "44",
+      "info": "습도와 바람에도 흔들림 없는 강력한 고정력을 자랑하며, 초미세 분사 입자가 모발에 메탈 코팅을 입힌 듯 스타일을 완벽하게 유지하고, 끈적임이나 백탁 없이 깔끔하게 마무리되는 전문가용 초강력 스타일링 스프레이입니다.",
+      "photo": "https://img.freepik.com/premium-psd/3d-rendering-glossy-sprayer-bottle-mockup_429578-8432.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    },
+            {
+      "brand": "블랙노바",
+      "name": "블랙 차콜 딥 퓨리파잉 샴푸 500ml",
+      "price": 33000,
+      "id": "45",
+      "info": "참숯(차콜) 파우더와 살리실산 성분이 과도한 피지와 노폐물을 흡착하고 딥 클렌징하여, 잦은 트러블과 냄새로 고민하는 지성 두피를 하루 종일 청량하고 깨끗하게 유지시켜주는 강력한 퓨리파잉 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-photo/beauty-natural-skincare-product-mockup-shampoo-conditioner-bottles-stone-terrazzo-podium_1144595-7690.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    }
+  ]
+}

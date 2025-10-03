@@ -41,7 +41,9 @@ function App() {
         <Route path="/makeup" element={<Navigate to="/makeup/1"/>} />
         <Route path="/makeup/:page" element={<MakeupPage />} />
 
-        <Route path="/haircare" element={<HaircarePage />} />
+        <Route path="/haircare" element={<Navigate to="/haircare/1"/>} />
+        <Route path="/haircare/:page" element={<HaircarePage/>} />
+
         <Route path="/bodycare" element={<BodycarePage />} />
       </Routes>
 

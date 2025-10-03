@@ -1,0 +1,44 @@
+{
+  "BestSliderHaircare": [
+    {
+      "brand": "크로모",
+      "name": "로즈 힙 인텐시브 리페어 샴푸 500ml",
+      "price": 32000,
+      "id": "1",
+      "info": "로즈 힙 오일과 저분자 케라틴을 고농축으로 담아내어 잦은 시술로 건조하고 푸석해진 모발에 깊은 영양과 보습을 공급하고, 샴푸만으로도 엉킴 없이 부드럽게 빗겨지는 극손상모를 위한 부드러운 리페어 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetic-bottle-mockup-set_1252549-97.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "모멘토",
+      "name": "빙하수 하이드로 쿨링 미스트 120ml",
+      "price": 24000,
+      "id": "2",
+      "info": "빙하수와 알로에 성분을 담아내어 뜨거운 드라이 열이나 외부 자극으로 건조하고 예민해진 두피와 모발에 즉각적인 수분 공급과 쿨링 진정 효과를 선사하며, 물처럼 가볍게 분사되어 끈적임이나 잔여감 없이 산뜻하게 두피 열감을 낮춰주는 데일리 수분 미스트입니다.",
+      "photo": "https://img.freepik.com/premium-psd/4-oz-powder-spray-mockup-closed_1332-8080.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "링구아",
+      "name": "아이스 버스트 퓨리파잉 샴푸 300ml",
+      "price": 25000,
+      "id": "3",
+      "info": "페퍼민트와 녹차 성분이 과도한 피지와 열감을 효과적으로 제거하고, 샴푸 후 즉각적으로 시원한 쿨링감을 선사하여 지성 두피와 운동 후 열이 오른 두피를 청량하게 진정시키는 남성 및 지성 두피 전용 딥 클렌징 샴푸입니다.",
+      "photo": "https://img.freepik.com/premium-psd/plastic-container-packaging-mockup-design_165789-1180.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "솔린",
+      "name": "테라코타 글로우 코팅 오일 100ml",
+      "price": 45000,
+      "id": "4",
+      "info": "아비시니안 오일과 동백 오일의 황금 비율 블렌딩으로 모발에 묵직하고 깊은 윤기를 부여하고, 끊어지고 갈라진 극손상 모발 끝을 강력하게 하드 코팅하여 앰버(호박)처럼 빛나는 광채와 회복력을 선사하는 최고급 리커버리 오일입니다.",
+      "photo": "https://img.freepik.com/premium-psd/sun-protection-bottle-with-rock_23-2149613273.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    },
+    {
+      "brand": "홀스퀸",
+      "name": "골든 세라마이드 리치 컨디셔너 350ml",
+      "price": 31000,
+      "id": "5",
+      "info": "고농축 세라마이드와 골드 아르간 오일을 함유한 크림 제형으로, 극도로 손상된 모발에 즉각적인 코팅과 영양을 공급하여 엉킴과 정전기를 방지하고, 가장 부드럽고 묵직한 윤기를 선사하는 집중 케어 컨디셔너입니다.",
+      "photo": "https://img.freepik.com/premium-psd/cosmetics-mockup-bubbles-arrangement_23-2148945918.jpg?ga=GA1.1.1152520471.1754054064&semt=ais_hybrid&w=740&q=80"
+    }
+  ]
+}

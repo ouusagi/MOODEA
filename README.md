@@ -10,8 +10,8 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 업데이트 내역
-### 2025-10-01
-- 메이크업 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
+### 2025-10-03
+- 헤어케어 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
 
 ## 파일 구조 변경
 
@@ -40,6 +40,7 @@ src/
      ├─ SkincarePage.jsx
      ├─ CleansingPage.jsx
      └─ MakeupPage.jsx
+     └─ HaircarePage.jsx
 
 ```
 
@@ -86,7 +87,7 @@ src/
 ## 구현 기능 (헤더 섹션)
 - 상품 정렬 기능: 상품명순, 낮은가격순, 높은가격순, 추천순 정렬필터 기능 구현
 - 페이지네이션 기능: 리액트 라우터를 이용한 페이지네이션 구현 (1,2,3 페이지)
-- 스킨케어, 클렌징, 메이크업 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
+- 스킨케어, 클렌징, 메이크업, 헤어케어 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
 
 ## 사용 기술
 - **React**: UI 컴포넌트 기반 개발  
@@ -100,7 +101,7 @@ src/
 ## 기획
 | 와이어프레임 | 디자인시안 |
 |---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="600" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="700" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 ## 설치 및 실행
 ```bash
