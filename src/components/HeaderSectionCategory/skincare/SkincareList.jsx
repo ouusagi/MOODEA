@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import BestSlider from "../../Recycling/BestSlider";
+import supabase from "../../../supabaseClient";
 
 
 function SkincareList(){
@@ -11,26 +12,62 @@ function SkincareList(){
     let [skincareitem,setskincareitem] = useState([]) 
     let [slider,setslider] = useState([])
 
-    useEffect(()=>{
-        fetch('/Skincare.json')
-        .then(res=>res.json())
-        .then(data =>{
-            setskincareitem(data.Skincare)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
+    // useEffect(()=>{
+    //     fetch('/Skincare.json')
+    //     .then(res=>res.json())
+    //     .then(data =>{
+    //         setskincareitem(data.Skincare)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[])
 
     useEffect(()=>{
-        fetch('/BestSliderSkincare.json')
-        .then(res=> res.json())
-        .then(data=>{
-            setslider(data.BestSliderSkincare)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
+        async function Skincare() {
+            const {data, error} = await supabase
+            .from('Skincare')
+            .select('*')
+
+            if(error){
+                console.log(error)
+            }
+
+            else{
+                setskincareitem(data)
+            }
+        }
+
+        Skincare()
+    },[])
+
+    // useEffect(()=>{
+    //     fetch('/BestSliderSkincare.json')
+    //     .then(res=> res.json())
+    //     .then(data=>{
+    //         setslider(data.BestSliderSkincare)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[])
+
+    useEffect(()=>{
+        async function BestSliderSkincare() {
+            const {data, error} = await supabase
+            .from('BestSliderSkincare')
+            .select('*')
+
+            if(error){
+                console.log(error)
+            }
+
+            else{
+                setslider(data)
+            }
+        }
+
+        BestSliderSkincare()
     },[])
 
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import supabase from '../../supabaseClient'
 
 
 function NewProductList(){
@@ -9,16 +10,34 @@ function NewProductList(){
     let [products,setProducts] = useState([]) 
     let [pluscount,setpluscount] = useState(count)
 
-    useEffect(()=>{
-        fetch('/Newproducts-items.json')
-        .then(res=>res.json())
-        .then(data =>{
-            setProducts(data.Newproducts)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[])
+    // useEffect(()=>{
+    //     fetch('/Newproducts-items.json')
+    //     .then(res=>res.json())
+    //     .then(data =>{
+    //         setProducts(data.Newproducts)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[])
+
+useEffect(() => {
+  async function loadProducts() {
+    const { data, error } = await supabase
+      .from('Newproducts_items')
+      .select('*')
+    
+    if (error){
+       console.log(error)
+    }
+    else{
+        setProducts(data)
+    }
+  }
+
+  loadProducts()
+}, [])
+
 
     const plusbtn = ()=> {
         setpluscount(now=> Math.min(now + count, Maxcount))
@@ -46,7 +65,7 @@ function NewProductList(){
                     <div className="newproduct-text">
                     <h5>{item.brand}</h5>
                     <h3>{item.name}</h3>
-                    <h4>{item.price}</h4>
+                    <h4>{item.price.toLocaleString()}원</h4>
                 </div>
                 </div>
             </div>

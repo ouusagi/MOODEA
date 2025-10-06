@@ -8,11 +8,8 @@ function CleansingPage() {
     <div>
       <HeaderSectionCategory
       categoryName= "Cleansing"
-      categoryBio= "피부가 원하는 맑음을 선물해 보세요."
-      jsonFile="/Cleansing.json"
-      arrayName= "Cleansing"
-      bestSliderFile= "/BestSliderCleansing.json"
-      bestSliderArray= "BestSliderCleansing"
+      titleName= "Cleansing"
+      titleBio= "피부가 원하는 맑음을 선물해 보세요."
       basePath= "cleansing"
       />
     </div>

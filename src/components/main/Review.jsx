@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import supabase from "../../supabaseClient";
 
 
 
@@ -7,15 +8,32 @@ function Review(){
 
    let [Review,setReview] = useState([])
 
+   // useEffect(()=>{
+   //    fetch('/Review.json')
+   //    .then(res=> res.json())
+   //    .then(data=>{
+   //       setReview(data.Reviews)
+   //    })
+   //    .catch(err=>{
+   //       console.log(err)
+   //    })
+   // },[])
+
    useEffect(()=>{
-      fetch('/Review.json')
-      .then(res=> res.json())
-      .then(data=>{
-         setReview(data.Reviews)
-      })
-      .catch(err=>{
-         console.log(err)
-      })
+      async function Review() {
+         const {data, error} = await supabase
+         .from('Reviews')
+         .select('*')
+
+         if(error){
+            console.log(error)
+         }
+
+         else{
+            setReview(data)
+         }
+      }
+      Review()
    },[])
 
     

@@ -4,6 +4,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useEffect } from "react";
+import supabase from "../../supabaseClient";
 
 
 
@@ -12,17 +13,33 @@ function Bestseller(){
 
   let [best,setbest] = useState([])
 
-  useEffect(()=>{
-    fetch('/Bestseller.json')
-    .then(res=> res.json())
-    .then(data=>{
-      setbest(data.Bestseller)
-    })
-    .catch(err=>{
-      console.log(err)
-    })
-  },[])
+  // useEffect(()=>{
+  //   fetch('/Bestseller.json')
+  //   .then(res=> res.json())
+  //   .then(data=>{
+  //     setbest(data.Bestseller)
+  //   })
+  //   .catch(err=>{
+  //     console.log(err)
+  //   })
+  // },[])
 
+  useEffect(()=>{
+    async function Bestseller() {
+      const { data, error } = await supabase
+      .from('Bestseller')
+      .select('*')
+
+      if(error){
+        console.log(error)
+      }
+
+      else{
+        setbest(data)
+      }
+    }
+    Bestseller()
+  },[])
 
 
     return(
@@ -54,7 +71,7 @@ function Bestseller(){
               <div className="infobox-container">
                 <h3>{item.name}</h3>
                 <p>★★★★★</p>
-                <h4>{item.price}원</h4>
+                <h4>{item.price.toLocaleString()}원</h4>
               </div>
           </div>
         </SwiperSlide>

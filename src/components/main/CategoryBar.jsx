@@ -1,19 +1,37 @@
 import { useState,useEffect } from 'react'
+import supabase from '../../supabaseClient'
 
 
 function CategoryBar(){
 let [Category,setCategory] = useState([])
 
+    // useEffect(()=>{
+    //     fetch('/Category.json')
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         setCategory(data.Category)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // })
+
     useEffect(()=>{
-        fetch('/Category.json')
-        .then(res=>res.json())
-        .then(data=>{
-            setCategory(data.Category)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    })
+        async function CategoryBar() {
+            const {data, error} = await supabase
+            .from('Category')
+            .select('*')
+
+            if(error){
+                console.log(error)
+            }
+            else{
+                setCategory(data)
+            }
+        }
+        CategoryBar()
+    },[])
+
 
     return(
 

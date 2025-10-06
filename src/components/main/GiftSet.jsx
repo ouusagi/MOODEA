@@ -1,19 +1,38 @@
 import React, { useState,useEffect } from "react";
+import supabase from "../../supabaseClient";
 
 
 function GiftSet(){
 
   const [Gift,setGift] = useState([])
 
+    // useEffect(()=>{
+    //     fetch('/GiftSet.json')
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         setGift(data.Gifts)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[])
+
     useEffect(()=>{
-        fetch('/GiftSet.json')
-        .then(res=>res.json())
-        .then(data=>{
-            setGift(data.Gifts)
-        })
-        .catch(err=>{
-            console.log(err)
-        })
+      async function GiftSet() {
+        const {data, error} = await supabase
+        .from('GiftSet')
+        .select('*')
+
+        if(error){
+          console.log(error)
+        }
+
+        else{
+          setGift(data)
+        }
+      }
+
+      GiftSet()
     },[])
 
 
@@ -45,7 +64,7 @@ function GiftSet(){
                       <div className="GiftSet-text">
                         <h3>{item.name}</h3>
                         <p>{item.bio}</p>
-                        <h4>{item.price}원</h4>
+                        <h4>{item.price.toLocaleString()}원</h4>
                         <div className="GiftSet-text2">
                         <h5>BEST</h5>
                         <h5>NEW</h5>

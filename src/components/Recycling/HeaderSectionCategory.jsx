@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import BestSlider from "./BestSlider";
+import supabase from "../../supabaseClient";
 
 
-function HeaderSectionCategory({categoryName, categoryBio, arrayName, bestSliderArray, jsonFile, basePath, bestSliderFile}){
+function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
 
     const {page} = useParams()
     const nowpage = Number(page)
@@ -11,27 +12,69 @@ function HeaderSectionCategory({categoryName, categoryBio, arrayName, bestSlider
     let [item,setitem] = useState([]) 
     let [slider,setslider] = useState([])
 
-    useEffect(()=>{
-        fetch(jsonFile)
-        .then(res=>res.json())
-        .then(data =>{
-            setitem(data[arrayName])
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[jsonFile,arrayName])
+    // useEffect(()=>{
+    //     fetch(jsonFile)
+    //     .then(res=>res.json())
+    //     .then(data =>{
+    //         setitem(data[arrayName])
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[jsonFile,arrayName])
 
     useEffect(()=>{
-        fetch(bestSliderFile)
-        .then(res=> res.json())
-        .then(data=>{
-            setslider(data[bestSliderArray])
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-    },[bestSliderFile,bestSliderArray])
+        async function HeaderSectionCategoryPage() {
+            const {data, error} = await supabase
+            .from('HeaderSectionCategoryPage')
+            .select('*')
+            .eq("category", categoryName)
+            .order("id", { ascending: true });
+
+            if(error){
+                console.log(error)
+            }
+
+            else{
+                setitem(data)
+            }
+        }
+        
+        HeaderSectionCategoryPage()
+    },[categoryName])
+
+
+
+    // useEffect(()=>{
+    //     fetch(bestSliderFile)
+    //     .then(res=> res.json())
+    //     .then(data=>{
+    //         setslider(data[bestSliderArray])
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[bestSliderFile,bestSliderArray])
+
+    useEffect(()=>{
+        async function BestSlider() {
+            const {data, error} = await supabase
+            .from('BestSlider')
+            .select('*')
+            .eq('category', categoryName)
+            .order("id", { ascending: true });
+
+            if(error){
+                console.log(error)
+            }
+
+            else{
+                setslider(data)
+            }
+        }
+
+        BestSlider()
+    },[categoryName])
 
 
 
@@ -64,8 +107,8 @@ function HeaderSectionCategory({categoryName, categoryBio, arrayName, bestSlider
         <div className="SkincareList-bg">
 
         <div className="SkincareList-title-container">
-            <h1>{categoryName}</h1>
-            <h2>{categoryBio}</h2>
+            <h1>{titleName}</h1>
+            <h2>{titleBio}</h2>
         </div>
 
         <BestSlider items={slider}/>

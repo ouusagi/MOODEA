@@ -2,65 +2,65 @@
   "Bestseller": [
   {
     "name": "로제아 듀이 에센스 100ml",
-    "price": "28,000",
+    "price": 28000,
     "brand": "로제아",
-    "num": 1,
+    "id": 1,
     "photo": "https://plus.unsplash.com/premium_photo-1680740103561-56cae76337ad?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "name": "클리어 오아시스 수딩 밤 80g",
-    "price": "19,800",
+    "price": 19800,
     "brand": "블루밍",
-    "num": 2,
+    "id": 2,
     "photo": "https://img.freepik.com/premium-psd/composition-mock-up-cosmetic-with-melting-elements_23-2149094157.jpg"
   },
   {
     "name": "어스 포레스트 바디 워시 200ml",
     "price": "24,000",
     "brand": "에코라이브",
-    "num": 3,
+    "id": 3,
     "photo": "https://i.pinimg.com/736x/a1/2a/59/a12a59c1263e0ed117ef2bb3fbfb721b.jpg"
   },
   {
     "name": "시트러스 젠틀 클렌징 바 200g",
-    "price": "9,900",
+    "price": 9900,
     "brand": "네이처 바",
-    "num": 4,
+    "id": 4,
     "photo": "https://cdn.dribbble.com/userupload/31186988/file/still-6bc8de6477e2d756c6375cadb869e4a3.png?format=webp&resize=400x300&vertical=center"
   },
   {
     "name": "라일락 나이트 크림 50g",
-    "price": "34,500",
+    "price": 34500,
     "brand": "페더",
-    "num": 5,
+    "id": 5,
     "photo": "https://img.freepik.com/premium-psd/skin-care-packaging-mockup_23-2150932518.jpg"
   },
   {
     "name": "스카이 밸런싱 로션 130g",
-    "price": "17,500",
+    "price": 17500,
     "brand": "멜리",
-    "num": 6,
+    "id": 6,
     "photo": "https://img.freepik.com/premium-psd/cosmetic-product-packaging-mockup_1150-40298.jpg"
   },
   {
     "name": "퓨리파잉 딥클렌징 100ml",
-    "price": "16,000",
+    "price": 16000,
     "brand": "클린업",
-    "num": 7,
+    "id": 7,
     "photo": "https://img.freepik.com/premium-psd/cosmetic-cream-tube-mockup_540116-699.jpg"
   },
   {
     "name": "라임 플라워 수분크림 150ml",
-    "price": "16,800",
+    "price": 16800,
     "brand": "플루이드",
-    "num": 8,
+    "id": 8,
     "photo": "https://elements-resized.envatousercontent.com/elements-preview-images/bdb823e8-82d2-4740-af40-c7f90bb74863?w=632&cf_fit=scale-down&q=85&format=auto&s=187ac0c5ff77b70d11e996764db4263b22b2ed67cefd09356370d5db8cd75fdc"
   },
   {
     "name": "아쿠아 선 프렌드 60g",
-    "price": "22,000",
+    "price": 22000,
     "brand": "오르카",
-    "num": 9,
+    "id": 9,
     "photo": "https://elements-resized.envatousercontent.com/elements-cover-images/4418398e-f541-4f5c-a2d4-9053134ba880?w=433&cf_fit=scale-down&q=85&format=auto&s=9a775bfb80b4465c11c7a02b8326f50810d9ccb32c5955c0644c9c4543864875"
   }
  ]
