@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import ScrollToTop from '../scrollToTop';
 
 // pages
 import {
@@ -7,7 +8,8 @@ import {
   CleansingPage,
   MakeupPage,
   HaircarePage,
-  BodycarePage
+  BodycarePage,
+  PerfumePage
 } from './pages';
 
 // common components
@@ -22,6 +24,7 @@ import './components/common/HeaderFooter.css'
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -29,6 +32,7 @@ function App() {
       <AdPopup/>
       <TopMenu/>
       <HeaderSection />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<MainPage />} />
 
@@ -46,6 +50,9 @@ function App() {
 
         <Route path="/bodycare" element={<Navigate to="/bodycare/1"></Navigate>} />
         <Route path="/bodycare/:page" element={<BodycarePage />} />
+
+        <Route path="/perfume" element={<Navigate to="/perfume/1"></Navigate>} />
+        <Route path="/perfume/:page" element={<PerfumePage />} />
       </Routes>
 
       <Footer />

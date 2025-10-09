@@ -1,9 +1,11 @@
 import { useState,useEffect } from 'react'
 import supabase from '../../supabaseClient'
+import { useNavigate } from 'react-router-dom'
 
 
 function CategoryBar(){
 let [Category,setCategory] = useState([])
+let navigate = useNavigate()
 
     // useEffect(()=>{
     //     fetch('/Category.json')
@@ -47,7 +49,9 @@ let [Category,setCategory] = useState([])
                 <div className='CategoryBar-box'>
                     {Category.map((item,i)=>{
                         return(
-                            <div className='CategoryBar-item' key={i}>
+                            <div className='CategoryBar-item' key={i} onClick={()=>{
+                                navigate(`/${item.basePath}`)
+                            }}>
                                 <img src={item.photo} alt="카테고리 제품별 이미지"/>
                                 <h4>{item.Product}</h4>
                             </div>
