@@ -9,7 +9,8 @@ import {
   MakeupPage,
   HaircarePage,
   BodycarePage,
-  PerfumePage
+  PerfumePage,
+  SuncarePage
 } from './pages';
 
 // common components
@@ -53,6 +54,9 @@ function App() {
 
         <Route path="/perfume" element={<Navigate to="/perfume/1"></Navigate>} />
         <Route path="/perfume/:page" element={<PerfumePage />} />
+
+        <Route path="/suncare" element={<Navigate to="/suncare/1"></Navigate>} />
+        <Route path="/suncare/:page" element={<SuncarePage />} />
       </Routes>
 
       <Footer />

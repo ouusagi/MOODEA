@@ -10,6 +10,7 @@ import MakeupPage from './MakeupPage';
 import HaircarePage from './HaircarePage';
 import BodycarePage from './BodycarePage';
 import PerfumePage from './PerfumePage';
+import SuncarePage from './Suncare.Page';
 
 // 한 번에 export
 export {
@@ -19,5 +20,6 @@ export {
   MakeupPage,
   HaircarePage,
   BodycarePage,
-  PerfumePage
+  PerfumePage,
+  SuncarePage
 };
