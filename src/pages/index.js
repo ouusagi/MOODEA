@@ -11,6 +11,7 @@ import HaircarePage from './HaircarePage';
 import BodycarePage from './BodycarePage';
 import PerfumePage from './PerfumePage';
 import SuncarePage from './Suncare.Page';
+import MaskpackPage from './MaskpackPage';
 
 // 한 번에 export
 export {
@@ -21,5 +22,6 @@ export {
   HaircarePage,
   BodycarePage,
   PerfumePage,
-  SuncarePage
+  SuncarePage,
+  MaskpackPage
 };

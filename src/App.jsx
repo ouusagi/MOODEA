@@ -10,7 +10,8 @@ import {
   HaircarePage,
   BodycarePage,
   PerfumePage,
-  SuncarePage
+  SuncarePage,
+  MaskpackPage
 } from './pages';
 
 // common components
@@ -57,6 +58,9 @@ function App() {
 
         <Route path="/suncare" element={<Navigate to="/suncare/1"></Navigate>} />
         <Route path="/suncare/:page" element={<SuncarePage />} />
+
+        <Route path="/maskpack" element={<Navigate to="/maskpack/1"></Navigate>} />
+        <Route path="/maskpack/:page" element={<MaskpackPage />} />
       </Routes>
 
       <Footer />
