@@ -1,10 +1,12 @@
 import React, { useState,useEffect } from "react";
 import supabase from "../../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 
 function GiftSet(){
 
   const [Gift,setGift] = useState([])
+  let navigate = useNavigate()
 
     // useEffect(()=>{
     //     fetch('/GiftSet.json')
@@ -50,7 +52,9 @@ function GiftSet(){
                     <img src="./Gift.png" alt="넓은 산맥 배경에 장식되있는 화장품" />
                     <h2>중요한 날,<br />선물을 고민하고 있을 때 !</h2>
                     <p>사랑하는 사람에게<br />마음을 전하는 완벽한 선택.</p>
-                    <button>MORE GIFTSET</button>
+                    <button onClick={()=>{
+                      navigate('/giftset/1')
+                    }}>MORE GIFTSET</button>
                 </div>
 
                 <div className="GiftSet-item-container">
@@ -83,18 +87,5 @@ function GiftSet(){
     )
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default GiftSet;

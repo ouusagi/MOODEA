@@ -26,7 +26,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
     useEffect(()=>{
         async function HeaderSectionCategoryPage() {
             const {data, error} = await supabase
-            .from('HeaderSectionCategoryPage')
+            .from('ProductsDB')
             .select('*')
             .eq("category", categoryName)
             .order("id", { ascending: true });

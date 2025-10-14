@@ -11,7 +11,8 @@ import {
   BodycarePage,
   PerfumePage,
   SuncarePage,
-  MaskpackPage
+  MaskpackPage,
+  GiftsetPage
 } from './pages';
 
 // common components
@@ -61,6 +62,9 @@ function App() {
 
         <Route path="/maskpack" element={<Navigate to="/maskpack/1"></Navigate>} />
         <Route path="/maskpack/:page" element={<MaskpackPage />} />
+
+        <Route path="/giftset" element={<Navigate to="/giftset/1"></Navigate>} />
+        <Route path="/giftset/:page" element={<GiftsetPage />} />
       </Routes>
 
       <Footer />
