@@ -10,8 +10,10 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 업데이트 내역
-### 2025-10-14
-- 기프트세트 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
+### 2025-10-16
+- 상품 상세 페이지 구현: 상품 상세페이지 재활용 컴포넌트(ProductDetail.jsx)를 제작하여 어느 컴포넌트던 데인터바인딩만 하면 완성되도록 구현
+- 기능구현1 : 상품 갯수 선택과 갯수의 비례하여 총 금액을 계산해주는 기능 구현
+- 기능구현2 : 상품 상세 페이지의 탭 창 클릭시 선택된 탭 창에만 acitve를 부여하여 색상 변화 기능 구현
 
 ## 파일 구조 변경
 
@@ -34,13 +36,20 @@ src/
  │    └─ Recycling/          # 재활용 컴포넌트
  │        └─ BestSlider.jsx
  │        └─ HeaderSectionCategory.jsx
+ │        └─ ProductDetail.jsx   
+ │        └─ ProductDetail.css 
+ │        └─ ...
  │
- └─ pages/                # 컴포넌트 대표 페이지 
+ └─ pages/     # 카테고리 페이지 
+     ├ Detail/        # 상품 상세 페이지 
+     │      └─ NewProductListDetail.jsx
+     │      └─ BestSellerDetail.jsx
      ├─ MainPage.jsx
      ├─ SkincarePage.jsx
      ├─ CleansingPage.jsx
      └─ MakeupPage.jsx
      └─ HaircarePage.jsx
+     └─ SuncarePage.jsx
 
 ```
 
@@ -97,6 +106,11 @@ src/
 
 ## 구현 기능 (기프트세트 섹션)
 - 기프트세트 페이지 구현: 컴포넌트 재활용과 데이터바인딩을 이용한 페이지 구현
+
+## 구현 기능 (상품 상세 페이지)
+- 상품 상세 페이지 구현: 상품 상세페이지 재활용 컴포넌트(ProductDetail.jsx)를 제작하여 어느 컴포넌트던 데인터바인딩만 하면 완성되도록 구현
+- 기능구현1 : 상품 갯수 선택과 갯수의 비례하여 총 금액을 계산해주는 기능 구현
+- 기능구현2 : 상품 상세 페이지의 탭 창 클릭시 선택된 탭 창에만 acitve를 부여하여 색상 변화 기능 구현
 
 ## 사용 기술
 - **React**: UI 컴포넌트 기반 개발  

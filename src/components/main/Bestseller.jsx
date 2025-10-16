@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { useEffect } from "react";
 import supabase from "../../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,6 +13,7 @@ import supabase from "../../supabaseClient";
 function Bestseller(){
 
   let [best,setbest] = useState([])
+  let navigate = useNavigate()
 
   // useEffect(()=>{
   //   fetch('/Bestseller.json')
@@ -29,6 +31,7 @@ function Bestseller(){
       const { data, error } = await supabase
       .from('Bestseller')
       .select('*')
+      .order('id', {ascending: true})
 
       if(error){
         console.log(error)
@@ -62,7 +65,7 @@ function Bestseller(){
       >
         {best.map((item,i)=>(
         <SwiperSlide key={i}>
-          <div className="cardbox-container" key={i}>
+          <div className="cardbox-container" key={i} onClick={()=> navigate(`/bestseller/${item.id}`)}>
               <div className="image-container">
                 <p>BEST</p>
                 <img src={item.photo} alt="photo"/>

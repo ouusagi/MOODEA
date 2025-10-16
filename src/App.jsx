@@ -15,6 +15,13 @@ import {
   GiftsetPage
 } from './pages';
 
+// ProductDetaill
+import { 
+  NewproductListDetail,
+  BestSellerDetail
+} from './pages/Detail';
+
+
 // common components
 import AdPopup from './components/common/AdPopup'
 import HeaderSection from './components/common/HeaderSection';
@@ -36,7 +43,9 @@ function App() {
       <TopMenu/>
       <HeaderSection />
       <ScrollToTop/>
+
       <Routes>
+
         <Route path="/" element={<MainPage />} />
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
@@ -65,6 +74,10 @@ function App() {
 
         <Route path="/giftset" element={<Navigate to="/giftset/1"></Navigate>} />
         <Route path="/giftset/:page" element={<GiftsetPage />} />
+
+        <Route path="/newproduct/:id" element={<NewproductListDetail />}></Route>
+        <Route path="/bestseller/:id" element={<BestSellerDetail />}></Route>
+
       </Routes>
 
       <Footer />

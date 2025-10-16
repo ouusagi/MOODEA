@@ -10,10 +10,9 @@ import MakeupPage from './MakeupPage';
 import HaircarePage from './HaircarePage';
 import BodycarePage from './BodycarePage';
 import PerfumePage from './PerfumePage';
-import SuncarePage from './Suncare.Page';
+import SuncarePage from './SuncarePage';
 import MaskpackPage from './MaskpackPage';
 import GiftsetPage from './GiftsetPage';
-
 
 // 한 번에 export
 export {

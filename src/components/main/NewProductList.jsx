@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import supabase from '../../supabaseClient'
+import { useNavigate } from 'react-router-dom'
 
 
 function NewProductList(){
@@ -9,6 +10,7 @@ function NewProductList(){
 
     let [products,setProducts] = useState([]) 
     let [pluscount,setpluscount] = useState(count)
+    let navigate = useNavigate()
 
     // useEffect(()=>{
     //     fetch('/Newproducts-items.json')
@@ -61,7 +63,9 @@ useEffect(() => {
             {products.slice(0, pluscount).map((item,i)=>(
             <div className='newproduct-item-container' key={i}>
                 <div className='newproduct-item'>
-                    <img src={item.photo} alt="상품 이미지" />
+                    <img src={item.photo} alt="상품 이미지" onClick={()=>{
+                        navigate(`/newproduct/${item.id}`)
+                    }}/>
                     <div className="newproduct-text">
                     <h5>{item.brand}</h5>
                     <h3>{item.name}</h3>

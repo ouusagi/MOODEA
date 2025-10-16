@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 상세페이지 */
+
+.product-detail{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1300px;
+    margin: auto;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.product-detail-img {
+  flex: 0.6;
+  display: flex;
+}
+
+.product-detail-img img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 550px;
+}
+
+.product-detail-info {
+  flex: 1;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 500px;
+}
+
+.product-detail-info h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.product-detail-info h3 {
+    color: #666;
+    font-size: 1rem;
+}
+
+.product-detail-info .price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.product-detail-info .delivery{
+    font-size: 1rem;
+}
+
+.product-detail-info .info {
+  line-height: 1.6;
+  color: #666;
+  white-space: pre-line;
+}
+
+.count-btn-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 0.5rem;
+}
+
+.count-btn-container button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+  transition: all 0.1s ease;
+}
+
+.count-btn-container button:active {
+  background-color: #222;
+  color: white;
+}
+
+.count-btn-container span {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.count-btn-container h4{
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 1rem;
+}
+
+.product-detail-btn{
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-btn button {
+  width: 200px;
+  padding: 20px;
+  border: none;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  margin-top: 1.5rem;
+}
+
+.product-detail-btn button:nth-child(2),.product-detail-btn button:nth-child(3) {
+  background-color: white;
+  border: 1px solid #eee;
+  color: black;
+}
+
+.product-detail-btn button:nth-child(1):hover {
+  background-color: white;
+  color: black;
+}
+
+.product-detail-btn button:nth-child(2):hover,.product-detail-btn button:nth-child(3):hover  {
+  border: 1px solid #222;
+}
+
+
+/* 상세페이지 */
+
+
+/* 상품토글 */
+
+.product-detail-box-info{
+    display: flex;
+    max-width: 1300px;
+    height: 3rem;
+    margin: 1rem auto 0 auto;
+}
+
+.product-detail-box-info button{
+    width: 325px;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid black;
+}
+
+.product-detail-box-info button.active{
+    background-color: white;
+    color: black;
+    border-bottom: 2px solid gray;
+}
+
+
+
+.product-detail-box-content{
+    padding: 1.5rem;
+    display: flex;
+    max-width: 1300px;
+    height: auto;
+    margin: 0rem auto 3rem auto;
+    background-color: #f8f8f8;
+}
+
+/* 상품토글 */
+
+
+
+
+
+
+
+
+@media screen and (min-width:1600px) {
+
+.product-detail{
+    max-width: 1350px;
+    gap: 5rem;
+}
+
+.product-detail-box-info{
+    max-width: 1350px;
+}
+
+.product-detail-box-info button{
+    width: 338px;
+}
+
+.product-detail-box-content{
+    max-width: 1350px;
+}
+
+
+}
+
+@media screen and (min-width:1800px) {
+
+.product-detail{
+    max-width: 1350px;
+    gap: 5rem;
+}
+
+.product-detail-box-info{
+    max-width: 1350px;
+}
+
+.product-detail-box-info button{
+    width: 338px;
+}
+
+.product-detail-box-content{
+    max-width: 1350px;
+}
+
+}
