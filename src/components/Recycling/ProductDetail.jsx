@@ -9,6 +9,10 @@ function ProductDetail({ tableName }) {
     let {id} = useParams()
     let [saveinfo, setsaveinfo] = useState(0)
     let [itemcount, setitemcount] = useState(1)
+    let [btn,setbtn] = useState(false)
+    let [showimg,setshowimg] = useState(["https://img.freepik.com/premium-psd/pipette-with-drop-cosmetic-oil-bottle_70626-12801.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80",
+      "https://img.freepik.com/premium-psd/skin-care-packaging-design-mockup_23-2149426319.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80","https://img.freepik.com/premium-psd/cosmetic-tube-mockup-psd-with-patterned-glass-texture-product-backdrop_53876-145826.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
+    ])
 
     useEffect(()=>{
         async function fetchData() {
@@ -95,10 +99,26 @@ function ProductDetail({ tableName }) {
         </div>
 
         <div className="product-detail-box-content">
-          {saveinfo === 0 && <div>상세정보</div>}
-          {saveinfo === 1 && <div>구매후기</div>}
-          {saveinfo === 2 && <div>반품/교환</div>}
-          {saveinfo === 3 && <div>Q&A</div>}
+          {saveinfo === 0 && <div><img src="https://img.freepik.com/premium-psd/skin-care-packaging-design-mockup_23-2149426344.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80" alt="상품 템플릿 사진" /> 
+{!btn && (<button onClick={()=>{setbtn(true)}}>상품정보 더보기</button>)}
+{btn && (showimg.map((img,i)=>{
+ return <img key={i} src={img} alt="상품 템플릿 사진" />
+}))}
+{btn && (<p className="contents-end">마지막 페이지 입니다.</p>)}
+</div>}
+          {saveinfo === 1 && <div className="contents1">게시글이 없습니다</div>}
+          {saveinfo === 2 && <div className="contents2"><h3>[반품/교환]</h3><br /><p>고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. <br /> 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.</p>
+          <br />무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.  
+주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, <br />7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다. <br /><br /><br /><h3>[ 배송정보 ]</h3><br /><p>배송 방법 : 택배 <br />
+배송 지역 : 전국지역 <br />
+배송 비용 : 2,500원 <br />
+배송 기간 : 3일 ~ 7일 <br /><br />
+배송 안내 : - 산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다. <br />
+고객님께서 주문하신 상품은 입금 확인후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.</p><br /><br /> <h3>[ 교환 및 반품정보 ]</h3><br /> 교환 및 반품이 가능한 경우 <br />
+ - 계약내용에 관한 서면을 받은 날부터 7일. 단, 그 서면을 받은 때보다 재화등의 공급이 늦게 이루어진 경우에는 재화등을 공급받거나 재화등의 공급이 시작된 날부터 7일 이내 <br />
+  - 공급받으신 상품 및 용역의 내용이 표시.광고 내용과 다르거나 계약내용과 다르게 이행된 때에는 당해 재화 등을 공급받은 날 부터 3월이내, 그사실을 알게 된 날 또는 알 수 있었던 날부터 30일이내 <br /><br /><br />교환 및 반품이 불가능한 경우 <br />- 이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우(다만, 재화 등의 내용을 확인하기 위하여 포장 등을 훼손한 경우에는 청약철회를 할 수 있습니다)
+  <br />- 이용자의 사용 또는 일부 소비에 의하여 재화 등의 가치가 현저히 감소한 경우 <br />- 시간의 경과에 의하여 재판매가 곤란할 정도로 재화등의 가치가 현저히 감소한 경우 <br />- 복제가 가능한 재화등의 포장을 훼손한 경우 <br /><br />※ 고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담하셔야 합니다.</div>}
+          {saveinfo === 3 && <div className="contents1">게시글이 없습니다</div>}
         </div>
 
 </div>

@@ -8,7 +8,7 @@ function NewProductList(){
     const count = 10
     const Maxcount = 30
 
-    let [products,setProducts] = useState([]) 
+    let [products,setProducts] = useState(null) 
     let [pluscount,setpluscount] = useState(count)
     let navigate = useNavigate()
 
@@ -28,6 +28,7 @@ useEffect(() => {
     const { data, error } = await supabase
       .from('Newproducts_items')
       .select('*')
+      .order('id', {ascending : true})
     
     if (error){
        console.log(error)
@@ -39,6 +40,8 @@ useEffect(() => {
 
   loadProducts()
 }, [])
+
+if(!products) return <p>상품 정보를 불러오는 중 입니다..</p>
 
 
     const plusbtn = ()=> {
