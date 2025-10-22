@@ -7,6 +7,7 @@ function NewproductListDetail() {
     <div>
       <ProductDetail 
       tableName= "Newproducts_items"
+      category= "Newproducts_items"
       />
     </div>
   )

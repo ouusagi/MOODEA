@@ -3,7 +3,7 @@ import supabase from "../../supabaseClient";
 import { useEffect, useState } from "react";
 import '../Recycling/ProductDetail.css'
 
-function ProductDetail({ tableName }) {
+function ProductDetail({ tableName, category }) {
 
     let [products,setproducts] = useState(null)
     let {id} = useParams()
@@ -21,7 +21,8 @@ function ProductDetail({ tableName }) {
             .select('*')
             .order('id', {ascending: true})
             .eq('id', id)
-            .single()
+            .eq('category', category)
+            .maybeSingle()
 
         if(error){
             console.log(error)
@@ -32,7 +33,7 @@ function ProductDetail({ tableName }) {
         }
 
         fetchData()
-    },[id,tableName])
+    },[id, category, tableName])
 
     if(!products) return <p>상품 정보를 불러오는 중 입니다..</p>
 

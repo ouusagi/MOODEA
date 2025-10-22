@@ -1,15 +1,19 @@
-import SkincareList from "../components/HeaderSectionCategory/skincare/SkincareList";
-import '../components/HeaderSectionCategory/category.css'
-
+import HeaderSectionCategory from "../components/Recycling/HeaderSectionCategory";
 
 function SkincarePage() {
 
   return (
     <div>
-    <SkincareList/>
+      <HeaderSectionCategory 
+      categoryName= "Skincare"
+      titleName= "Skincare"
+      titleBio= "피부를 위한 작은 쉼표를 더해보세요."
+      basePath= "skincare"
+      />
     </div>
   )
 
 }
 
 export default SkincarePage;
+

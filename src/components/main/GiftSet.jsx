@@ -24,6 +24,7 @@ function GiftSet(){
         const {data, error} = await supabase
         .from('GiftSet')
         .select('*')
+        .order('id', {ascending: true})
 
         if(error){
           console.log(error)
@@ -49,7 +50,7 @@ function GiftSet(){
             <div className="GiftSet-container">
 
                 <div className="GiftSet-img-container">
-                    <img src="./Gift.png" alt="넓은 산맥 배경에 장식되있는 화장품" />
+                    <img src="./Gift.png" alt="넓은 산맥 배경에 장식되있는 화장품"/>
                     <h2>중요한 날,<br />선물을 고민하고 있을 때 !</h2>
                     <p>사랑하는 사람에게<br />마음을 전하는 완벽한 선택.</p>
                     <button onClick={()=>{
@@ -63,11 +64,11 @@ function GiftSet(){
                     return(
                     <div className="GiftSet-item" key={i}>
                       <div className="GiftSet-item-img-wrapper">
-                        <img src={item.photo}/>
+                        <img src={item.photo} onClick={()=>{navigate(`/giftsetproduct/${item.category}/${item.id}`)}}/>
                       </div>
                       <div className="GiftSet-text">
                         <h3>{item.name}</h3>
-                        <p>{item.bio}</p>
+                        <p>{item.info}</p>
                         <h4>{item.price.toLocaleString()}원</h4>
                         <div className="GiftSet-text2">
                         <h5>BEST</h5>

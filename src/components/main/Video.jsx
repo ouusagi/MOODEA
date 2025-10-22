@@ -1,10 +1,12 @@
 import React, { useState,useEffect,useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function Video(){
 
   let [show, setshow] = useState(false)
   let containerRef = useRef(null)
+  let navigate = useNavigate()
 
   useEffect(()=>{
     const obzone = new IntersectionObserver(
@@ -47,7 +49,7 @@ function Video(){
 
                   <div className="video-btn">
                     <button className="btn1">브랜드 철학 더보기</button>
-                    <button className="btn2">제품 보러가기</button>
+                    <button className="btn2" onClick={()=> navigate("/skincare/1")}>제품 보러가기</button>
                   </div>
 
               </div>

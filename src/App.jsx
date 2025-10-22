@@ -22,6 +22,12 @@ import {
 } from './pages/Detail';
 
 
+// Recycling Product Detail Pages
+import BestProductDetailPage from './components/Recycling/BestProductDetailPage';
+import ProductDetailPage from './components/Recycling/ProductDetailPage';
+import GiftsetProductDetailPage from './components/Recycling/GiftsetProductDetailPage';
+
+
 // common components
 import AdPopup from './components/common/AdPopup'
 import HeaderSection from './components/common/HeaderSection';
@@ -31,6 +37,8 @@ import TopMenu from './components/common/TopMenu';
 
 // css
 import './components/common/HeaderFooter.css'
+
+
 
 
 
@@ -77,7 +85,9 @@ function App() {
 
         <Route path="/newproduct/:id" element={<NewproductListDetail />}></Route>
         <Route path="/bestseller/:id" element={<BestSellerDetail />}></Route>
-
+        <Route path="/product/:category/:id" element={<ProductDetailPage />}></Route>
+        <Route path="/bestproduct/:category/:id" element={<BestProductDetailPage />}></Route>
+        <Route path="/giftsetproduct/:category/:id" element={<GiftsetProductDetailPage />}></Route>
       </Routes>
 
       <Footer />

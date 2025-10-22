@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import BestSlider from "./BestSlider";
 import supabase from "../../supabaseClient";
+import '../Recycling/category.css'
 
 
 function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
@@ -11,6 +12,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
 
     let [item,setitem] = useState([]) 
     let [slider,setslider] = useState([])
+    let navigate = useNavigate()
 
     // useEffect(()=>{
     //     fetch(jsonFile)
@@ -111,7 +113,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             <h2>{titleBio}</h2>
         </div>
 
-        <BestSlider items={slider}/>
+        <BestSlider items={slider} categoryName={categoryName}/>
 
         <div className="itemarray-container">
 
@@ -131,7 +133,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             {sliceditem.map((item,i)=>(
             <div className='skincare-item-container' key={i}>
                 <div className='skincare-item'>
-                    <img src={item.photo} alt="상품 이미지" />
+                    <img src={item.photo} alt="상품 이미지" onClick={() => navigate(`/product/${categoryName}/${item.id}`)}/>
                     <div className="skincare-text">
                     <h5>{item.brand}</h5>
                     <h3>{item.name}</h3>

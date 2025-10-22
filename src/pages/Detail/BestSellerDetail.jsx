@@ -7,6 +7,7 @@ function BestSellerDetail() {
     <div>
       <ProductDetail 
       tableName= "Bestseller"
+      category="Bestseller"
       />
     </div>
   )

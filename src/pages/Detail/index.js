@@ -3,6 +3,7 @@ import NewproductListDetail from './NewProductListDetail';
 import BestSellerDetail from './BestSellerDetail';
 
 
+
 // 한 번에 export
 export {
   NewproductListDetail,
