@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function TopMenu(){
 
@@ -31,8 +32,8 @@ function TopMenu(){
     <div className="menu-container">
 
         <div className="option-container">
-        <a href="#">회원가입</a>
-        <a href="#">로그인</a>
+        <Link to="/signup">회원가입</Link>
+        <Link to="/login">로그인</Link>
         <a href="#">주문조회</a>
         <a href="#">찜한상품</a>
         <a href="#">고객지원</a>

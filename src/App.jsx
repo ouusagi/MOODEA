@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import ScrollToTop from '../scrollToTop';
 
 // pages
@@ -27,6 +27,10 @@ import BestProductDetailPage from './components/Recycling/BestProductDetailPage'
 import ProductDetailPage from './components/Recycling/ProductDetailPage';
 import GiftsetProductDetailPage from './components/Recycling/GiftsetProductDetailPage';
 
+// Login Page & Signup Page
+import LoginPage from './pages/Login/LoginPage';
+import SignupPage from './pages/Signup/SignupPage';
+
 
 // common components
 import AdPopup from './components/common/AdPopup'
@@ -44,17 +48,32 @@ import './components/common/HeaderFooter.css'
 
 
 function App() {
+
+  const location = useLocation();
+  let isLoginPage = location.pathname === '/login'
+  let isSignupPage = location.pathname === '/signup'
+
+
   return (
     <div className="App">
 
-      <AdPopup/>
-      <TopMenu/>
-      <HeaderSection />
-      <ScrollToTop/>
+      
+      {!isSignupPage && !isLoginPage &&(
+        <>
+       <AdPopup/>
+       <TopMenu/>
+       <HeaderSection />
+       <ScrollToTop/>
+       </>
+      )}
+      
 
       <Routes>
 
         <Route path="/" element={<MainPage />} />
+
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/signup" element={<SignupPage />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
         <Route path="/skincare/:page" element={<SkincarePage />} />
@@ -90,7 +109,8 @@ function App() {
         <Route path="/giftsetproduct/:category/:id" element={<GiftsetProductDetailPage />}></Route>
       </Routes>
 
-      <Footer />
+      {!isSignupPage && !isLoginPage &&(<><Footer /></>)}
+      
     </div>
   );
 }

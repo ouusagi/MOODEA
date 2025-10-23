@@ -241,6 +241,48 @@ img {
 
 /* 상품토글 */
 
+/* 모달 */
+
+.modal-bg{
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  white-space: pre-line;
+}
+
+.modal-btn-container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-btn-container button{
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* 모달 */
+
 
 
 

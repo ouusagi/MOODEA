@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import supabase from "../../supabaseClient";
 import { useEffect, useState } from "react";
 import '../Recycling/ProductDetail.css'
+import { useNavigate } from "react-router-dom";
 
 function ProductDetail({ tableName, category }) {
 
@@ -13,6 +14,8 @@ function ProductDetail({ tableName, category }) {
     let [showimg,setshowimg] = useState(["https://img.freepik.com/premium-psd/pipette-with-drop-cosmetic-oil-bottle_70626-12801.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80",
       "https://img.freepik.com/premium-psd/skin-care-packaging-design-mockup_23-2149426319.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80","https://img.freepik.com/premium-psd/cosmetic-tube-mockup-psd-with-patterned-glass-texture-product-backdrop_53876-145826.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
     ])
+    let [showmd, setshowmd] = useState(false)
+    let navigate = useNavigate()
 
     useEffect(()=>{
         async function fetchData() {
@@ -36,6 +39,21 @@ function ProductDetail({ tableName, category }) {
     },[id, category, tableName])
 
     if(!products) return <p>상품 정보를 불러오는 중 입니다..</p>
+
+    function Modal() {
+      
+      return(
+        <div className="modal-bg">
+          <div className="modal-box">
+          <p>"로그인 후 이용 가능합니다. <br /> 로그인 페이지로 이동하시겠습니까?"</p>
+          <div className="modal-btn-container">
+          <button onClick={()=> setshowmd(false)}>취소</button>
+          <button onClick={()=> navigate("/login")}>확인</button>
+          </div>
+          </div>
+        </div>
+      )
+    }
 
 
   return (
@@ -65,18 +83,15 @@ function ProductDetail({ tableName, category }) {
             }}>+</button>
             <h4>Total {(products.price * itemcount).toLocaleString()}원</h4>
         </div>
+
+
+        {showmd && <Modal/>}
         
 
       <div className="product-detail-btn">
-        <button onClick={()=>{
-          alert("로그인 후 이용 가능합니다.")
-        }}>BUY IT NOW</button>
-        <button onClick={()=>{
-          alert("로그인 후 이용 가능합니다.")
-        }}>CART</button>
-        <button onClick={()=>{
-          alert("로그인 후 이용 가능합니다.")
-        }}><p>WISH LIST</p></button>
+        <button onClick={()=>{setshowmd(true)}}>BUY IT NOW</button>
+        <button onClick={()=>{setshowmd(true)}}>CART</button>
+        <button onClick={()=>{setshowmd(true)}}><p>WISH LIST</p></button>
       </div>
       
       </div>

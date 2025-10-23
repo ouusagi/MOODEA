@@ -10,8 +10,11 @@
 - 반응형 레이아웃 및 기본적인 쇼핑몰 UI/UX 구현
 
 ## 업데이트 내역
-### 2025-10-22
+### 2025-10-22 & 2025-10-23
 - 상세페이지 : 모든 상품 상세페이지 url파라미터를 이용해 연결 및 이동 구현
+- 모달창 구현 : 비로그인 상태에서 구매,장바구니,찜하기 클릭 시 로그인 필요 모달창 구현
+- 로그인 UI구현 : 로그인 UI구현
+- 회원가입 UI구현 : 회원가입 UI구현
 
 ## 파일 구조 변경
 
@@ -36,12 +39,22 @@ src/
  │        └─ HeaderSectionCategory.jsx
  │        └─ ProductDetail.jsx   
  │        └─ ProductDetail.css 
- │        └─ ...
+ │        └─ ProductDetailPage.jsx <= url파라미터로 전달 받은 값 + props로 데이터를 전달받고 바인딩해줄 페이지인 ProductDetail.jsx 에게 전달
  │
  └─ pages/     # 카테고리 페이지 
      ├ Detail/        # 상품 상세 페이지 
      │      └─ NewProductListDetail.jsx
      │      └─ BestSellerDetail.jsx
+     │      └─ index.js
+     │     
+     ├─Login # 로그인 페이지
+     │   └─ LoginPage.jsx
+     │   └─ LoginPage.css
+     │
+     ├─Signup # 회원가입 페이지
+     │   └─ SignupPage.jsx
+     │   └─ SignupPage.css
+     │
      ├─ MainPage.jsx
      ├─ SkincarePage.jsx
      ├─ CleansingPage.jsx
@@ -112,6 +125,11 @@ src/
 - 기능구현2 : 상품 상세 페이지의 탭 창 클릭시 선택된 탭 창에만 acitve를 부여하여 색상 변화 기능 구현
 - 더보기 버튼 구현: 상세정보 더보기 버튼 조건부 렌더링을 이용하여 기능 구현 & 목업 이미지 삽입
 - 상세 페이지 : 모든 상품 상세페이지 url파라미터를 이용해 연결 및 이동 구현
+- 모달창 구현 : 비로그인 상태에서 구매,장바구니,찜하기 클릭 시 로그인 필요 모달창 구현
+
+## 구현 기능 (로그인 & 회원가입)
+- 로그인 UI구현 : 로그인 UI구현
+- 회원가입 UI구현 : 회원가입 UI구현
 
 ## 사용 기술
 - **React**: UI 컴포넌트 기반 개발  
@@ -134,6 +152,15 @@ npm install
 
 # 개발 서버 실행
 npm run dev
+
+# 이슈사항
+{/* 
+  ⚠️ Known Issues
+  1. 언어 변경 후 상품 개수 변경 시 계산 로직 작동 안함 (GTranslate DOM 직접 조작 영향) = 외부 플러그인 문제
+  2. 로그인 페이지 이동 후 메인 복귀 시 언어 변경 위젯 사라짐 새로고침하면 다시 생김 (SPA 환경에서 재초기화 불가) = 외부 플러그인 문제
+  3. confirm() 간헐적 반응 지연 → React 비동기 렌더링 구조와 충돌
+     ✅ 해결: 커스텀 모달 UI로 대체
+*/} 
 
 
 ⚠️ 현재 프로젝트는 미완성 상태이며, 일부 UI/기능은 구현 중입니다.
