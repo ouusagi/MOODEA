@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "./SignupPage.css";
-import { useState } from "react";
 
 
 function SignupPage() {  
-
+    
+    let navigate = useNavigate()
     let [email,setemail] = useState("")
     let [emaillimit,setemaillimit] = useState("")
     let [password,setpassword] = useState("")
@@ -16,6 +16,7 @@ function SignupPage() {
     let [agelimit,setagelimit] = useState("")
     let [username,setusername] = useState("")
     let [usernamelimit,setusernamelimit] = useState("")
+    let [sex,setsex] = useState("female")
     const emailType = /^\S+@\S+\.\S+$/
 
     useEffect(()=>{
@@ -30,6 +31,22 @@ function SignupPage() {
 
     const handleSubmit = (e)=>{
         e.preventDefault();
+        let pass = true
+
+        if(!emailType.test(email)){setemaillimit("이메일 형식으로 입력해주세요."); pass = false;}
+        if(password.length < 8){setpwlimit("패스워드는 8자리 이상 입력해주세요."); pass = false;}
+        if(name == ""){setnamelimit("이름(실명)을 입력해주세요."); pass = false;}
+        if(age.length < 6){setagelimit("생년월일은 6자리로 입력해주세요."); pass = false;}
+        if(username == ""){setusernamelimit("닉네임을 입력해주세요."); pass = false;}
+
+        if(pass == true){
+        alert("회원가입을 축하합니다. 🎉") 
+        navigate('/')
+        }
+        else{
+          alert("입력 항목을 정확히 기입하신 후 다시 시도해주세요.")
+          return
+        }
     }
     
     return (
@@ -52,7 +69,7 @@ function SignupPage() {
               <button className="check-btn">중복확인</button>
               {!emailType.test(email) ? <p className="limit">{emaillimit}</p> : null}
               <input type="text" id="email" placeholder="이메일을 입력해주세요." value={email} onChange={(e)=>{
-                setemail(e.target.value.replace(/[^a-zA-Z0-9._@]/g,"")) // 이메일칸에 입력 할 수 있는 텍스트 제한
+               if(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(e.target.value)){alert("이메일은 영어로 입력해주세요.")} setemail(e.target.value.replace(/[^a-zA-Z0-9._@]/g,"")) // 이메일칸에 입력 할 수 있는 텍스트 제한
               }} onBlur={()=>{if(!emailType.test(email)){setemaillimit("이메일 형식으로 입력해주세요.")}}}/>
 
               <label htmlFor="password">password</label>
@@ -80,7 +97,7 @@ function SignupPage() {
               }} onBlur={()=>{if(username == ""){setusernamelimit("닉네임을 입력해주세요.")}}}/>
 
               <label htmlFor="sex">sex</label>
-              <select id="sex">
+              <select id="sex" value={sex} onChange={(e)=>{setsex(e.target.value)}}>
                 <option value="female">여성</option>
                 <option value="male">남성</option>
               </select>
