@@ -170,3 +170,12 @@ button:focus{
 }
 
 /* 회원가입 페이지 스타일링 */
+
+/* 경고 멘트 스타일링 */
+
+.limit{
+    font-size: 0.7rem;
+    color: red !important;
+}
+
+/* 경고 멘트 스타일링 */

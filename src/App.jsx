@@ -109,7 +109,7 @@ function App() {
         <Route path="/giftsetproduct/:category/:id" element={<GiftsetProductDetailPage />}></Route>
       </Routes>
 
-      {!isSignupPage && !isLoginPage &&(<><Footer /></>)}
+      {!isSignupPage && !isLoginPage && <Footer />}
       
     </div>
   );

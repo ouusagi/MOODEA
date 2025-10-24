@@ -11,7 +11,8 @@ function LoginPage() {
         document.body.style.overflow = "hidden";
         document.body.style.marginTop = "0rem";
         return()=>{
-            document.body.style.overflow = "auto"
+            document.body.style.overflowY = "auto"
+            document.body.style.overflowX = "hidden"
             document.body.style.marginTop = "3rem"
         }
     },[])
