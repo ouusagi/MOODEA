@@ -83,6 +83,10 @@ img {
     font-size: 0.8rem;
 }
 
+.username-wrap{
+    position: relative;
+}
+
 .check-btn{
     position: absolute;
     right: 0px;

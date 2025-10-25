@@ -1,11 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./SignupPage.css";
+import supabase from "../../supabaseClient";
 
 
 function SignupPage() {  
     
     let navigate = useNavigate()
+    let [checkbtn,setcheckbtn] = useState(0)
+    let [checkbtn2,setcheckbtn2] = useState(0)
     let [email,setemail] = useState("")
     let [emaillimit,setemaillimit] = useState("")
     let [password,setpassword] = useState("")
@@ -29,10 +32,12 @@ function SignupPage() {
         }
     },[])
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
-        let pass = true
+        let pass = true;
 
+        if(checkbtn <= 0){alert("이메일 중복확인을 해주세요."); return;}
+        if(checkbtn2 <= 0){alert("닉네임 중복확인을 해주세요."); return;}
         if(!emailType.test(email)){setemaillimit("이메일 형식으로 입력해주세요."); pass = false;}
         if(password.length < 8){setpwlimit("패스워드는 8자리 이상 입력해주세요."); pass = false;}
         if(name == ""){setnamelimit("이름(실명)을 입력해주세요."); pass = false;}
@@ -40,14 +45,53 @@ function SignupPage() {
         if(username == ""){setusernamelimit("닉네임을 입력해주세요."); pass = false;}
 
         if(pass == true){
-        alert("회원가입을 축하합니다. 🎉") 
-        navigate('/')
+
+        const {data, error} = await supabase
+        .from("users")
+        .insert([{email : email, password : password, name : name, age : age, username : username, sex : sex,}])
+        if(error){console.log(error); alert("에러가 발생 하였습니다. 다시 시도해주세요."); return;}
+
+        alert(`"${username}"님 회원가입을 축하합니다! 🎉`);navigate('/'); //모든 겅증 후 pass가 true일때 db에 데이터 넣고 에러 검사 까지 한 후 문제가 없으면 가입 성공
         }
+
         else{
           alert("입력 항목을 정확히 기입하신 후 다시 시도해주세요.")
           return
         }
     }
+
+    useEffect(()=>{
+      setcheckbtn(0)
+    },[email])
+
+    useEffect(()=>{
+      setcheckbtn2(0)
+    },[username])
+
+
+    const handleCheckEmail = async ()=>{
+      const {data : emailcheck, error : emailrerror} = await supabase
+      .from('users')
+      .select('email')
+      .eq('email', email)
+
+      if(emailcheck.length > 0){alert("이미 사용중인 이메일 입니다."); return;}
+      if(email == ""){alert("이메일을 입력해주세요."); return;}
+      else{alert("사용 가능한 이메일 입니다.");setcheckbtn(1);}
+    }
+
+    const handleCheckUsername = async ()=>{
+      const {data : usernamecheck, error : usernamererror} = await supabase
+      .from('users')
+      .select('username')
+      .eq('username', username)
+
+      if(usernamecheck.length > 0){alert("이미 사용중인 닉네임 입니다."); return;}
+      if(username == ""){alert("닉네임을 입력해주세요."); return;}
+      else{alert("사용 가능한 닉네임 입니다."); setcheckbtn2(1);}
+    }
+
+    
     
     return (
 
@@ -66,7 +110,7 @@ function SignupPage() {
               <form onSubmit={handleSubmit}>
 
               <label htmlFor="email">E-mail</label>
-              <button className="check-btn">중복확인</button>
+              <button type="button" className="check-btn" onClick={handleCheckEmail}>중복확인</button>
               {!emailType.test(email) ? <p className="limit">{emaillimit}</p> : null}
               <input type="text" id="email" placeholder="이메일을 입력해주세요." value={email} onChange={(e)=>{
                if(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(e.target.value)){alert("이메일은 영어로 입력해주세요.")} setemail(e.target.value.replace(/[^a-zA-Z0-9._@]/g,"")) // 이메일칸에 입력 할 수 있는 텍스트 제한
@@ -90,7 +134,10 @@ function SignupPage() {
                 setage(e.target.value.replace(/[^0-9]/g,"").slice(0,6))
                 }} onBlur={()=>{if(age.length < 6){setagelimit("생년월일은 6자리로 입력해주세요.")}}}/>
 
+              <div className="username-wrap">
               <label htmlFor="username">username</label>
+              <button type="button" className="check-btn" onClick={handleCheckUsername}>중복확인</button>
+              </div>
               {username == "" ? <p className="limit">{usernamelimit}</p> : ""}
               <input type="text" id="username" placeholder="닉네임을 입력해주세요." value={username} onChange={(e)=>{
                 setusername(e.target.value)

@@ -1,23 +1,24 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function AdPopup(){
 
 
-    let [on,change] = useState(true)
+    let [change,setchange] = useState(true)
 
     function check(){
-        change(false)
+        setchange(false)
         document.body.style.marginTop = 0
     }
 
 
     return(
         <div>
-            { on&&(
+            { change &&(
     <div className="AD-container">
         <div className="AD-item1">
-            <a href="#">첫 쇼핑시 3,000원 할인 회원가입 쿠폰 증정</a>
+            <Link to={'/signup'}>첫 쇼핑시 3,000원 할인 회원가입 쿠폰 증정</Link>
         </div>
 
         <div className="AD-item2">
