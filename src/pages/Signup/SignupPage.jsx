@@ -7,7 +7,7 @@ import supabase from "../../supabaseClient";
 function SignupPage() {  
     
     let navigate = useNavigate()
-    let [checkbtn,setcheckbtn] = useState(0)
+    let [checkbtn1,setcheckbtn1] = useState(0)
     let [checkbtn2,setcheckbtn2] = useState(0)
     let [email,setemail] = useState("")
     let [emaillimit,setemaillimit] = useState("")
@@ -35,8 +35,8 @@ function SignupPage() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         let pass = true;
-
-        if(checkbtn <= 0){alert("이메일 중복확인을 해주세요."); return;}
+        if(!email || !password || !name || !age || !username){alert("모든 요소를 입력해주세요."); return;}
+        if(checkbtn1 <= 0){alert("이메일 중복확인을 해주세요."); return;}
         if(checkbtn2 <= 0){alert("닉네임 중복확인을 해주세요."); return;}
         if(!emailType.test(email)){setemaillimit("이메일 형식으로 입력해주세요."); pass = false;}
         if(password.length < 8){setpwlimit("패스워드는 8자리 이상 입력해주세요."); pass = false;}
@@ -46,12 +46,14 @@ function SignupPage() {
 
         if(pass == true){
 
-        const {data, error} = await supabase
-        .from("users")
-        .insert([{email : email, password : password, name : name, age : age, username : username, sex : sex,}])
-        if(error){console.log(error); alert("에러가 발생 하였습니다. 다시 시도해주세요."); return;}
+        const {data, error} = await supabase.auth.signUp({email,password, options:{data:{username}}})
 
-        alert(`"${username}"님 회원가입을 축하합니다! 🎉`);navigate('/'); //모든 겅증 후 pass가 true일때 db에 데이터 넣고 에러 검사 까지 한 후 문제가 없으면 가입 성공
+        if(error){
+          console.log(error); alert("에러가 발생했습니다. 다시 시도해주세요."); return;
+        }
+
+        if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex});
+        alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉`); navigate('/');}
         }
 
         else{
@@ -61,7 +63,7 @@ function SignupPage() {
     }
 
     useEffect(()=>{
-      setcheckbtn(0)
+      setcheckbtn1(0)
     },[email])
 
     useEffect(()=>{
@@ -77,7 +79,7 @@ function SignupPage() {
 
       if(emailcheck.length > 0){alert("이미 사용중인 이메일 입니다."); return;}
       if(email == ""){alert("이메일을 입력해주세요."); return;}
-      else{alert("사용 가능한 이메일 입니다.");setcheckbtn(1);}
+      else{alert("사용 가능한 이메일 입니다.");setcheckbtn1(1);}
     }
 
     const handleCheckUsername = async ()=>{
