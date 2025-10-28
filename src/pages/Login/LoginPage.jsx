@@ -1,11 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./LoginPage.css";
-import { useEffect } from "react";
+import { useEffect, useState  } from "react";
+import supabase from "../../supabaseClient";
 
 
 function LoginPage() {  
 
     let navigate = useNavigate();
+    let [email, setemail] = useState("");
+    let [password, setpassword] = useState("");
+    
 
     useEffect(()=>{
         document.body.style.overflow = "hidden";
@@ -17,8 +21,26 @@ function LoginPage() {
         }
     },[])
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
+
+        if(!email || !password){alert("이메일과 패스워드를 입력해주세요."); return;}
+
+        const {data, error} = await supabase.auth.signInWithPassword({
+            email : email, password : password
+        })
+
+        if(error){
+            if(error.message.includes("Email not confirmed")){
+                alert("가입하신 이메일로 메일 인증 후 재로그인 해주세요.")
+                return;
+            }
+            console.log(error); 
+            alert("이메일 혹은 패스워드가 일치 하지 않습니다."); 
+            return;
+        }
+
+        if(data.user){alert(`"${data.user.user_metadata.username}"님 환영합니다 ! 🎉`); navigate('/');}
     }
     
     return (
@@ -38,14 +60,18 @@ function LoginPage() {
               <form onSubmit={handleSubmit}>
 
               <label htmlFor="email">E-mail</label>
-              <input type="text" id="email" placeholder="이메일을 입력해주세요."/>
+              <input type="text" id="email" value={email} onChange={(e)=>{
+                setemail(e.target.value)
+              }} placeholder="이메일을 입력해주세요."/>
 
               <label htmlFor="password">password</label>
-              <input type="password" id="password" placeholder="비밀번호를 입력해주세요."/>
+              <input type="password" id="password" value={password} onChange={(e)=>{
+                setpassword(e.target.value)
+              }} placeholder="비밀번호를 입력해주세요."/>
 
               <div className="login-btn-container">
               <button type="submit" className="login-btn">이메일로 로그인</button>
-              <button type="submit" className="signup-btn" onClick={()=>{navigate('/signup')}}>회원가입</button>
+              <button type="button" className="signup-btn" onClick={()=>{navigate('/signup')}}>회원가입</button>
               </div>
 
               </form>
