@@ -93,6 +93,14 @@ img {
   color: gray;
 }
 
+.option-container button{
+  color: gray;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 .menuicon-container{
   display: flex;
   gap: 1rem;
