@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 프로필 */
+
+.Mypage-container{
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.p-tag{
+    font-size: 2rem;
+    padding: 4rem 0rem 2rem 0rem;
+    font-weight: 300;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+
+.hr-green{
+    width: 8.7rem;
+    border-bottom: 0.5px solid #4CAF50;
+}
+
+.profile-container{
+    display: flex;
+    border-top: 4px solid #DADADA;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 12rem;
+    background-color: #F7F9FB;
+}
+
+.profile-left {
+  position: relative;
+  background-color: red;
+}
+
+.profile-img-box{
+    position: absolute;
+    top: 30%;
+    left: 2rem;
+    transform: translateY(-30%);
+    width: 100px;
+    height: 100px;
+    border-radius: 9999px;
+}
+
+.profile-img-box img{
+    width: 100%;
+    border-radius: 9999px;
+    border: none;
+}
+
+.profile-img-box p{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.profile-change-icon{
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    transform: translateX(-100%);
+    cursor: pointer;
+}
+
+/* 프로필 */
+
+
+/* 정보칸 */
+
+.profile-right {
+    padding: 2rem 0 0 10.5rem;
+}
+
+.profile-info-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.info-username{
+    font-size: 1.5rem;
+}
+
+.info-userEmail{
+    color: gray;
+}
+
+.info-userTotal{
+    padding-top: 0.2rem;
+    font-size: 1rem;
+}
+
+.info-userTotal span{
+    color: #A7D8F0;
+}
+
+.profile-btn{
+    padding-top: 1rem;
+}
+
+.profile-btn button{
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #DADADA;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+/* 정보칸 */
+
+
+/* 미디어 쿼리 */
+
+@media screen and (min-width:1600px) {
+
+.Mypage-container{
+  max-width: 1350px;
+}
+
+.profile-container{
+    max-width: 1350px;
+}
+
+}
+
+@media screen and (min-width:1800px) {
+
+.Mypage-container{
+  max-width: 1350px;
+}
+
+.profile-container{
+    max-width: 1350px;
+}
+
+}
+
+/* 미디어 쿼리 */

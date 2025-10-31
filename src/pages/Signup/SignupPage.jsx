@@ -53,7 +53,7 @@ function SignupPage() {
         }
 
         if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex});
-        alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉`); navigate('/');}
+        alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉`); navigate('/login');}
         }
 
         else{
