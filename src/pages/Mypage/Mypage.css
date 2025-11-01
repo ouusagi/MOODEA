@@ -76,6 +76,7 @@ img {
     margin-top: 0.5rem;
     text-align: center;
     font-size: 0.9rem;
+    background-color: #f4f4f4;
 }
 
 .profile-change-icon{
@@ -204,11 +205,22 @@ img {
 }
 
 .sections-list-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-top: 3px solid #eee;
     margin-bottom: 3rem;
     width: 100%;
     height: 200px;
     background-color: #F7F9FB;
+}
+
+.sections-list-box p{
+  font-size: 1rem;
+  color: #9aa0a6;
+  font-weight: 400;
+  text-align: center;
+  padding: 40px 0;
 }
 /* 유저 리스트 섹션 */
 
@@ -226,8 +238,13 @@ img {
 }
 
 .RecentOrders-container{
-    max-width: 1400px;
+    max-width: 1350px;
 }
+
+.UserSections-container{
+    max-width: 1350px;
+}
+
 }
 
 @media screen and (min-width:1800px) {
@@ -241,7 +258,11 @@ img {
 }
 
 .RecentOrders-container{
-    max-width: 1400px;
+    max-width: 1350px;
+}
+
+.UserSections-container{
+    max-width: 1350px;
 }
 
 }

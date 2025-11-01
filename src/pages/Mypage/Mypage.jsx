@@ -36,7 +36,7 @@ function Mypage(){
                 <div className="profile-img-box">
                     <img src="https://static.vecteezy.com/system/resources/previews/013/360/247/non_2x/default-avatar-photo-icon-social-media-profile-sign-symbol-vector.jpg" alt="user_img" />
                     <i className="fa-solid fa-pen-to-square profile-change-icon"></i>
-                    <p>WHITE 회원</p>
+                    <p>WHITE 회원 🤍</p>
                 </div>
               </div>
 
@@ -80,22 +80,29 @@ function Mypage(){
         <div className="UserSections-container">
 
             <div className="title-box">
+
             <p className="title-p-tag">최근 주문한 상품</p>
-            <button>더보기</button>
+            <button>더보기 +</button>
             </div>
-            <div className="sections-list-box"></div>
+            <div className="sections-list-box">
+            <p>최근 주문한 상품이 없습니다.</p>
+            </div>
 
             <div className="title-box">
             <p className="title-p-tag">장바구니</p>
-            <button>더보기</button>
+            <button>더보기 +</button>
             </div>
-            <div className="sections-list-box"></div>
+            <div className="sections-list-box">
+            <p>장바구니에 담긴 상품이 없습니다.</p>
+            </div>
 
             <div className="title-box">
             <p className="title-p-tag">나의 리뷰</p>
-            <button>더보기</button>
+            <button>더보기 +</button>
             </div>
-            <div className="sections-list-box"></div>
+            <div className="sections-list-box">
+            <p>작성하신 리뷰가 없습니다.</p>
+            </div>
 
         </div>
 
