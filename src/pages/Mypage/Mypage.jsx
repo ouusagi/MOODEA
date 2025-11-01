@@ -51,10 +51,52 @@ function Mypage(){
                     <button>등급혜택</button>
                     </div>
                 </div>
-                
+              </div>
+
+              <div className="profile-AssetsSection-container">
+                <div className="item-box">
+                <p>쿠폰</p>
+                <p className="item-box-count">5</p>
+                </div>
+              </div>
+
+              <div className="profile-AssetsSection-container">
+                <div className="item-box">
+                <p>포인트</p>
+                <p className="item-box-count">3000</p>
+                </div>
+              </div>
+
+              <div className="profile-AssetsSection-container">
+                <div className="item-box">
+                <p>찜목록</p>
+                <p className="item-box-count">2</p>
+                </div>
               </div>
 
             </div>
+        </div>
+
+        <div className="UserSections-container">
+
+            <div className="title-box">
+            <p className="title-p-tag">최근 주문한 상품</p>
+            <button>더보기</button>
+            </div>
+            <div className="sections-list-box"></div>
+
+            <div className="title-box">
+            <p className="title-p-tag">장바구니</p>
+            <button>더보기</button>
+            </div>
+            <div className="sections-list-box"></div>
+
+            <div className="title-box">
+            <p className="title-p-tag">나의 리뷰</p>
+            <button>더보기</button>
+            </div>
+            <div className="sections-list-box"></div>
+
         </div>
 
 
