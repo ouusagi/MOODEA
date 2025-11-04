@@ -74,7 +74,11 @@ function TopMenu(){
             else{navigate('/mypage')}
         }}><i className="fa-regular fa-user"></i></Link>
 
-        <a href="#"><i className="fa-solid fa-basket-shopping"></i></a>
+        <Link to="/cart" onClick={(e)=>{
+            e.preventDefault()
+            if(!user){ alert("로그인이 필요한 서비스 입니다."); navigate("/login");}
+            else{navigate('/cart')}
+        }}><i className="fa-solid fa-basket-shopping"></i></Link>
         <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
         </div>
 

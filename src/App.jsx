@@ -34,6 +34,8 @@ import SignupPage from './pages/Signup/SignupPage';
 // My Page
 import Mypage from './pages/Mypage/Mypage';
 
+// Cart
+import Cart from './pages/Cart/Cart';
 
 // common components
 import AdPopup from './components/common/AdPopup'
@@ -79,6 +81,7 @@ function App() {
         <Route path="/signup" element={<SignupPage />}></Route>
 
         <Route path="/mypage" element={<Mypage />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
         <Route path="/skincare/:page" element={<SkincarePage />} />

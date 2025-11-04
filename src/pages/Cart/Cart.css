@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 장바구니 타이틀 */
+.cart-container{
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.cart-title-box{
+    display: flex;
+    gap: 1.8rem;
+    padding: 4rem 0rem 2rem 0rem;
+}
+
+.cart-title-box .cart-title-p1{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+
+.cart-title-box .cart-title-p2{
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+/* 장바구니 타이틀 */
+
+/* 장바구니 아이템 타이틀 */
+.cart-body{
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.cart-item-list-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    box-shadow:0 3px 20px rgba(0,0,0,0.04);
+}
+
+.cart-item-list-title{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.cart-item-col{
+    font-weight: 600;
+}
+
+.cart-item-col:nth-child(1){
+  width: 40%;
+}
+
+.cart-item-col:nth-child(2){
+  width: 15%;
+  
+}
+
+.cart-item-col:nth-child(3){
+  width: 15%;
+}
+
+.cart-item-col:nth-child(4){
+  width: 15%;
+}
+
+.cart-item-col:nth-child(5){
+  width: 15%;
+}
+
+
+/* 장바구니 아이템 타이틀 */
+
+
+/* 장바구니 아이템 리스트 */
+
+.cart-item-list-box{
+    height: auto;
+    background-color: #f4f4f4;
+}
+
+.cart-item-list-info{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem ;
+    border: 1px solid #eee;
+    border-top: 0;
+}
+
+.cart-item{
+    justify-content: center;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.cart-item:nth-child(1){
+    width: 40%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    
+}
+
+.cart-item:nth-child(2){
+  width: 15%;
+  
+}
+
+.cart-item:nth-child(3){
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    
+}
+
+.cart-item:nth-child(4){
+  width: 15%;
+  
+}
+
+.cart-item.remove-btn{
+  width: 15%;
+  display:flex;
+  justify-content:center;
+}
+
+.cart-item-name{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 0.3rem;
+    overflow: hidden;
+}
+
+.cart-item-name h3{
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cart-item-name h5{
+    color: #888;
+}
+
+
+.cart-item img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.cart-item button{
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.1s ease;
+}
+
+.cart-item.remove-btn i{
+  cursor:pointer;
+}
+
+/* 장바구니 아이템 리스트 */
+
+
+
+/* 장바구니 아이템 모달 */
+.cart-total-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 300px;
+    max-height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    padding: 2rem;
+}
+
+.cart-total-modal p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cart-total-modal h5{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cart-total-modal p:nth-child(1){
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.cart-total-modal p:nth-child(9){
+    color:#6C5CE7;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.cart-total-modal button{
+    margin-top: 1rem;
+    background-color: #2B2B2B;
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+    border: none;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cart-total-modal button:hover{
+    background-color: white;
+    border: 1px solid #eee;
+    color: black;
+}
+/* 장바구니 아이템 모달 */
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1600px) {
+
+.cart-container{
+    max-width: 1350px;
+}
+
+}
+
+@media screen and (min-width:1800px) {
+
+.cart-container{
+    max-width: 1350px;
+}
+
+}
