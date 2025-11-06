@@ -16,10 +16,11 @@ function ProductDetail({ tableName, category }) {
     ])
     let [showmd, setshowmd] = useState(false)
     let navigate = useNavigate()
+    let [user, setuser] = useState(null)
 
     useEffect(()=>{
         async function fetchData() {
-            const {data, error} = await supabase
+            const {data: getdata, error: notdata} = await supabase
             .from(tableName)
             .select('*')
             .order('id', {ascending: true})
@@ -27,18 +28,52 @@ function ProductDetail({ tableName, category }) {
             .eq('category', category)
             .maybeSingle()
 
-        if(error){
-            console.log(error)
+        if(notdata){
+            console.log(notdata)
         }
         else{
-            setproducts(data)
+            setproducts(getdata)
         }
+
+        const {data: UserData, error: UserError} = await supabase.auth.getUser()
+        if(UserError){console.log(UserError.message)}
+        else{setuser(UserData?.user ?? null)}
         }
 
         fetchData()
     },[id, category, tableName])
 
     if(!products) return <p>상품 정보를 불러오는 중 입니다..</p>
+
+
+    async function addToCart() {
+      const {data: inCart, error:errorCart} = await supabase  // 장바구니 중복확인
+      .from("Cart")
+      .select("*")
+      .eq('user_id',user.id)
+      .eq('product_id',products.id)
+      .maybeSingle()
+
+      if(inCart){   // 중복이면 상품 수량만 증가
+        await supabase
+        .from("Cart")
+        .update({quantity:inCart.quantity + itemcount})
+        .eq('id', inCart.id)
+    }
+
+    else{
+      await supabase.from("Cart") //중복이 없으면 카트 테이블에 해당 상품 데이터 전송
+      .insert({
+        user_id:user.id,
+        product_id:products.id,
+        quantity:itemcount,
+        price:products.price,
+        name:products.name,
+        photo:products.photo
+      })
+    }
+    alert("장바구니에 담겼습니다 ! 🛒")
+  }
 
     function Modal() {
       
@@ -89,9 +124,12 @@ function ProductDetail({ tableName, category }) {
         
 
       <div className="product-detail-btn">
-        <button onClick={()=>{setshowmd(true)}}>BUY IT NOW</button>
-        <button onClick={()=>{setshowmd(true)}}>CART</button>
-        <button onClick={()=>{setshowmd(true)}}><p>WISH LIST</p></button>
+        <button onClick={()=>{if(!user){setshowmd(true)}}}>BUY IT NOW</button>
+        <button onClick={()=>{
+          if(!user){setshowmd(true)}
+          else{addToCart()}
+          }}>CART</button>
+        <button onClick={()=>{if(!user){setshowmd(true)}}}><p>WISH LIST</p></button>
       </div>
       
       </div>
