@@ -245,7 +245,7 @@ img {
 }
 
 .cart-total-modal button{
-    margin-top: 1rem;
+    margin-top: 0rem;
     background-color: #2B2B2B;
     color: white;
     font-weight: 500;

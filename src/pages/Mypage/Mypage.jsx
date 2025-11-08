@@ -2,11 +2,13 @@ import { useState, useEffect } from "react"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './Mypage.css'
+import { useNavigate } from "react-router-dom"
 
 function Mypage(){
 
     let [username,setusername] = useState("")
     let [useremail,setuseremail] = useState("")
+    let navigate = useNavigate()
 
     useEffect(()=>{
         const Username = async ()=>{
@@ -90,7 +92,7 @@ function Mypage(){
 
             <div className="title-box">
             <p className="title-p-tag">장바구니</p>
-            <button>더보기 +</button>
+            <button onClick={()=>{navigate("/cart")}}>더보기 +</button>
             </div>
             <div className="sections-list-box">
             <p>장바구니에 담긴 상품이 없습니다.</p>

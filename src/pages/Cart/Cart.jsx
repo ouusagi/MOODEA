@@ -6,6 +6,9 @@ import './Cart.css'
 function Cart(){
 
   let [cart,setcart] = useState([])
+  const total = cart.reduce((sum,item)=>{return sum + item.quantity * item.price},0)
+  const shipping = total >= 50000 ? 0 : 3000
+  const point = Math.floor(total / 1000) * 10
 
   useEffect(()=>{
     async function Getitems() {
@@ -117,15 +120,16 @@ function Cart(){
               <div className="cart-total-modal">
                 <p>최종 결제 금액</p>
                 <hr />
-                <p>주문금액 : 108,000원</p>
+                <p>주문금액 : {total.toLocaleString()}원</p>
                 <p>할인금액 : 0원</p>
-                <p>상품 총 개수 : {cart.length}개</p>
-                <p>배송비 : 무료</p>
+                <p>상품 총 개수 : {cart.reduce((sum,item)=>{return sum + item.quantity},0)}개</p>
+                <p>배송비 : {shipping}원</p>
                 <h5>(5만원 이상 주문시 배송비 무료)</h5>
                 <hr />
-                <p>총 금액 : 108,000원</p>
-                <p>적립 예정 포인트 : 1000p</p>
-                <button>결제하기</button>
+                <p>총 금액 : {total.toLocaleString()}원</p>
+                <p>적립 예정 포인트 : {point}p</p>
+                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>결제하기</button>
+                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>쿠폰/포인트 사용</button>
               </div>
 
             </div>
