@@ -53,7 +53,8 @@ function SignupPage() {
         }
 
         if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex});
-        alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉`); navigate('/login');}
+        await SignupCoupon(data.user.id)
+        alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉  신규 가입 축하 쿠폰이 지급 완료되었습니다! 🎁`); navigate('/login');}
         }
 
         else{
@@ -91,6 +92,17 @@ function SignupPage() {
       if(usernamecheck.length > 0){alert("이미 사용중인 닉네임 입니다."); return;}
       if(username == ""){alert("닉네임을 입력해주세요."); return;}
       else{alert("사용 가능한 닉네임 입니다."); setcheckbtn2(1);}
+    }
+
+    async function SignupCoupon(userid) {
+      const {error:couponerror} = await supabase.from("user_coupons")
+      .insert({
+        user_id:userid,
+        coupon_name:"회원가입 축하 쿠폰",
+        amount:3000,
+        used:false
+      })
+      if(couponerror){return alert("에러가 발생하였습니다"); console.log(couponerror.message)}
     }
 
     

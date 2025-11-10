@@ -8,18 +8,42 @@ function Mypage(){
 
     let [username,setusername] = useState("")
     let [useremail,setuseremail] = useState("")
+    let [userId,setuserId] = useState(null)
+    let [coupon,setcoupon] = useState([])
     let navigate = useNavigate()
 
-    useEffect(()=>{
-        const Username = async ()=>{
+
+        const fetchUser = async ()=>{
+            if(!userId) return;
             const {data, error} = await supabase.auth.getSession()
             if(error){console.log(error.message)}
             else{
+                // userInfo
                 setusername(data.session?.user?.user_metadata?.username || "");
-                setuseremail(data.session?.user?.email || "")}
-        }
-        Username()
-    },[])
+                setuseremail(data.session?.user?.email || "")
+                setuserId(data.session.user.id)
+              }
+        }     
+
+
+        const fetchCoupons = async ()=>{
+                const {data:CouponData, error:CouponError} = await supabase.from("user_coupons")
+                .select("*")
+                .eq("user_id",userId)
+                if(CouponError){console.log(CouponError)}
+                else{setcoupon(CouponData)}}
+
+
+
+                useEffect(()=>{
+                  fetchUser()
+                },[])
+
+                useEffect(()=>{
+                  if(userId){
+                    fetchCoupons()
+                  }
+                },[userId])
 
 
     return(
@@ -58,7 +82,7 @@ function Mypage(){
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
                 <p>쿠폰</p>
-                <p className="item-box-count">5</p>
+                <p className="item-box-count">{coupon.length}개</p>
                 </div>
               </div>
 
