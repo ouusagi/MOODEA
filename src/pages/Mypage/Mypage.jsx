@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import App from "../../App"
+import Cart from "../Cart/Cart"
 import supabase from "../../supabaseClient"
 import './Mypage.css'
 import { useNavigate } from "react-router-dom"
+import CartItemList from "../../components/Recycling/CartItemList"
 
 function Mypage(){
 
@@ -10,11 +12,12 @@ function Mypage(){
     let [useremail,setuseremail] = useState("")
     let [userId,setuserId] = useState(null)
     let [coupon,setcoupon] = useState([])
+    let [point,setpoint] = useState(0)
+    let [cart,setcart] = useState([])
     let navigate = useNavigate()
 
 
         const fetchUser = async ()=>{
-            if(!userId) return;
             const {data, error} = await supabase.auth.getSession()
             if(error){console.log(error.message)}
             else{
@@ -35,6 +38,28 @@ function Mypage(){
 
 
 
+        const UserPoint = async ()=>{
+          const {data:userPoint, error:pointError} = await supabase.from("users")
+          .select("point")
+          .eq("user_id",userId)
+          if(pointError){console.log(pointError.message)}
+          else(setpoint(userPoint))
+        }
+        
+        
+        const UserCart = async ()=>{
+          const {data:cartData, error:cartError} = await supabase.from("Cart")
+          .select("*")
+          .eq("user_id",userId)
+          .limit(3)
+          .order("id",{ascending : false})
+
+          if(cartError){console.log(cartError.message)}
+          else{setcart(cartData)}
+        }
+
+
+
                 useEffect(()=>{
                   fetchUser()
                 },[])
@@ -42,6 +67,8 @@ function Mypage(){
                 useEffect(()=>{
                   if(userId){
                     fetchCoupons()
+                    UserPoint()
+                    UserCart()
                   }
                 },[userId])
 
@@ -70,7 +97,7 @@ function Mypage(){
                 <div className="profile-info-box">
                     <p className="info-username">{username}</p>
                     <p className="info-userEmail">({useremail})</p>
-                    <p className="info-userTotal">고객님의 총 구매금액은 <span>157,400</span>원 입니다.</p>
+                    <p className="info-userTotal">고객님의 총 구매금액은 <span>0</span>원 입니다.</p>
 
                     <div className="profile-btn">
                     <button>회원정보 수정</button>
@@ -89,7 +116,7 @@ function Mypage(){
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
                 <p>포인트</p>
-                <p className="item-box-count">3000</p>
+                <p className="item-box-count">{point}</p>
                 </div>
               </div>
 
@@ -118,8 +145,10 @@ function Mypage(){
             <p className="title-p-tag">장바구니</p>
             <button onClick={()=>{navigate("/cart")}}>더보기 +</button>
             </div>
-            <div className="sections-list-box">
-            <p>장바구니에 담긴 상품이 없습니다.</p>
+            <div className={`sections-list-box ${cart.length === 0 ? "empty" : ""}`}>
+              { cart.length === 0 ? (<p>장바구니에 담긴 상품이 없습니다.</p>) : (cart.map((item,i)=>
+                <CartItemList key={item.i} item={item}/>
+              ))}
             </div>
 
             <div className="title-box">

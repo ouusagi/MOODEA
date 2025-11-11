@@ -215,6 +215,23 @@ img {
     background-color: #F7F9FB;
 }
 
+.sections-list-box:nth-child(4){
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-top: 3px solid #eee;
+    margin-bottom: 3rem;
+    width: 100%;
+    height: auto;
+    background-color: #F7F9FB;
+}
+
+.sections-list-box.empty {
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
 .sections-list-box p{
   font-size: 1rem;
   color: #9aa0a6;
@@ -223,6 +240,47 @@ img {
   padding: 40px 0;
 }
 /* 유저 리스트 섹션 */
+
+
+
+
+
+/* 마이페이지 렌더링 전용 */
+
+.cart-preview-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #F7F9FB;
+  padding: 1rem 1.5rem;
+}
+
+.cart-preview-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-preview-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cart-preview-item-info h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cart-preview-item-info h5 {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* 마이페이지 렌더링 전용 */
 
 
 /* 미디어 쿼리 */

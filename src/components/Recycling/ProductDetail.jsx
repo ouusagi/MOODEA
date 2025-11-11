@@ -69,7 +69,8 @@ function ProductDetail({ tableName, category }) {
         quantity:itemcount,
         price:products.price,
         name:products.name,
-        photo:products.photo
+        photo:products.photo,
+        brand:products.brand
       })
     }
     alert("장바구니에 담겼습니다 ! 🛒")
