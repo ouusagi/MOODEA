@@ -1,7 +1,5 @@
 function CartItemList({ item }) {
 
-    console.log(item)
-
   return (
     <div className="cart-preview-item" key={item.id}>
       <img src={item.photo} alt="product-img" />

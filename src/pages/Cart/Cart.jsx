@@ -5,10 +5,14 @@ import './Cart.css'
 
 function Cart(){
 
+  let [point,setpoint] = useState(0)
+  let [inputpoint,setinputpoint] = useState('')
+  let [coupon,setcoupon] = useState([])
   let [cart,setcart] = useState([])
+  let [showModal,setShowModal] = useState(false)
   const total = cart.reduce((sum,item)=>{return sum + item.quantity * item.price},0)
   const shipping = total >= 50000 ? 0 : 3000
-  const point = Math.floor(total / 1000) * 10
+  const earnpoint = Math.floor(total / 1000) * 10
 
   useEffect(()=>{
     async function Getitems() {
@@ -30,6 +34,21 @@ function Cart(){
       else{
         setcart(cartData)
       }
+
+      const {data:UserPoint, error:UserError} = await supabase.from("users")
+      .select("point")
+      .eq("id",userData.user.id)
+      .single()
+
+      if(UserError){console.log(UserError.message)}
+      else{setpoint(UserPoint.point)}
+
+
+      const {data:UserCoupon, error:CouponError} = await supabase.from("user_coupons")
+      .select("*")
+      .eq("user_id",userData.user.id)
+      if(CouponError){console.log(CouponError.message)}
+      else{setcoupon(UserCoupon)}
 
     }
     Getitems()
@@ -64,6 +83,10 @@ function Cart(){
           setcart(prev => prev.filter(i => i.id !== item.id))
         }
 
+
+        function useAllPoints(){
+          setinputpoint(point)
+        }
 
 
     return(
@@ -108,7 +131,7 @@ function Cart(){
                         </div>
                         <div className="cart-item">{(item.price * item.quantity).toLocaleString()}원</div>
                         <div className="cart-item remove-btn" onClick={()=> deleteitem(item)}>
-                        <i class="fa-solid fa-xmark"></i>
+                        <i className="fa-solid fa-xmark"></i>
                         </div>
                       </div>
                    </div>
@@ -127,15 +150,51 @@ function Cart(){
                 <h5>(5만원 이상 주문시 배송비 무료)</h5>
                 <hr />
                 <p>총 금액 : {total.toLocaleString()}원</p>
-                <p>적립 예정 포인트 : {point}p</p>
+                <p>적립 예정 포인트 : {earnpoint}p</p>
                 <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>결제하기</button>
-                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>쿠폰/포인트 사용</button>
+                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}
+              else{setShowModal(true)}}}>쿠폰/포인트 사용</button>
               </div>
 
             </div>
 
 
         </div>
+
+
+              {showModal && (
+        <div className="modal-overlay">
+          <div className="coupon-modal">
+            <h3>쿠폰/포인트 사용</h3>
+            <div className="point_coupon_box">
+            <p>보유 포인트: {point}p</p>
+            <p>보유 쿠폰: {coupon.length}개</p>
+            </div>
+
+            <div className="coupon-input-box">
+              <label>보유 쿠폰 사용</label>
+              <select>{coupon.map((item,i)=>{
+                return <option key={i}>{item.coupon_name}</option>
+              })}</select>
+              <button>적용</button>
+            </div>
+
+            <div className="point-input-box">
+              <label>사용할 포인트</label>
+              <div>
+              <input type="text" placeholder="0" value={inputpoint} min={0} max={point} 
+              onChange={(e)=>{if(/^\d*$/.test(e.target.value)){setinputpoint(e.target.value)}}}/>
+              </div>
+              <button onClick={(e)=>{if(Number(inputpoint) > point){alert("보유한 포인트가 부족합니다.")}
+              else if(!inputpoint || Number(inputpoint) === 0){alert("포인트를 입력해주세요.")}
+            else{alert("포인트가 적용 되었습니다 !")}}}>적용</button>
+              <button onClick={useAllPoints}>전체사용</button>
+            </div>
+
+            <button className="close-btn" onClick={()=> setShowModal(false)}>닫기</button>
+          </div>
+        </div>
+      )}
 
         </div>
     )
