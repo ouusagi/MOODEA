@@ -192,7 +192,7 @@ function Cart(){
               </div>
               <button onClick={(e)=>{if(Number(inputpoint) > point){alert("보유한 포인트가 부족합니다.")}
               else if(!inputpoint || Number(inputpoint) === 0){alert("포인트를 입력해주세요.")}
-            else{alert("포인트가 적용 되었습니다 !"); setdiscount(Number(inputpoint))}}}>적용</button>
+            else{alert("포인트가 적용 되었습니다 !"); setdiscount(Number(inputpoint)); setShowModal(false)}}}>적용</button>
               <button onClick={useAllPoints}>전체사용</button>
             </div>
 
