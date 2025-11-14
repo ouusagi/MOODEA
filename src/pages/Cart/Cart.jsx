@@ -10,6 +10,9 @@ function Cart(){
   let [coupon,setcoupon] = useState([])
   let [cart,setcart] = useState([])
   let [showModal,setShowModal] = useState(false)
+  const [selectedCoupon, setSelectedCoupon] = useState(null)
+  const [CouponDiscount, setCouponDiscount] = useState(0)
+  const [discount,setdiscount] = useState(0)
   const total = cart.reduce((sum,item)=>{return sum + item.quantity * item.price},0)
   const shipping = total >= 50000 ? 0 : 3000
   const earnpoint = Math.floor(total / 1000) * 10
@@ -49,6 +52,7 @@ function Cart(){
       .eq("user_id",userData.user.id)
       if(CouponError){console.log(CouponError.message)}
       else{setcoupon(UserCoupon)}
+      if(UserCoupon.length > 0){setSelectedCoupon(UserCoupon[0])}
 
     }
     Getitems()
@@ -144,12 +148,12 @@ function Cart(){
                 <p>최종 결제 금액</p>
                 <hr />
                 <p>주문금액 : {total.toLocaleString()}원</p>
-                <p>할인금액 : 0원</p>
+                <p>할인금액 : {(discount + CouponDiscount).toLocaleString()}원</p>
                 <p>상품 총 개수 : {cart.reduce((sum,item)=>{return sum + item.quantity},0)}개</p>
-                <p>배송비 : {shipping}원</p>
+                <p>배송비 : {shipping.toLocaleString()}원</p>
                 <h5>(5만원 이상 주문시 배송비 무료)</h5>
                 <hr />
-                <p>총 금액 : {total.toLocaleString()}원</p>
+                <p>총 금액 : {(total - discount - CouponDiscount + shipping).toLocaleString()}원</p>
                 <p>적립 예정 포인트 : {earnpoint}p</p>
                 <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>결제하기</button>
                 <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}
@@ -173,10 +177,11 @@ function Cart(){
 
             <div className="coupon-input-box">
               <label>보유 쿠폰 사용</label>
-              <select>{coupon.map((item,i)=>{
-                return <option key={i}>{item.coupon_name}</option>
+              <select value={selectedCoupon?.coupon_name || ""} onChange={(e)=> {const selected = coupon.find(c => c.coupon_name === e.target.value); 
+              setSelectedCoupon(selected)}}>{coupon.map((item,i)=>{
+              return <option key={i}>{item.coupon_name}</option>
               })}</select>
-              <button>적용</button>
+              <button onClick={()=>{if(!selectedCoupon){return alert("쿠폰을 선택 해주세요.")}else{alert("쿠폰이 적용 되었습니다 !"); setCouponDiscount(selectedCoupon.amount)}}}>적용</button>
             </div>
 
             <div className="point-input-box">
@@ -187,7 +192,7 @@ function Cart(){
               </div>
               <button onClick={(e)=>{if(Number(inputpoint) > point){alert("보유한 포인트가 부족합니다.")}
               else if(!inputpoint || Number(inputpoint) === 0){alert("포인트를 입력해주세요.")}
-            else{alert("포인트가 적용 되었습니다 !")}}}>적용</button>
+            else{alert("포인트가 적용 되었습니다 !"); setdiscount(Number(inputpoint))}}}>적용</button>
               <button onClick={useAllPoints}>전체사용</button>
             </div>
 
