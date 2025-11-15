@@ -14,6 +14,7 @@ function Mypage(){
     let [coupon,setcoupon] = useState([])
     let [point,setpoint] = useState(0)
     let [cart,setcart] = useState([])
+    let [wish,setwish] = useState(0)
     let navigate = useNavigate()
 
 
@@ -24,7 +25,7 @@ function Mypage(){
                 // userInfo
                 setusername(data.session?.user?.user_metadata?.username || "");
                 setuseremail(data.session?.user?.email || "")
-                setuserId(data.session.user.id)
+                setuserId(data?.session?.user?.id || null)
               }
         }     
 
@@ -41,9 +42,10 @@ function Mypage(){
         const UserPoint = async ()=>{
           const {data:userPoint, error:pointError} = await supabase.from("users")
           .select("point")
-          .eq("user_id",userId)
+          .eq("id",userId)
+          .maybeSingle()
           if(pointError){console.log(pointError.message)}
-          else(setpoint(userPoint))
+          else(setpoint(userPoint?.point || 0))
         }
         
         
@@ -58,6 +60,15 @@ function Mypage(){
           else{setcart(cartData)}
         }
 
+        const Wishlist = async ()=>{
+          const {data:Wishitem, error:WishError} = await supabase.from("Wishlist")
+          .select("product_id")
+          .eq("user_id",userId)
+
+          if(WishError){console.log(WishError.message)}
+          else{setwish(Wishitem)}
+        }
+
 
 
                 useEffect(()=>{
@@ -69,6 +80,7 @@ function Mypage(){
                     fetchCoupons()
                     UserPoint()
                     UserCart()
+                    Wishlist()
                   }
                 },[userId])
 
@@ -116,14 +128,14 @@ function Mypage(){
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
                 <p>포인트</p>
-                <p className="item-box-count">{point}</p>
+                <p className="item-box-count">{point.toLocaleString()}</p>
                 </div>
               </div>
 
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
-                <p>찜목록</p>
-                <p className="item-box-count">2</p>
+                <p onClick={()=> {if(userId){navigate("/wishlist")}else{alert("로그인이 필요한 서비스입니다."); navigate("/login")}}}>찜목록</p>
+                <p onClick={()=> {if(userId){navigate("/wishlist")}else{alert("로그인이 필요한 서비스입니다."); navigate("/login")}}} className="item-box-count">{wish.length}</p>
                 </div>
               </div>
 
@@ -147,7 +159,7 @@ function Mypage(){
             </div>
             <div className={`sections-list-box ${cart.length === 0 ? "empty" : ""}`}>
               { cart.length === 0 ? (<p>장바구니에 담긴 상품이 없습니다.</p>) : (cart.map((item,i)=>
-                <CartItemList key={item.i} item={item}/>
+                <CartItemList key={i} item={item}/>
               ))}
             </div>
 

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 위시리스트 타이틀 */
+.Wishlist-container{
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.Wishlist-title-box{
+    display: flex;
+    gap: 1.8rem;
+    padding: 4rem 0rem 2rem 0rem;
+}
+
+.Wishlist-title-box .Wishlist-title-p1{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+
+.Wishlist-title-box .Wishlist-title-p2{
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+/* 위시리스트 타이틀 */
+
+
+
+
+@media screen and (min-width:1600px) {
+
+.Wishlist-container{
+    max-width: 1350px;
+}
+
+}
+
+@media screen and (min-width:1800px) {
+
+.Wishlist-container{
+    max-width: 1350px;
+}
+
+}

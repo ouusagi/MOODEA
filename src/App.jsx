@@ -37,6 +37,9 @@ import Mypage from './pages/Mypage/Mypage';
 // Cart
 import Cart from './pages/Cart/Cart';
 
+// Wishlist
+import Wishlist from './pages/Wishlist/Wishlist';
+
 // common components
 import AdPopup from './components/common/AdPopup'
 import HeaderSection from './components/common/HeaderSection';
@@ -79,7 +82,7 @@ function App() {
 
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>
-
+        <Route path="/wishlist" element={<Wishlist/>}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
 
