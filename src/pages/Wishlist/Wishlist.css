@@ -52,6 +52,77 @@ img {
 /* 위시리스트 타이틀 */
 
 
+/* 위시리스트 배너 */
+.Wishlist-banner-container{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5rem;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+}
+
+.Wishlist-banner-container > div:nth-child(1) { width: 40%; }
+.Wishlist-banner-container > div:nth-child(2),
+.Wishlist-banner-container > div:nth-child(3),
+.Wishlist-banner-container > div:nth-child(4) {
+    width: 20%;
+    text-align: center;
+}
+/* 위시리스트 배너 */
+
+
+/* 위시리스트 아이템 */
+.Wishlist-item-container{
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Wishlist-item-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    height: auto;
+    border-bottom: 2px solid #eee;
+}
+
+.Wishlist-item-box > div:nth-child(1) { width: 40%; }
+.Wishlist-item-box > div:nth-child(2),
+.Wishlist-item-box > div:nth-child(3),
+.Wishlist-item-box > div:nth-child(4) {
+    width: 20%;
+    text-align: center;
+}
+
+.Wishlist-item-container img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-left: -4.1rem;
+}
+
+.Wishlist-item-img{
+    display: flex;
+    gap: 1rem;
+}
+
+.Wishlist-item-box button{
+    background-color: #2B2B2B;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+/* 위시리스트 아이템 */
+
+
 
 
 @media screen and (min-width:1600px) {

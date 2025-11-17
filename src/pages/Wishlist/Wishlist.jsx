@@ -46,6 +46,48 @@ function Wishlist(){
                 <p className="Wishlist-title-p2">{product.length} items</p>
             </div>
 
+            <div className="Wishlist-banner-container">
+                <div>
+                    <p>상품명</p>
+                </div>
+
+                <div>
+                    <p>상품가격</p>
+                </div>
+
+                <div>
+                    <p>담기</p>
+                </div>
+
+                <div>
+                    <p>제거</p>
+                </div>
+            </div>
+
+            <div className="Wishlist-item-container">
+
+            <div className="Wishlist-item-box">
+
+                <div className="Wishlist-item-img">
+                    <img src="/MOODEA.png" alt="product-img" />
+                    <p>상품명</p>
+                </div>
+
+                <div>
+                    <p>상품가격</p>
+                </div>
+
+                <div>
+                    <button>장바구니에 담기</button>
+                </div>
+
+                <div>
+                    <button>X</button>
+                </div>
+            </div>
+
+            </div>
+
         </div>
        
         </div>

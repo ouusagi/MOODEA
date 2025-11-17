@@ -60,6 +60,7 @@ img {
 
 .cart-item-list-container{
     display: flex;
+    border-radius: 20px 20px 0px 0px;
     flex: 1;
     flex-direction: column;
     box-shadow:0 3px 20px rgba(0,0,0,0.04);
