@@ -29,7 +29,7 @@ function ProductDetail({ tableName, category }) {
             .maybeSingle()
 
         if(notdata){
-            console.log(notdata)
+            console.log(notdata.message)
         }
         else{
             setproducts(getdata)
@@ -74,6 +74,32 @@ function ProductDetail({ tableName, category }) {
       })
     }
     alert("장바구니에 담겼습니다 ! 🛒")
+  }
+
+
+  async function addToWishList() {
+    const {data:itemData, error:itemError} = await supabase
+    .from('Wishlist')
+    .select('*')
+    .eq('user_id',user.id)
+    .eq('product_id',products.id)
+    .maybeSingle()
+
+    if(itemError){console.log(itemError.message); alert("서버 오류가 발생했습니다. 나중에 다시 시도해주세요.");return}
+    if(itemData){alert("이미 위시리스트에 담겨 있습니다 ❤️"); return}
+    else{
+      const {error:insertError} = await supabase.from('Wishlist')
+      .insert({
+        user_id:user.id,
+        product_id:products.id,
+        price:products.price,
+        name:products.name,
+        photo:products.photo,
+        brand:products.brand
+      })
+      if(insertError){alert("에러가 발생하였습니다."); console.log(insertError.message); return}
+      alert("위시리스트에 담겼습니다 ❤️")
+    }
   }
 
     function Modal() {
@@ -130,7 +156,7 @@ function ProductDetail({ tableName, category }) {
           if(!user){setshowmd(true)}
           else{addToCart()}
           }}>CART</button>
-        <button onClick={()=>{if(!user){setshowmd(true)}}}><p>WISH LIST</p></button>
+        <button onClick={()=>{if(!user){setshowmd(true)}else{addToWishList()}}}><p>WISH LIST</p></button>
       </div>
       
       </div>

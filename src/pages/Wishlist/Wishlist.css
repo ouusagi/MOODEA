@@ -112,16 +112,35 @@ img {
     gap: 1rem;
 }
 
-.Wishlist-item-box button{
-    background-color: #2B2B2B;
-    color: white;
-    padding: 0.5rem;
+.Wishlist-item-img h3{
+    font-size: 0.7rem;
+    color: #666;
+}
+
+.cart-box{
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 5px;
-    border: none;
+}
+
+.close-button{
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 /* 위시리스트 아이템 */
 
+
+
+/* 아이템이 없을때 */
+.not-item-msg{
+    font-size: 1rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+}
+/* 아이템이 없을때 */
 
 
 
