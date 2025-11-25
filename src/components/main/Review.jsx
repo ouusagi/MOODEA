@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import supabase from "../../supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -7,6 +8,7 @@ import supabase from "../../supabaseClient";
 function Review(){
 
    let [Review,setReview] = useState([])
+   let navigate = useNavigate()
 
    // useEffect(()=>{
    //    fetch('/Review.json')
@@ -45,7 +47,7 @@ function Review(){
                 <h1>Reviews</h1>
                 <h2>“MOODÉA를 경험한 고객님들의 진솔한 후기를 만나보세요."</h2>
                 </div>
-                <button className="Reviwmore-btn">모든 후기보기<i className="fa-solid fa-angle-right"></i></button>
+                <button className="Reviwmore-btn" onClick={()=> navigate('/reviewboard')}>모든 후기보기<i className="fa-solid fa-angle-right"></i></button>
             </div>
             
 

@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+
+/* 리뷰게시판 컨테이너 */
+.ReviewBoard-bg{
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+}
+/* 리뷰게시판 컨테이너 */
+
+
+/* 리뷰게시판 타이틀 */
+.ReviewBoard-title{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.8rem;
+    padding: 4rem 0rem 2rem 0rem;
+}
+
+.ReviewBoard-title > div{
+    display: flex;
+    gap: 2rem;
+}
+
+.ReviewBoard-title-p1{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+
+.ReviewBoard-title-p2{
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: #2B2B2B;
+    letter-spacing: 0.5px;
+}
+
+.abs-box{
+    position: relative;
+}
+
+.Search-box{
+    width: 14rem;
+    border: #eee 1px solid;
+    text-align: start;
+    padding: 0 1rem;
+    font-weight: 500;
+    color: black;
+    border-radius: 1rem;
+}
+
+.Review-Search{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+/* 리뷰게시판 타이틀 */
+
+
+/* 리뷰게시판 메뉴 배너 */
+
+.ReviewBoard-banner-container{
+    display: flex;
+    width: 100%;
+    border-top: 2px solid #2B2B2B;
+    border-bottom: 1px solid #eee;
+    background-color: #F7F7F7;
+    height: 3.5rem;
+}
+
+.ReviewBoard-banner-Contents{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.ReviewBoard-banner-Contents > div {
+    text-align: center;
+}
+
+.ReviewBoard-banner-Contents > div:nth-child(1) { width: 10%; }
+.ReviewBoard-banner-Contents > div:nth-child(2) { width: 50%; }
+.ReviewBoard-banner-Contents > div:nth-child(3) { width: 10%; }
+.ReviewBoard-banner-Contents > div:nth-child(4) { width: 10%; }
+.ReviewBoard-banner-Contents > div:nth-child(5) { width: 10%; }
+.ReviewBoard-banner-Contents > div:nth-child(6) { width: 10%; }
+
+/* 리뷰게시판 메뉴 배너 */
+
+
+/* 리뷰게시판 게시글 백그라운드 */
+.ReviewBoard-Post-box{
+    width: 100%;
+    height: auto;
+}
+
+.ReviewBoard-Post-list{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #eee;
+}
+
+.ReviewBoard-Post-list > div{
+    text-align: center;
+}
+
+.ReviewBoard-Post-list > div > p{
+    cursor: pointer;
+}
+
+.ReviewBoard-Post-list > div:nth-child(1) { width: 10%; }
+.ReviewBoard-Post-list > div:nth-child(2) { width: 50%; }
+.ReviewBoard-Post-list > div:nth-child(3) { width: 10%; }
+.ReviewBoard-Post-list > div:nth-child(4) { width: 10%; }
+.ReviewBoard-Post-list > div:nth-child(5) { width: 10%; }
+.ReviewBoard-Post-list > div:nth-child(6) { width: 10%; }
+/* 리뷰게시판 게시글 백그라운드 */
+
+
+/* 글쓰기 버튼 */
+.post-btn{
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: end;
+}
+
+.post-btn button{
+    background-color: #2B2B2B;
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+    border: none;
+    width: 5%;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post-btn button:hover{
+    background-color: white;
+    border: 1px solid #eee;
+    color: black;
+}
+
+/* 글쓰기 버튼 */
+
+
+/* 페이지네이션 */
+.page-num-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0rem;
+}
+
+.page-num-box{
+    display: flex;
+    gap: 1.3rem;
+}
+
+.page-num-box > div{
+    cursor: pointer;
+}
+/* 페이지네이션 */
+
+
+
+@media screen and (min-width:1600px) {
+.ReviewBoard-bg{
+    max-width: 1350px;
+}
+}
+
+@media screen and (min-width:1800px) {
+.ReviewBoard-bg{
+    max-width: 1350px;
+}
+}

@@ -84,21 +84,10 @@ function Wishlist(){
             
             
             <div className="Wishlist-banner-container">
-                <div>
-                    <p>상품명</p>
-                </div>
-
-                <div>
-                    <p>상품가격</p>
-                </div>
-
-                <div>
-                    <p>담기</p>
-                </div>
-
-                <div>
-                    <p>제거</p>
-                </div>
+                <div><p>상품명</p></div>
+                <div><p>상품가격</p></div>
+                <div><p>담기</p></div>
+                <div><p>제거</p></div>
             </div>
 
             <div className="Wishlist-item-container">

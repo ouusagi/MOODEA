@@ -40,6 +40,9 @@ import Cart from './pages/Cart/Cart';
 // Wishlist
 import Wishlist from './pages/Wishlist/Wishlist';
 
+// ReviewBoard
+import ReviewBoard from './pages/ReviewBoard/ReviewBoard';
+
 // common components
 import AdPopup from './components/common/AdPopup'
 import HeaderSection from './components/common/HeaderSection';
@@ -85,6 +88,7 @@ function App() {
         <Route path="/wishlist" element={<Wishlist/>}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/reviewboard" element={<ReviewBoard />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
         <Route path="/skincare/:page" element={<SkincarePage />} />
