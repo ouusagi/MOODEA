@@ -3,6 +3,8 @@ import supabase from "../../supabaseClient";
 import { useEffect, useState } from "react";
 import '../Recycling/ProductDetail.css'
 import { useNavigate } from "react-router-dom";
+import { requestPayment } from "../../utils/payment";
+
 
 function ProductDetail({ tableName, category }) {
 
@@ -102,6 +104,16 @@ function ProductDetail({ tableName, category }) {
     }
   }
 
+  async function handleBuyNow(){
+    const paymentData = {
+      orderId:`order-${Date.now()}`,
+      amount:products.price * itemcount,
+      orderName:products.name,
+      customerName:user.Email
+    }
+    await requestPayment(paymentData)
+  }
+
     function Modal() {
       
       return(
@@ -151,7 +163,7 @@ function ProductDetail({ tableName, category }) {
         
 
       <div className="product-detail-btn">
-        <button onClick={()=>{if(!user){setshowmd(true)}}}>BUY IT NOW</button>
+        <button onClick={()=>{if(!user){setshowmd(true)}else{handleBuyNow()}}}>BUY IT NOW</button>
         <button onClick={()=>{
           if(!user){setshowmd(true)}
           else{addToCart()}
