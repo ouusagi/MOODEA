@@ -61,7 +61,11 @@ function TopMenu(){
         </>)}
 
         <a href="#">주문조회</a>
-        <a href="#">찜한상품</a>
+        <Link to="/wishlist" onClick={(e)=>{
+            e.preventDefault()
+            if(!user){alert("로그인이 필요한 서비스 입니다."); navigate('/login')}
+            else{navigate('/wishlist')}
+        }}>찜한상품</Link>
         <a href="#">고객지원</a>
         </div>
 

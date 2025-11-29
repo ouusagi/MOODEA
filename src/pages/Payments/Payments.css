@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* 결제 성공 페이지 */
+.Success-container{
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.Success-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.Success-text-1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #222;
+}
+
+.Success-text-2{
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+
+/* 추천 아이템 */
+.recommended-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.recommended-title-1{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* 추천 아이템 */
+
+/* 버튼 */
+.select-btn{
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 0rem 0rem 0rem;
+}
+
+.select-btn-0{
+    margin-top: 0rem;
+    background-color: #2B2B2B;
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+    border: none;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+}
+
+.select-btn-0:hover{
+    background-color: white;
+    border: 1px solid #eee;
+    color: black;
+}
+/* 버튼 */
+
+
+/* 스와이퍼 캐러셀 */
+.Effect-coverflow-Swiper {
+  width: 100%;
+  height: 250px;
+}
+/* 스와이퍼 캐러셀 */
+
+
+/* 결제 성공 페이지 */
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1600px) {
+
+.Success-container{
+    max-width: 1350px;
+}
+
+}
+
+@media screen and (min-width:1800px) {
+
+.Success-container{
+    max-width: 1350px;
+}
+
+}

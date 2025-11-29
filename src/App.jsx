@@ -40,6 +40,10 @@ import Cart from './pages/Cart/Cart';
 // Wishlist
 import Wishlist from './pages/Wishlist/Wishlist';
 
+// Payments
+import Success from './pages/Payments/Success';
+import Fail from './pages/Payments/Fail';
+
 // ReviewBoard
 import ReviewBoard from './pages/ReviewBoard/ReviewBoard';
 
@@ -88,6 +92,8 @@ function App() {
         <Route path="/wishlist" element={<Wishlist/>}></Route>
         <Route path="/mypage" element={<Mypage />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/payment/success" element={<Success/>}></Route>
+        <Route path="/payment/fail" element={<Fail/>}></Route>
         <Route path="/reviewboard" element={<ReviewBoard />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
