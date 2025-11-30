@@ -40,9 +40,9 @@ function Success(){
 
                 <div className="recommended-products">
 
-                    <div className="recommended-title-1">
-                    <p>고객님이 선호하실만한 상품</p>
-                    <hr />
+                    <div className="recommended-title">
+                    <p className="recommended-text-1">Recommendation</p>
+                    <p className="recommended-text-2">"고객님이 선호하실만한 상품"</p>
                     </div>
 
                 <Swiper

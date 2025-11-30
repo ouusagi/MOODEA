@@ -60,10 +60,26 @@ img {
     gap: 0.2rem;
 }
 
-.recommended-title-1{
+.recommended-title{
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
+}
+
+.recommended-text-1{
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.recommended-text-2{
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+    border-bottom: 2px solid #E8DCC8;
 }
 /* 추천 아이템 */
 
@@ -76,8 +92,8 @@ img {
 
 .select-btn-0{
     margin-top: 0rem;
-    background-color: #2B2B2B;
-    color: white;
+    background-color: white;
+    color: black;
     font-weight: 500;
     border-radius: 3px;
     border: none;
@@ -88,9 +104,9 @@ img {
 }
 
 .select-btn-0:hover{
-    background-color: white;
+    background-color: #2B2B2B;
     border: 1px solid #eee;
-    color: black;
+    color: white;
 }
 /* 버튼 */
 
@@ -110,6 +126,43 @@ img {
 
 
 
+/* 결제 실패 페이지 */
+.Fail-container{
+    max-width: 1300px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.Fail-Error-box{
+    display: flex;
+    gap: 1.4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0rem;
+}
+
+.Fail-Error-text1{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.Fail-Error-text2{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.sad-icon{
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+/* 결제 실패 페이지 */
+
+
+
 
 
 
@@ -122,6 +175,9 @@ img {
     max-width: 1350px;
 }
 
+.Fail-container{
+    max-width: 1350px;
+}
 }
 
 @media screen and (min-width:1800px) {
@@ -130,4 +186,7 @@ img {
     max-width: 1350px;
 }
 
+.Fail-container{
+    max-width: 1350px;
+}
 }
