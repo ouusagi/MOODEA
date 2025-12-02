@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './Payments.css'
@@ -13,7 +14,39 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 function Success(){
 
+    const [searchparams] = useSearchParams()
+    const orderId = searchparams.get("orderId")
+    const paymentKey = searchparams.get("paymentKey")
+    const amount = searchparams.get("amount")
     let [items,setitems] = useState([])
+    let navigate = useNavigate()
+    
+    useEffect(()=>{
+        async function SaveOrder() {
+            const {data:userdata} = await supabase.auth.getUser()
+            const user_id = userdata.user.id;
+            const {data} = await supabase.auth.getSession()
+            const session = data.session.access_token
+
+            await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/order-complete',
+                {
+                    method:'POST',
+                    headers: {'Content-Type' : "application/json",
+                              'Authorization': `Bearer ${session}`
+                             },
+                    body: JSON.stringify({user_id,orderId,paymentKey,amount})
+                }
+            )
+            .then(res => res.json())
+            .then(data => console.log("응답:", data))
+            .catch(err => console.error("fetch 에러:", err));
+            }
+
+            if(orderId && paymentKey && amount){
+               SaveOrder()
+            }
+
+    },[orderId, paymentKey, amount])
 
     useEffect(()=>{
         async function Getproduct() {
@@ -61,18 +94,19 @@ function Success(){
                     pagination={true}
                     modules={[EffectCoverflow, Pagination]}
                     className="Effect-coverflow-Swiper"
+                    slideToClickedSlide={true}
                     >
                         
                     {items.map((item,id)=>(
                     <SwiperSlide key={id}>
-                    <img src={item.photo} alt="product-img" />
+                    <img onClick={()=>{navigate('/skincare')}} src={item.photo} alt="product-img"/>
                     </SwiperSlide>
                     ))}
                 </Swiper>
 
                 <div className="select-btn">
-                    <button className="select-btn-0">메인으로</button>
-                    <button className="select-btn-0">상품 더보기</button>
+                    <button className="select-btn-0" onClick={()=>{navigate('/')}}>메인으로</button>
+                    <button className="select-btn-0" onClick={()=>{navigate('/skincare')}}>상품 더보기</button>
                 </div>
 
                 </div>

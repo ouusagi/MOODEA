@@ -17,8 +17,9 @@ UI/UX 설계부터 컴포넌트 구조화, 데이터 연동까지 **실무형 �
 
 
 ## 업데이트 내역
-### 2025-11-30
-- 결제 실패 페이지 UI : 결제 실패 시 결제 실패 페이지 UI 제작 완료
+### 2025-12-02
+- Edge Function API 설정: 구매한 상품 정보를 슈퍼베이스 서버로 안전하게 전송하기 위한 환경 및 Supabase 설정
+- API → DB 데이터 전송 : Edge Function API를 통해 유저 결제 정보를 전송하고, 해당 API에서 Supabase DB에 안전하게 insert하는 로직 구현
 
 ## 파일 구조 변경
 
@@ -176,8 +177,31 @@ state에서도 필터링하여 화면에 즉시 반영.
 
 ## 결제하기 (로그인 시만 이용 가능)
 - 토스페이먼츠 API 연동 : 사용자가 결제버튼 클릭 시 결제 정보(금액,주문번호 등)를 payment.js로 전달 후, 해당 데이터 기반으로 토스페이먼츠 결제 API를 호출하여 결제창을 실행
-- 결제 성공 페이지 UI : 결제 성공 시 결제 성공 페이지 UI 제작 완료
-- 결제 실패 페이지 UI : 결제 실패 시 결제 실패 페이지 UI 제작 완료
+- 결제 성공 페이지 UI : 결제 성공 시 보여줄 페이지 UI 제작 완료
+- 결제 실패 페이지 UI : 결제 실패 시 보여줄 페이지 UI 제작 완료
+- Edge Function API 설정: 구매한 상품 정보를 슈퍼베이스 서버로 안전하게 전송하기 위한 환경 및 Supabase 설정
+- API → DB 데이터 전송 : Edge Function API를 통해 유저 결제 정보를 전송하고, 해당 API에서 Supabase DB에 안전하게 insert하는 로직 구현
+
+## 결제하기 구조
+프론트→ paymentKey, orderId, amount, user_id 등 결제정보를 API로 보내기
+Superbase Edge Function → Supabase DB insert
+전체 흐름: React → Edge Function → Supabase DB
+
+```
+[React]
+useEffect → fetch(save-order)
+
+       ↓
+
+[Supabase Edge Function]
+- user_id 파악 가능
+- DB insert
+
+       ↓
+
+[Supabase DB]
+Orders 테이블에 저장
+```
 
 ## 후기 게시판
 - 후기 게시판 ui : 후기 게시판 ui (완) [추후 기능 구현 예정]
