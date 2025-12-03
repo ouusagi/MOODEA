@@ -28,7 +28,7 @@ function Success(){
             const {data} = await supabase.auth.getSession()
             const session = data.session.access_token
 
-            await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/order-complete',
+            await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/save-order',
                 {
                     method:'POST',
                     headers: {'Content-Type' : "application/json",

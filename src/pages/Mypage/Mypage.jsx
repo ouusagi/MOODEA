@@ -8,6 +8,7 @@ import CartItemList from "../../components/Recycling/CartItemList"
 
 function Mypage(){
 
+    let [userSession,setuserSession] = useState('')
     let [username,setusername] = useState("")
     let [useremail,setuseremail] = useState("")
     let [userId,setuserId] = useState(null)
@@ -15,6 +16,7 @@ function Mypage(){
     let [point,setpoint] = useState(0)
     let [cart,setcart] = useState([])
     let [wish,setwish] = useState(0)
+    let [Amount,setAmount] = useState('Loding')
     let navigate = useNavigate()
 
 
@@ -23,6 +25,7 @@ function Mypage(){
             if(error){console.log(error.message)}
             else{
                 // userInfo
+                setuserSession(data.session?.access_token || "")
                 setusername(data.session?.user?.user_metadata?.username || "");
                 setuseremail(data.session?.user?.email || "")
                 setuserId(data?.session?.user?.id || null)
@@ -69,20 +72,29 @@ function Mypage(){
           else{setwish(Wishitem)}
         }
 
-
+        const TotalAmount = async ()=>{
+          await fetch(`https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/order-complete?user_id=${userId}`,
+          {headers:{Authorization:`Bearer ${userSession}`}})
+            .then(res => res.json())
+            .then(data => {
+              const total = data.reduce((acc, cur)=> acc + (cur.amount || 0),0)
+              setAmount(total.toLocaleString())})
+            .catch(err => console.log(err))
+        }
 
                 useEffect(()=>{
                   fetchUser()
                 },[])
 
                 useEffect(()=>{
-                  if(userId){
+                  if(userId && userSession){
                     fetchCoupons()
                     UserPoint()
                     UserCart()
                     Wishlist()
+                    TotalAmount()
                   }
-                },[userId])
+                },[userId, userSession])
 
 
     return(
@@ -109,7 +121,7 @@ function Mypage(){
                 <div className="profile-info-box">
                     <p className="info-username">{username}</p>
                     <p className="info-userEmail">({useremail})</p>
-                    <p className="info-userTotal">고객님의 총 구매금액은 <span>0</span>원 입니다.</p>
+                    <p className="info-userTotal">고객님의 총 구매금액은 <span>{Amount}</span>원 입니다.</p>
 
                     <div className="profile-btn">
                     <button>회원정보 수정</button>
