@@ -2,9 +2,11 @@ import { useEffect, useState } from "react"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './Cart.css'
+import { requestPayment } from "../../utils/payment";
 
 function Cart(){
 
+  let [user,setuser] = useState('')
   let [point,setpoint] = useState(0)
   let [inputpoint,setinputpoint] = useState('')
   let [coupon,setcoupon] = useState([])
@@ -23,6 +25,9 @@ function Cart(){
       if(userError){
         console.log(userError.message)
         return
+      }
+      else{
+        setuser(userData)
       }
 
       const {data : cartData, error : cartError} = await supabase
@@ -92,6 +97,16 @@ function Cart(){
           setinputpoint(point)
         }
 
+        async function handleBuyNow() {
+          const orderName = cart.length === 1 ? cart[0].name : `${cart[0].name}외 ${cart.reduce((sum,item)=> {return sum + item.quantity},0) - 1}개`
+          const paymentData = {
+            orderId: `order-${Date.now()}`,
+            amount: total - discount - CouponDiscount + shipping,
+            orderName,
+            customerName: user.Email
+          }
+          await requestPayment(paymentData)
+        }
 
     return(
         <div>
@@ -155,7 +170,7 @@ function Cart(){
                 <hr />
                 <p>총 금액 : {(total - discount - CouponDiscount + shipping).toLocaleString()}원</p>
                 <p>적립 예정 포인트 : {earnpoint}p</p>
-                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}}}>결제하기</button>
+                <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")} else{handleBuyNow()}}}>결제하기</button>
                 <button onClick={()=> {if(cart.length === 0){return alert("장바구니에 담긴 상품이 없습니다.")}
               else{setShowModal(true)}}}>쿠폰/포인트 사용</button>
               </div>
