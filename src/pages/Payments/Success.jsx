@@ -18,11 +18,23 @@ function Success(){
     const orderId = searchparams.get("orderId")
     const paymentKey = searchparams.get("paymentKey")
     const amount = searchparams.get("amount")
-    let [items,setitems] = useState([])
+    const [orderedItems, setOrderedItems] = useState([])
+    let [Swiperitems,setSwiperitems] = useState([])
     let navigate = useNavigate()
+
+useEffect(() => {
+        if (!orderId) return;
+
+        const storedData = window.sessionStorage.getItem(orderId);
+        if (storedData) {
+            const parsedItems = JSON.parse(storedData);
+            setOrderedItems(parsedItems);
+        }
+    }, [orderId])
     
     useEffect(()=>{
         async function SaveOrder() {
+            if (orderedItems.length === 0) return;
             const {data:userdata} = await supabase.auth.getUser()
             const user_id = userdata.user.id;
             const {data} = await supabase.auth.getSession()
@@ -34,11 +46,11 @@ function Success(){
                     headers: {'Content-Type' : "application/json",
                               'Authorization': `Bearer ${session}`
                              },
-                    body: JSON.stringify({user_id,orderId,paymentKey,amount})
+                    body: JSON.stringify({user_id,orderId,paymentKey,amount,items:orderedItems})
                 }
             )
             .then(res => res.json())
-            .then(data => console.log("응답:", data))
+            .then(data =>{console.log("응답:", data); window.sessionStorage.removeItem(orderId)})
             .catch(err => console.error("fetch 에러:", err));
             }
 
@@ -46,7 +58,7 @@ function Success(){
                SaveOrder()
             }
 
-    },[orderId, paymentKey, amount])
+    },[orderId, paymentKey, amount, orderedItems])
 
     useEffect(()=>{
         async function Getproduct() {
@@ -56,7 +68,7 @@ function Success(){
             .limit(9)
 
             if(errorData){console.log(errorData.message);return;}
-            setitems(itemData.sort(()=> Math.random() - 0.5))
+            setSwiperitems(itemData.sort(()=> Math.random() - 0.5))
         }
         Getproduct()
     },[])
@@ -97,7 +109,7 @@ function Success(){
                     slideToClickedSlide={true}
                     >
                         
-                    {items.map((item,id)=>(
+                    {Swiperitems.map((item,id)=>(
                     <SwiperSlide key={id}>
                     <img onClick={()=>{navigate('/skincare')}} src={item.photo} alt="product-img"/>
                     </SwiperSlide>

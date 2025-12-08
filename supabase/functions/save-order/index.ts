@@ -16,53 +16,73 @@ Deno.serve(async (req) => {
   }
 
   if (req.method === "POST") {
-    const { orderId, paymentKey, amount, user_id } = await req.json();
+    // ⬇ 프론트엔드에서 보낸 결제 정보(paymentKey, amount)와 상품 배열(items)을 모두 받습니다.
+    const { orderId, paymentKey, amount, user_id, items } = await req.json();
+
+    // ⛔ 필수 파라미터 체크
+    if (!orderId || !user_id || !items || items.length === 0 || !paymentKey || !amount) {
+      return new Response(JSON.stringify({ error: "Missing required data (orderId, paymentKey, amount, or items)" }), {
+        status: 400,
+        headers: corsHeaders
+      });
+    }
 
     const supabase = createClient(
       Deno.env.get("PROJECT_URL")!,
       Deno.env.get("SERVICE_ROLE_KEY")!
     );
-
-    // 1) 이미 저장된 주문인지 확인
-    const { data: existingOrder, error: checkError } = await supabase
-      .from("Orders")
-      .select("id")
-      .eq("order_id", orderId)
-      .maybeSingle();
-
-    if (checkError) {
-      return new Response(JSON.stringify({ error: checkError.message }), {
-        status: 400,
-        headers: corsHeaders
-      });
-    }
-
-    // 이미 존재하면 다시 insert 하지 않음
-    if (existingOrder) {
-      return new Response(JSON.stringify({ message: "Already saved" }), {
-        status: 200,
-        headers: corsHeaders
-      });
-    }
-
-    // 2) 존재하지 않을 때만 새로 insert
-    const { error } = await supabase
-      .from("Orders")
+    
+    // =======================================================
+    // 1단계: 주문 Header 정보 저장 (OrdersHeader 테이블)
+    // =======================================================
+    const { error: headerError } = await supabase
+      .from("OrderHeaders") // ⬅ 결제 정보를 저장할 테이블 이름
       .insert({
-        user_id,
         order_id: orderId,
-        payment_key: paymentKey,
-        amount
+        user_id: user_id,
+        paymentKey: paymentKey, // ✅ 결제 키
+        amount: amount,          // ✅ 총 결제 금액
       });
 
-    if (error) {
-      return new Response(JSON.stringify({ error: error.message }), {
+    if (headerError) {
+      return new Response(JSON.stringify({ error: `Header INSERT Error: ${headerError.message}` }), {
         status: 400,
         headers: corsHeaders
       });
     }
 
-    return new Response(JSON.stringify({ success: true }), {
+    // =======================================================
+    // 2단계: 개별 상품 정보 저장 (Orders 테이블)
+    // =======================================================
+    
+    // 1. 배열 변환: items 배열의 각 요소를 DB의 행(Row) 객체로 변환합니다.
+    const itemsToInsert = items.map(item => ({
+        // order_id를 외래키로 사용하여 OrderHeaders 테이블과 연결
+        order_id: orderId,
+        user_id: user_id, 
+        
+        // 상품 정보 (DB 컬럼 이름과 일치하는지 확인 필요)
+        product_id: item.product_id, 
+        name: item.name,           
+        price: item.price,         
+        quantity: item.quantity,   
+        brand: item.brand,         
+        photo: item.photo,         
+    }));
+
+    // 2. 일괄 삽입 (Batch Insert)
+    const { error: itemsError } = await supabase
+      .from("Orders") // ⬅ 개별 상품 정보를 저장할 테이블 이름
+      .insert(itemsToInsert);
+
+    if (itemsError) {
+      return new Response(JSON.stringify({ error: `Items INSERT Error: ${itemsError.message}` }), {
+        status: 400,
+        headers: corsHeaders
+      });
+    }
+
+    return new Response(JSON.stringify({ success: true, message: "Order and Items successfully saved" }), {
       headers: corsHeaders
     });
   }

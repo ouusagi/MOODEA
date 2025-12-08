@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin-top: 3rem;
+    overflow-x: hidden;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1600px) {
+
+
+}
+
+@media screen and (min-width:1800px) {
+
+
+}

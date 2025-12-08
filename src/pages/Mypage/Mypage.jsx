@@ -17,6 +17,8 @@ function Mypage(){
     let [cart,setcart] = useState([])
     let [wish,setwish] = useState(0)
     let [Amount,setAmount] = useState('Loding')
+    let [Orderlist,setOrderlist] = useState([])
+    let [reviw,setreviw] = useState([])
     let navigate = useNavigate()
 
 
@@ -63,6 +65,18 @@ function Mypage(){
           else{setcart(cartData)}
         }
 
+        const UserOrder = async ()=>{
+          const {data:OrderData, error:OrderError} = await supabase
+          .from('Orders')
+          .select("*")
+          .eq('user_id',userId)
+          .order('id', {ascending: false})
+          .limit(3)
+
+          if(OrderError){console.log(OrderError.message); return;}
+          else{setOrderlist(OrderData)}
+        }
+
         const Wishlist = async ()=>{
           const {data:Wishitem, error:WishError} = await supabase.from("Wishlist")
           .select("product_id")
@@ -73,13 +87,16 @@ function Mypage(){
         }
 
         const TotalAmount = async ()=>{
-          await fetch(`https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/order-complete?user_id=${userId}`,
-          {headers:{Authorization:`Bearer ${userSession}`}})
-            .then(res => res.json())
-            .then(data => {
-              const total = data.reduce((acc, cur)=> acc + (cur.amount || 0),0)
-              setAmount(total.toLocaleString())})
-            .catch(err => console.log(err))
+          const {data:DataAmount, error:ErrorAmount} = await supabase
+          .from('OrderHeaders')
+          .select('amount')
+          .eq('user_id',userId)
+          
+          if(ErrorAmount){console.log(ErrorAmount.message); return;}
+          else{
+            const total = DataAmount.reduce((sum,item)=> {return sum + item.amount},0)
+            setAmount(total.toLocaleString())
+          }
         }
 
                 useEffect(()=>{
@@ -91,6 +108,7 @@ function Mypage(){
                     fetchCoupons()
                     UserPoint()
                     UserCart()
+                    UserOrder()
                     Wishlist()
                     TotalAmount()
                   }
@@ -159,10 +177,12 @@ function Mypage(){
             <div className="title-box">
 
             <p className="title-p-tag">최근 주문한 상품</p>
-            <button>더보기 +</button>
+            <button onClick={()=> navigate('/orderlist')}>더보기 +</button>
             </div>
-            <div className="sections-list-box">
-            <p>최근 주문한 상품이 없습니다.</p>
+            <div className={`sections-list-box ${Orderlist.length === 0 ? "empty" : ""}`}>
+              { Orderlist.length === 0 ? (<p>최근 주문한 상품이 없습니다.</p>) : (Orderlist.map((item,i)=>
+                <CartItemList key={i} item={item}/>
+              ))}
             </div>
 
             <div className="title-box">
@@ -179,8 +199,10 @@ function Mypage(){
             <p className="title-p-tag">나의 리뷰</p>
             <button>더보기 +</button>
             </div>
-            <div className="sections-list-box">
-            <p>작성하신 리뷰가 없습니다.</p>
+          <div className={`sections-list-box ${reviw.length === 0 ? "empty" : ""}`}>
+              { reviw.length === 0 ? (<p>작성하신 리뷰가 없습니다.</p>) : (reviw.map((item,i)=>
+                <CartItemList key={i} item={item}/>
+              ))}
             </div>
 
         </div>

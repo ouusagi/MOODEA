@@ -1,4 +1,6 @@
-export async function requestPayment({ orderId, amount, orderName, customerName }) {
+export async function requestPayment({ orderId, amount, orderName, customerName, items }) {
+
+    window.sessionStorage.setItem(orderId, JSON.stringify(items));
     const clientKey = import.meta.env.VITE_TOSS_CLIENT_KEY; // 1. env에서 클라이언트 key값을 불러와 인증 준비
 
     const tossPayments = new window.TossPayments(clientKey); // 2. CDN으로 브라우저 전역(window)에 등록된 Tosspayments 클래스로

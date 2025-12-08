@@ -98,12 +98,14 @@ function Cart(){
         }
 
         async function handleBuyNow() {
+          const items = cart.map(item => ({product_id:item.product_id, price:item.price, quantity:item.quantity, brand:item.brand, photo:item.photo, name:item.name}))
           const orderName = cart.length === 1 ? cart[0].name : `${cart[0].name}외 ${cart.reduce((sum,item)=> {return sum + item.quantity},0) - 1}개`
           const paymentData = {
             orderId: `order-${Date.now()}`,
             amount: total - discount - CouponDiscount + shipping,
             orderName,
-            customerName: user.Email
+            customerName: user.email,
+            items
           }
           await requestPayment(paymentData)
         }

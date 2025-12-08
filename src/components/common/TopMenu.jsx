@@ -60,7 +60,11 @@ function TopMenu(){
         <Link to="/login">로그인</Link>
         </>)}
 
-        <a href="#">주문조회</a>
+        <Link to="orderlist" onClick={(e)=>{
+            e.preventDefault()
+            if(!user){alert("로그인이 필요한 서비스 입니다."); navigate('/login')}
+            else{navigate('/orderlist')}
+        }}>주문조회</Link>
         <Link to="/wishlist" onClick={(e)=>{
             e.preventDefault()
             if(!user){alert("로그인이 필요한 서비스 입니다."); navigate('/login')}

@@ -105,11 +105,15 @@ function ProductDetail({ tableName, category }) {
   }
 
   async function handleBuyNow(){
+    const orderId = `order-${Date.now()}`
+    const itemDetail = {product_id: products.id, name: products.name, price:products.price, quantity:itemcount, brand:products.brand, photo:products.photo}
+    const itemsArray = [itemDetail]
     const paymentData = {
-      orderId:`order-${Date.now()}`,
+      orderId:orderId,
       amount:products.price * itemcount,
       orderName:products.name,
-      customerName:user.Email
+      customerName:user.email,
+      items:itemsArray
     }
     await requestPayment(paymentData)
   }
