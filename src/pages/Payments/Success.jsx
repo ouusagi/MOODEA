@@ -37,23 +37,37 @@ useEffect(() => {
             if (orderedItems.length === 0) return;
             const {data:userdata} = await supabase.auth.getUser()
             const user_id = userdata.user.id;
-            const {data} = await supabase.auth.getSession()
-            const session = data.session.access_token
+            const {data:userToken} = await supabase.auth.getSession()
+            const session = userToken.session.access_token
 
-            await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/save-order',
+            if(!session){console.error('사용자 세션을 찾을 수 없어 결제 검증을 진행할 수 없습니다.'); navigate('/payment/fail?code=AUTH_ERROR'); return;}
+
+            const orderVerificationData = {user_id,orderId,paymentKey,amount:Number(amount),items:orderedItems}
+
+            try{
+            const res = await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/save-order',
                 {
                     method:'POST',
                     headers: {'Content-Type' : "application/json",
                               'Authorization': `Bearer ${session}`
                              },
-                    body: JSON.stringify({user_id,orderId,paymentKey,amount,items:orderedItems})
+                    body: JSON.stringify(orderVerificationData)
                 }
             )
-            .then(res => res.json())
-            .then(data =>{console.log("응답:", data); window.sessionStorage.removeItem(orderId)})
-            .catch(err => console.error("fetch 에러:", err));
+            const resdata = await res.json()
+
+            if(!res.ok){console.error("서버 검증 실패", resdata); navigate(`/payment/fail?message=${resdata.error || '결제 검증 중 오류가 발생했습니다.'}`); return;}
+
+            console.log("응답 :",resdata)
+            window.sessionStorage.removeItem(orderId)
             }
 
+            catch(err){
+            console.log("Fetch 또는 서버 통신 오류 :", err);
+            navigate("/payment/fail?code=NETWORK_ERROR");
+            }
+
+        }
             if(orderId && paymentKey && amount){
                SaveOrder()
             }

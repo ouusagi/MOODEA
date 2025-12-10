@@ -55,13 +55,14 @@ function Mypage(){
         
         
         const UserCart = async ()=>{
-          const {data:cartData, error:cartError} = await supabase.from("Cart")
+          const {data:cartData, error:cartError} = await supabase
+          .from("Cart")
           .select("*")
           .eq("user_id",userId)
+          .order("created_at",{ascending : false})
           .limit(3)
-          .order("id",{ascending : false})
 
-          if(cartError){console.log(cartError.message)}
+          if(cartError){console.log(cartError.message); return;}
           else{setcart(cartData)}
         }
 

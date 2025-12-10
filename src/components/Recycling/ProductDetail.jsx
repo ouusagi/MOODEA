@@ -105,16 +105,37 @@ function ProductDetail({ tableName, category }) {
   }
 
   async function handleBuyNow(){
+    const {data:dataSession} = await supabase.auth.getSession()
+    const userSession = dataSession?.session
     const orderId = `order-${Date.now()}`
     const itemDetail = {product_id: products.id, name: products.name, price:products.price, quantity:itemcount, brand:products.brand, photo:products.photo}
     const itemsArray = [itemDetail]
-    const paymentData = {
+    const amount = products.price * itemcount
+
+    const FetchData = { // 금액 조작 검증용
       orderId:orderId,
-      amount:products.price * itemcount,
+      total_amount_verified:amount,
+      orderName:products.name,
+      userId:user.id,
+      items:itemsArray
+    }
+
+    const paymentData = { // 토스페이먼츠 API 결제 정보 전달용
+      orderId:orderId,
+      amount,
       orderName:products.name,
       customerName:user.email,
       items:itemsArray
     }
+
+    if(!userSession){console.log("사용자 세션을 찾을 수 없습니다. 다시 로그인해 주세요."); return;}
+
+    await fetch('https://boganzpcciscvqjmsdwi.supabase.co/functions/v1/order-complete',{
+      method:'POST',
+      headers:{'Content-Type': 'application/json', 'Authorization': `Bearer ${userSession.access_token}` },
+      body:JSON.stringify(FetchData)
+    })
+
     await requestPayment(paymentData)
   }
 
