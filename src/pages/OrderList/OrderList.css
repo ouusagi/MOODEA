@@ -20,6 +20,192 @@ img {
   -o-user-drag: none;
 }
 
+/* 주문목록 컨테이너 */
+.OrderList-container{
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.OrderList-empty{
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 3rem 0;
+  color: #888;
+  font-weight: 300;
+}
+/* 주문목록 컨테이너 */
+
+/* 주문목록 타이틀 */
+.OrderList-title-box{
+  width:  100%;
+  height: 150px;
+  border: 1px solid #eee;
+  border-radius: 1.4rem;
+  margin: 4rem 0 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.OrderList-title{
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1.9rem 2rem 0rem 2rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.OrderList-search{
+  position: relative;
+  padding: 1.1rem 2rem 0rem 2rem;
+}
+
+.OrderList-search input{
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #f4f4f4;
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 1rem;
+}
+
+.OrderList-search-icon{
+  padding: 1.1rem;
+  position: absolute;
+  right: 0.5%;
+  transform: translate(-50%, -50%);
+  top: 65%;
+  font-size: 1.1rem;
+  color: #888;
+  cursor: pointer;
+}
+/* 주문목록 타이틀 */
+
+
+/* 주문목록 상품 박스 */
+.OrderList-items-container{
+  width:  100%;
+  height: auto;
+  border: 1px solid #eee;
+  border-radius: 1.4rem;
+  margin: 0 0 4rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.OrderList-item-box{
+  width:  95%;
+  height: 200px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin: 1.9rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.OrderList-item-box-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.OrderList-item-info-box{
+  display: flex;
+  gap: 0.75rem;
+}
+
+.OrderList-item-info-box img{
+  width: 100px;
+  height: 100px;
+  margin-left: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.OrderList-item-info-box-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: space-between;
+}
+
+.OrderList-item-info-box-text p:nth-child(1){font-size: 1.1rem; font-weight: 500;}
+.OrderList-item-info-box-text p:nth-child(2){font-size: 1rem; font-weight: 600;}
+.OrderList-item-info-box-text p:nth-child(3){font-size: 0.9rem; font-weight: 600; color: #888;}
+
+.OrderList-item-info-box-btn{
+  display: flex;
+  gap: 0.5rem;
+  
+}
+
+.OrderList-item-info-box-btn button{
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: #222;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.OrderList-item-info-box-btn button:hover{
+  background-color: white;
+  color: #222;
+  border: 1px solid #eee;
+}
+
+.OrderList-option-btn{
+  width: 200px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin: 0 2rem 0 auto;
+}
+
+.OrderList-option-btn button{
+  height: 30px;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+/* 주문목록 상품 박스 */
+
+
+/* 페이지네이션 */
+.OrderList-Pagination{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.OrderList-Pagination button{
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.OrderList-Pagination button:hover{
+  background-color: #222;
+  color: white;
+  border: 1px solid #eee;
+}
+/* 페이지네이션 */
+
 
 
 
@@ -30,11 +216,13 @@ img {
 
 
 @media screen and (min-width:1600px) {
-
-
+  .OrderList-container{
+  max-width: 1350px;
+}
 }
 
 @media screen and (min-width:1800px) {
-
-
+    .OrderList-container{
+  max-width: 1350px;
+}
 }
