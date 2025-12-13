@@ -2,11 +2,13 @@ import { useEffect, useState } from "react"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './OrderList.css'
+import { addToCart } from "../../utils/cart"
 
 function OrderList(){
 
     let [user,setuser] = useState(null)
     let [OrderData,setOrderData] = useState([])
+    const [searchValue,setsearchValue] = useState('')
 
     useEffect(()=>{
         async function UserData() {
@@ -24,6 +26,7 @@ function OrderList(){
             const {data:fetchData, error:fetchError} = await supabase
             .from('Orders')
             .select('*')
+            .order('created_at', {ascending: false})
             .eq('user_id',user)
 
             if(fetchError){console.log(fetchError.message); return;}
@@ -32,6 +35,23 @@ function OrderList(){
         fetchOrders()
     },[user])
 
+    async function SearchItems() {
+        if(!user){console.log("로그인이 필요합니다."); return;}
+        const {data:SearchData, error:SearchError} = await supabase
+        .from("Orders")
+        .select("*")
+        .order("created_at", {ascending:false})
+        .eq("user_id",user)
+        .ilike("name",`%${searchValue}%`)
+
+        if(SearchError){console.log(SearchError.message); return;}
+        else{setOrderData(SearchData)}
+    }
+
+    async function CartItems(item) {
+        if(!user){alert('로그인이 필요합니다.'); return;}
+        addToCart(user, item)
+    }
 
 
     return(
@@ -42,8 +62,9 @@ function OrderList(){
             <div className="OrderList-title-box">
                 <p className="OrderList-title">주문목록 / 배송목록</p>
                 <div className="OrderList-search">
-                <input type="text" placeholder="주문한 상품 혹은 배송조회를 할 수 있어요 !" />
-                <span><i className="fa-solid fa-magnifying-glass OrderList-search-icon"></i></span>
+                <input type="text" placeholder="주문한 상품 혹은 배송조회를 할 수 있어요 !" value={searchValue} 
+                onChange={(e)=>{setsearchValue(e.target.value)}} onKeyDown={(e)=>{if(e.key === "Enter"){SearchItems()}}}/>
+                <span><i className="fa-solid fa-magnifying-glass OrderList-search-icon" onClick={()=>{SearchItems()}}></i></span>
                 </div>
             </div>
 
@@ -62,7 +83,7 @@ function OrderList(){
                     <p>{item.brand}</p>
 
                     <div className="OrderList-item-info-box-btn">
-                    <button>장바구니</button>
+                    <button onClick={()=>{CartItems(item)}}>장바구니</button>
                     <button>리뷰작성</button>
                     </div>
 

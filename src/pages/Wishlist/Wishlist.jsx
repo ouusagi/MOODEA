@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './Wishlist.css'
+import { addToCart } from "../../utils/cart"
 
 function Wishlist(){
 
@@ -36,32 +37,37 @@ function Wishlist(){
         GetUsers()
     },[])
 
-    async function InCart(item) {
-        const {data:CartItem, error:CartError} = await supabase
-        .from('Cart')
-        .select('*')
-        .eq('product_id', item.product_id)
-        .eq('user_id', userId)
-        .maybeSingle()
 
-        if(CartItem){alert('이미 장바구니에 담겨있는 제품입니다.'); console.log(CartError.message); return}
-        if(CartError){alert('에러가 발생하였습니다.'); console.log(CartError.message); return}
-
-        else{
-            const {error:InsertItemError} = await supabase.from('Cart')
-            .insert({
-                user_id:userId,
-                product_id:item.product_id,
-                quantity:1,
-                photo:item.photo,
-                price:item.price,
-                name:item.name,
-                brand:item.brand
-            })
-             if(InsertItemError){alert("에러가 발생하였습니다"); console.log(InsertItemError.message); return}
-             alert("장바구니에 담겼습니다 ! 🛒")
-        }
+    async function CartItems(item) {
+        if(!userId){alert('로그인이 필요합니다.'); return;}
+        addToCart(userId, item)
     }
+    // async function InCart(item) {
+    //     const {data:CartItem, error:CartError} = await supabase
+    //     .from('Cart')
+    //     .select('*')
+    //     .eq('product_id', item.product_id)
+    //     .eq('user_id', userId)
+    //     .maybeSingle()
+
+    //     if(CartItem){alert('이미 장바구니에 담겨있는 제품입니다.'); console.log(CartError.message); return}
+    //     if(CartError){alert('에러가 발생하였습니다.'); console.log(CartError.message); return}
+
+    //     else{
+    //         const {error:InsertItemError} = await supabase.from('Cart')
+    //         .insert({
+    //             user_id:userId,
+    //             product_id:item.product_id,
+    //             quantity:1,
+    //             photo:item.photo,
+    //             price:item.price,
+    //             name:item.name,
+    //             brand:item.brand
+    //         })
+    //          if(InsertItemError){alert("에러가 발생하였습니다"); console.log(InsertItemError.message); return}
+    //          alert("장바구니에 담겼습니다 ! 🛒")
+    //     }
+    // }
 
     async function DeleteItem(item) {
         await supabase
@@ -110,7 +116,7 @@ function Wishlist(){
                 </div>
 
                 <div>
-                    <span><i className="fa-solid fa-cart-plus cart-box" onClick={()=>InCart(item)}></i></span>
+                    <span><i className="fa-solid fa-cart-plus cart-box" onClick={()=>CartItems(item)}></i></span>
                 </div>
 
                 <div>
