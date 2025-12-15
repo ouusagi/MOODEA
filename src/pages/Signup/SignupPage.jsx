@@ -20,6 +20,7 @@ function SignupPage() {
     let [username,setusername] = useState("")
     let [usernamelimit,setusernamelimit] = useState("")
     let [sex,setsex] = useState("female")
+    let DEFAULT_PROFILE = "https://static.vecteezy.com/system/resources/previews/013/360/247/non_2x/default-avatar-photo-icon-social-media-profile-sign-symbol-vector.jpg"
     const emailType = /^\S+@\S+\.\S+$/
 
     useEffect(()=>{
@@ -52,7 +53,7 @@ function SignupPage() {
           console.log(error); alert("에러가 발생했습니다. 다시 시도해주세요."); return;
         }
 
-        if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex});
+        if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex, profile:DEFAULT_PROFILE});
         await SignupCoupon(data.user.id)
         alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉  신규 가입 축하 쿠폰이 지급 완료되었습니다! 🎁`); navigate('/login');}
         }

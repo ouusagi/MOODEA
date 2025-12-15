@@ -12,6 +12,7 @@ function Mypage(){
     let [username,setusername] = useState("")
     let [useremail,setuseremail] = useState("")
     let [userId,setuserId] = useState(null)
+    let [userProfile,setuserProfile] = useState(null)
     let [coupon,setcoupon] = useState([])
     let [point,setpoint] = useState(0)
     let [cart,setcart] = useState([])
@@ -100,6 +101,42 @@ function Mypage(){
           }
         }
 
+        const UserProfile = async ()=> {
+          if(!userSession){alert("로그인이 필요합니다."); return;}
+          const {data:ProfileData, error:ProfileError} = await supabase
+          .from("users")
+          .select("profile")
+          .eq("id",userId)
+          .maybeSingle()
+
+          if(ProfileError){console.log(ProfileError.message); return;}
+          else{setuserProfile(ProfileData?.profile || "")}
+        }
+
+        const handleProfile = async (file)=>{
+          if(!file) return;
+          const FileName = `${userId}.jpg` // 파일 확장자 통일 + 어느 유저가 변경을 했는지 식별하기 위해
+
+          const {error:UploadError} = await supabase.storage
+          .from("avatars")
+          .upload(FileName, file, {upsert: true}) // 파일명을 기준으로 중복이 있을 시 덮어쓰기 허용
+          if(UploadError){console.log(UploadError.message); alert("이미지 업로드를 실패했습니다 다시 시도해주세요."); return;}
+
+          const {data:ProfileUrl} = supabase.storage
+          .from("avatars")
+          .getPublicUrl(FileName)
+
+          const ProfileUpdate = `${ProfileUrl.publicUrl}?t=${Date.now()}` // 이미지 변경 시 캐시 사용을 방지하기 위해
+
+          await supabase
+          .from("users")
+          .update({profile:ProfileUpdate})
+          .eq("id",userId)
+          setuserProfile(ProfileUpdate)
+        }
+
+
+
                 useEffect(()=>{
                   fetchUser()
                 },[])
@@ -112,6 +149,7 @@ function Mypage(){
                     UserOrder()
                     Wishlist()
                     TotalAmount()
+                    UserProfile()
                   }
                 },[userId, userSession])
 
@@ -130,8 +168,8 @@ function Mypage(){
 
               <div className="profile-left">
                 <div className="profile-img-box">
-                    <img src="https://static.vecteezy.com/system/resources/previews/013/360/247/non_2x/default-avatar-photo-icon-social-media-profile-sign-symbol-vector.jpg" alt="user_img" />
-                    <i className="fa-solid fa-pen-to-square profile-change-icon"></i>
+                    <img src={userProfile} alt="user_img" />
+                    <i className="fa-solid fa-pen-to-square profile-change-icon"><input className="change-input" type="file" accept="image/*" onChange={(e)=> handleProfile(e.target.files[0])}/></i>
                     <p>WHITE 회원 🤍</p>
                 </div>
               </div>
