@@ -53,7 +53,7 @@ function SignupPage() {
           console.log(error); alert("에러가 발생했습니다. 다시 시도해주세요."); return;
         }
 
-        if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex, profile:DEFAULT_PROFILE});
+        if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex, point:0, profile:DEFAULT_PROFILE});
         await SignupCoupon(data.user.id)
         alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉  신규 가입 축하 쿠폰이 지급 완료되었습니다! 🎁`); navigate('/login');}
         }

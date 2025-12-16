@@ -181,7 +181,7 @@ img {
 /* 페이지네이션 */
 .OrderList-Pagination{
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   padding: 2rem 0;
 }
@@ -197,12 +197,18 @@ img {
   border-radius: 3px;
   color: #222;
   transition: all 0.3s ease;
+  
 }
 
 .OrderList-Pagination button:hover{
   background-color: #222;
   color: white;
   border: 1px solid #eee;
+}
+
+.OrderList-Pagination p{
+  font-size: 0.78rem;
+  padding: 0.5rem 0 0 0;
 }
 /* 페이지네이션 */
 

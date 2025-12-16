@@ -3,9 +3,13 @@ import App from "../../App"
 import supabase from "../../supabaseClient"
 import './OrderList.css'
 import { addToCart } from "../../utils/cart"
+import { useNavigate, useParams } from "react-router-dom"
 
 function OrderList(){
 
+    const navigate = useNavigate()
+    const {page} = useParams()
+    const nowpage = Number(page) || 1
     let [user,setuser] = useState(null)
     let [OrderData,setOrderData] = useState([])
     const [searchValue,setsearchValue] = useState('')
@@ -45,13 +49,19 @@ function OrderList(){
         .ilike("name",`%${searchValue}%`)
 
         if(SearchError){console.log(SearchError.message); return;}
-        else{setOrderData(SearchData)}
+        else{setOrderData(SearchData); navigate('/orderlist/1')}
     }
 
     async function CartItems(item) {
         if(!user){alert('로그인이 필요합니다.'); return;}
         addToCart(user, item)
     }
+
+
+    const pageproductcount = 5 // 한 페이지 당 제품의 수
+    const totalpage = Math.ceil(OrderData.length / pageproductcount) // 총 페이지 계산
+    const sliceditem = OrderData.slice((nowpage - 1) * pageproductcount, pageproductcount * nowpage) // 페이지별 보여줄 제품
+
 
 
     return(
@@ -71,7 +81,7 @@ function OrderList(){
             <div className="OrderList-items-container">
                 {OrderData.length === 0 && (<p className="OrderList-empty">주문한 상품이 없습니다.</p>)}
                     
-                    {OrderData.map((item,i)=>(
+                    {sliceditem.map((item,i)=>(
                 <div className="OrderList-item-box" key={i}>
                     <p className="OrderList-item-box-title">구매완료</p>
 
@@ -101,7 +111,13 @@ function OrderList(){
                 ))}
 
                 <div className="OrderList-Pagination">
-                <button>이전</button><button>다음</button>
+                    { nowpage !== 1 &&(
+                <button onClick={()=>{if(nowpage > 1){navigate(`/orderlist/${nowpage - 1}`)}}} disabled={nowpage === 1} >이전</button>
+                )}
+                <p>- {nowpage} 페이지 -</p>
+                { nowpage !== totalpage &&(
+                <button onClick={()=>{if(nowpage < totalpage){navigate(`/orderlist/${nowpage + 1}`)}}} disabled={nowpage === totalpage}>다음</button>
+                )}
                 </div>
 
             </div>

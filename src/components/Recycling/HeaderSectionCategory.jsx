@@ -14,17 +14,6 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
     let [slider,setslider] = useState([])
     let navigate = useNavigate()
 
-    // useEffect(()=>{
-    //     fetch(jsonFile)
-    //     .then(res=>res.json())
-    //     .then(data =>{
-    //         setitem(data[arrayName])
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // },[jsonFile,arrayName])
-
     useEffect(()=>{
         async function HeaderSectionCategoryPage() {
             const {data, error} = await supabase
@@ -44,19 +33,6 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
         
         HeaderSectionCategoryPage()
     },[categoryName])
-
-
-
-    // useEffect(()=>{
-    //     fetch(bestSliderFile)
-    //     .then(res=> res.json())
-    //     .then(data=>{
-    //         setslider(data[bestSliderArray])
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // },[bestSliderFile,bestSliderArray])
 
     useEffect(()=>{
         async function BestSlider() {

@@ -110,7 +110,7 @@ function Mypage(){
           .maybeSingle()
 
           if(ProfileError){console.log(ProfileError.message); return;}
-          else{setuserProfile(ProfileData?.profile || "")}
+          else{setuserProfile(ProfileData?.profile || null)}
         }
 
         const handleProfile = async (file)=>{
