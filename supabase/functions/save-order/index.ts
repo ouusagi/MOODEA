@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
       // =======================================================
       const { data: dbOrderHeader, error: dbError } = await supabase
           .from("OrderHeaders") 
-          .select("total_amount_verified")
+          .select("total_amount_verified, earn_point")
           .eq("order_id", orderId)
           .single();
       
@@ -67,6 +67,7 @@ Deno.serve(async (req) => {
       }
       
       const dbAmount = dbOrderHeader.total_amount_verified; 
+      const dbPoint = dbOrderHeader.earn_point;
       
       // =======================================================
       // 🚨 2단계: 토스페이먼츠에 결제 승인 요청 및 검증
@@ -132,7 +133,8 @@ Deno.serve(async (req) => {
           .update({
               paymentKey: paymentKey,
               amount: tossResponse.totalAmount, // ✅ 수정된 tossResponse 사용
-              payment_status: 'PAID' 
+              payment_status: 'PAID',
+              earn_point:dbPoint
           })
           .eq('order_id', orderId); 
 
@@ -165,6 +167,19 @@ Deno.serve(async (req) => {
           headers: corsHeaders
         });
       }
+
+      const {data:UserPointData, error:UserPointError} = await supabase
+      .from("users")
+      .select("point")
+      .eq("id",user_id)
+      .single()
+
+      if(UserPointError){console.log(UserPointError.message); return;}
+
+      await supabase
+      .from("users")
+      .update({point:UserPointData.point + dbPoint})
+      .eq("id",user_id)
 
       // =======================================================
       // 4단계: 최종 성공 반환

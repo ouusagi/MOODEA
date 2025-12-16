@@ -110,7 +110,8 @@ function Cart(){
             orderId,
             total_amount_verified: amount,
             userId: sessionData.session.user.id,
-            items: items
+            items: items,
+            earnpoint
           };
 
           const paymentData = { // 토스페이먼츠 API 결제 정보 전달용

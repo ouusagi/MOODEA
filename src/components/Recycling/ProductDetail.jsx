@@ -111,13 +111,15 @@ function ProductDetail({ tableName, category }) {
     const itemDetail = {product_id: products.id, name: products.name, price:products.price, quantity:itemcount, brand:products.brand, photo:products.photo}
     const itemsArray = [itemDetail]
     const amount = products.price * itemcount
+    const earnpoint = Math.floor(amount / 1000) * 10
 
     const FetchData = { // 금액 조작 검증용
       orderId:orderId,
       total_amount_verified:amount,
       orderName:products.name,
       userId:user.id,
-      items:itemsArray
+      items:itemsArray,
+      earnpoint
     }
 
     const paymentData = { // 토스페이먼츠 API 결제 정보 전달용
