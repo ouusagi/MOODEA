@@ -83,7 +83,7 @@ function OrderList(){
                     
                     {sliceditem.map((item,i)=>(
                 <div className="OrderList-item-box" key={i}>
-                    <p className="OrderList-item-box-title">구매완료</p>
+                    <p className="OrderList-item-box-title">구매완료  <h4>{item.created_at.slice(0,10)}</h4></p>
 
                     <div className="OrderList-item-info-box">
                     <img src={item.photo} alt="product-item-photo"/>

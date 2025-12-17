@@ -113,7 +113,8 @@ function Cart(){
             userId: sessionData.session.user.id,
             items: items,
             earnpoint,
-            selectedCouponId: selectedCoupon?.id ?? null
+            selectedCouponId: selectedCoupon?.id ?? null,
+            disCount:discount ?? 0
           };
 
           const paymentData = { // 토스페이먼츠 API 결제 정보 전달용

@@ -104,10 +104,20 @@ img {
 }
 
 .OrderList-item-box-title {
+  display: flex;
+  gap: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1.5rem;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.OrderList-item-box-title h4{
+  margin-top: 0.2rem;
+  padding: 0rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 400;
 }
 
 .OrderList-item-info-box{
