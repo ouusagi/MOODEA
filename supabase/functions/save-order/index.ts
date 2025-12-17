@@ -49,7 +49,7 @@ Deno.serve(async (req) => {
       // =======================================================
       const { data: dbOrderHeader, error: dbError } = await supabase
           .from("OrderHeaders") 
-          .select("total_amount_verified, earn_point")
+          .select("total_amount_verified, earn_point, selectedCoupon")
           .eq("order_id", orderId)
           .single();
       
@@ -68,6 +68,7 @@ Deno.serve(async (req) => {
       
       const dbAmount = dbOrderHeader.total_amount_verified; 
       const dbPoint = dbOrderHeader.earn_point;
+      const dbCoupon = dbOrderHeader.selectedCoupon
       
       // =======================================================
       // 🚨 2단계: 토스페이먼츠에 결제 승인 요청 및 검증
@@ -134,7 +135,8 @@ Deno.serve(async (req) => {
               paymentKey: paymentKey,
               amount: tossResponse.totalAmount, // ✅ 수정된 tossResponse 사용
               payment_status: 'PAID',
-              earn_point:dbPoint
+              earn_point:dbPoint,
+              selectedCoupon:dbCoupon
           })
           .eq('order_id', orderId); 
 
@@ -180,6 +182,16 @@ Deno.serve(async (req) => {
       .from("users")
       .update({point:UserPointData.point + dbPoint})
       .eq("id",user_id)
+
+
+      if(dbCoupon){
+      const {error:UserCouponError} = await supabase
+      .from("user_coupons")
+      .update({used:true})
+      .eq("id",dbCoupon)
+      .eq("used",false)
+      if(UserCouponError){console.log(UserCouponError.message); return;}
+      }
 
       // =======================================================
       // 4단계: 최종 성공 반환

@@ -55,9 +55,10 @@ function Cart(){
       const {data:UserCoupon, error:CouponError} = await supabase.from("user_coupons")
       .select("*")
       .eq("user_id",userData.user.id)
+      .eq("used", false)
       if(CouponError){console.log(CouponError.message)}
       else{setcoupon(UserCoupon)}
-      if(UserCoupon.length > 0){setSelectedCoupon(UserCoupon[0])}
+      // if(UserCoupon.length > 0){setSelectedCoupon(UserCoupon[0])}
 
     }
     Getitems()
@@ -111,7 +112,8 @@ function Cart(){
             total_amount_verified: amount,
             userId: sessionData.session.user.id,
             items: items,
-            earnpoint
+            earnpoint,
+            selectedCouponId: selectedCoupon?.id ?? null
           };
 
           const paymentData = { // 토스페이먼츠 API 결제 정보 전달용
@@ -215,10 +217,10 @@ function Cart(){
 
             <div className="coupon-input-box">
               <label>보유 쿠폰 사용</label>
-              <select value={selectedCoupon?.coupon_name || ""} onChange={(e)=> {const selected = coupon.find(c => c.coupon_name === e.target.value); 
-              setSelectedCoupon(selected)}}>{coupon.map((item,i)=>{
-              return <option key={i}>{item.coupon_name}</option>
-              })}</select>
+              <select value={selectedCoupon?.coupon_name ?? ""} onChange={(e)=> {const selected = coupon.find(c => c.coupon_name === e.target.value); 
+              setSelectedCoupon(selected)}}>
+                <option value="" >쿠폰을 선택해주세요</option>
+                {coupon.map((item,i)=>{return <option key={i}>{item.coupon_name}</option>})}</select>
               <button onClick={()=>{if(!selectedCoupon){return alert("쿠폰을 선택 해주세요.")}else{alert("쿠폰이 적용 되었습니다 !"); setCouponDiscount(selectedCoupon.amount)}}}>적용</button>
             </div>
 

@@ -12,6 +12,7 @@ interface OrderData {
   userId: string; 
   items: Array<{ product_id: string; price: number; quantity: number; [key: string]: any }>;
   earnpoint: number;
+  selectedCouponId: string | null
 }
 
 serve(async (req) => {
@@ -53,7 +54,7 @@ serve(async (req) => {
         return new Response(JSON.stringify({ error: '유효하지 않은 JSON 형식' }), { status: 400, headers: { 'Content-Type': 'application/json', ...headers } });
     }
     
-    const { orderId, total_amount_verified, userId, items, earnpoint } = data;
+    const { orderId, total_amount_verified, userId, items, earnpoint, selectedCouponId } = data;
 
     // 6. DB에 저장된 유저 ID와 요청된 ID 일치 확인 (보안 강화)
     if (user.id !== userId) {
@@ -70,7 +71,8 @@ serve(async (req) => {
                 user_id: user.id, // 💡 인증된 토큰의 ID 사용
                 total_amount_verified: total_amount_verified, 
                 payment_status: 'PENDING', 
-                earn_point:earnpoint
+                earn_point:earnpoint,
+                selectedCoupon:selectedCouponId
             },
         ]);
 

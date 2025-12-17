@@ -40,6 +40,7 @@ function Mypage(){
                 const {data:CouponData, error:CouponError} = await supabase.from("user_coupons")
                 .select("*")
                 .eq("user_id",userId)
+                .eq("used",false)
                 if(CouponError){console.log(CouponError)}
                 else{setcoupon(CouponData)}}
 
