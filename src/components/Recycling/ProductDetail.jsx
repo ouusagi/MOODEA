@@ -110,7 +110,7 @@ function ProductDetail({ tableName, category }) {
     const orderId = `order-${Date.now()}`
     const itemDetail = {product_id: products.id, name: products.name, price:products.price, quantity:itemcount, brand:products.brand, photo:products.photo}
     const itemsArray = [itemDetail]
-    const amount = products.price * itemcount
+    const amount = products.price * itemcount < 50000 ? products.price * itemcount + 2500 : products.price * itemcount
     const earnpoint = Math.floor(amount / 1000) * 10
 
     const FetchData = { // 금액 조작 검증용

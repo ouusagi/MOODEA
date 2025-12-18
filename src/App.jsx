@@ -44,7 +44,11 @@ import Wishlist from './pages/Wishlist/Wishlist';
 import Success from './pages/Payments/Success';
 import Fail from './pages/Payments/Fail';
 
+// OrderList
 import OrderList from './pages/OrderList/OrderList';
+
+// HelpCenterPage
+import HelpCenterPage from './pages/HelpCenterPage/HelpCenterPage';
 
 // ReviewBoard
 import ReviewBoard from './pages/ReviewBoard/ReviewBoard';
@@ -98,6 +102,8 @@ function App() {
         <Route path="/payment/fail" element={<Fail/>}></Route>
         <Route path='/orderlist' element={<Navigate to={"/orderlist/1"}/>}></Route>
         <Route path='/orderlist/:page' element={<OrderList/>}></Route>
+        <Route path="/helpcenter" element={<Navigate to={"/helpcenter/1"} />}></Route>
+        <Route path="/helpcenter/:page" element={<HelpCenterPage />}></Route>
         <Route path="/reviewboard" element={<ReviewBoard />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />

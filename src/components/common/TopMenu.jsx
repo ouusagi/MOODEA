@@ -70,7 +70,7 @@ function TopMenu(){
             if(!user){alert("로그인이 필요한 서비스 입니다."); navigate('/login')}
             else{navigate('/wishlist')}
         }}>찜한상품</Link>
-        <a href="#">고객지원</a>
+        <Link to="/helpcenter">고객지원</Link>
         </div>
 
         <div className="menuicon-container">
