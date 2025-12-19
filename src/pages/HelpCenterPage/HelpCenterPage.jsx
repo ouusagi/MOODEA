@@ -5,7 +5,8 @@ import { useState, useEffect } from "react"
 
 
 function HelpCenterPage() {  
-        const faqList = [
+  
+  const faqList = [
   {
     question: "회원가입은 필수인가요?",
     answer: `네, 상품 구매 및 주문 내역 확인을 위해 회원가입이 필요합니다.
@@ -91,7 +92,7 @@ function HelpCenterPage() {
 
     let [inputValue,setinputValue] = useState('') // 인풋창에 입력한 값
     let [togle,settogle] = useState(null)
-    const [filteredList, setFilteredList] = useState(faqList); // 검색결과 값 필터후
+    const [filteredList, setFilteredList] = useState(faqList); // 검색결과 필터링 된 값
     const navigate = useNavigate()
     const {page} = useParams()
     const nowpage = Number(page) || 1
@@ -152,9 +153,9 @@ function HelpCenterPage() {
         </div>
 
         <div className='HelpCenter-FNQ-Pagination'>
-            <button disabled={nowpage === 1} onClick={()=>{if(nowpage > 1){navigate(`/helpcenter/${nowpage - 1}`)}}}>이전</button>
+            <button disabled={nowpage === 1} onClick={()=>{if(nowpage > 1){settogle(null); navigate(`/helpcenter/${nowpage - 1}`);}}}>이전</button>
             <p>- {nowpage} 페이지 -</p>
-            <button disabled={nowpage === totalpage} onClick={()=>{if(nowpage < totalpage){navigate(`/helpcenter/${nowpage + 1}`)}}}>디음</button>
+            <button disabled={nowpage === totalpage} onClick={()=>{if(nowpage < totalpage){settogle(null); navigate(`/helpcenter/${nowpage + 1}`);}}}>디음</button>
         </div>
 
     </div>

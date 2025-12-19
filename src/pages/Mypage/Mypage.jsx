@@ -20,6 +20,7 @@ function Mypage(){
     let [Amount,setAmount] = useState('Loding')
     let [Orderlist,setOrderlist] = useState([])
     let [reviw,setreviw] = useState([])
+    const [upDateInfo,setupDateInfo] = useState(false)
     let navigate = useNavigate()
 
 
@@ -29,12 +30,20 @@ function Mypage(){
             else{
                 // userInfo
                 setuserSession(data.session?.access_token || "")
-                setusername(data.session?.user?.user_metadata?.username || "");
                 setuseremail(data.session?.user?.email || "")
                 setuserId(data?.session?.user?.id || null)
               }
         }     
 
+        const UserName = async ()=>{
+                const { data:NameData, error:NameError } = await supabase 
+                .from("users")
+                .select("username")
+                .eq("id", userId)
+                .single()
+                if(NameError){console.log(NameError.message); return;}
+                setusername(NameData.username)
+                }
 
         const fetchCoupons = async ()=>{
                 const {data:CouponData, error:CouponError} = await supabase.from("user_coupons")
@@ -144,6 +153,7 @@ function Mypage(){
 
                 useEffect(()=>{
                   if(userId && userSession){
+                    UserName()
                     fetchCoupons()
                     UserPoint()
                     UserCart()
@@ -153,6 +163,10 @@ function Mypage(){
                     UserProfile()
                   }
                 },[userId, userSession])
+
+        const OpenUpdateInfo = ()=>{
+          setupDateInfo(true)
+        }
 
 
     return(
@@ -182,7 +196,7 @@ function Mypage(){
                     <p className="info-userTotal">고객님의 총 구매금액은 <span>{Amount}</span>원 입니다.</p>
 
                     <div className="profile-btn">
-                    <button>회원정보 수정</button>
+                    <button onClick={()=>{OpenUpdateInfo()}}>회원정보 수정</button>
                     <button>등급혜택</button>
                     </div>
                 </div>
@@ -248,6 +262,57 @@ function Mypage(){
         </div>
 
 
+
+        <div className={`Modal-Overlay ${upDateInfo === true ? "open" : false}`} onClick={() => setupDateInfo(false)}></div>
+
+
+
+        <div className={`Update-Info-container ${upDateInfo === true ? "open" : false}`}>
+
+          <div className="Info-close-container">
+             <i className="fa-solid fa-x Info-close-btn" onClick={()=>{setupDateInfo(false)}}></i>
+          </div>
+
+          <div className="Update-Info-Top">
+            <img src={userProfile} alt="user_img" />
+            <i className="fa-solid fa-pen-to-square Update-Info-profile-change-icon"><input className="change-input" type="file" accept="image/*" onChange={(e)=> handleProfile(e.target.files[0])}/></i>
+            <p>{username}</p>
+          </div>
+
+          <div className="Update-Info-level">
+            <p>WHITE 회원 🤍</p>
+          </div>
+          
+
+          <div className="Update-Info-middle">
+            <p>회원 정보 수정</p>
+
+            <div className="Update-Info-middle-input">
+              <label htmlFor="name">닉네임</label>
+              <button>중복확인</button>
+              <input id="name" type="text" placeholder={username} />
+
+              <label htmlFor="phone">휴대전화</label>
+              <input id="phone" type="text" placeholder="070-xxxx-xxxx" />
+
+              <label htmlFor="address">우편번호</label>
+              <input id="address" type="text" placeholder="서울 강남구" />
+
+              <label htmlFor="address2">상세주소</label>
+              <input id="address2" type="text" placeholder="108동 201호" />
+            </div>
+
+            <div className="Update-Info-btn">
+              <button>정보수정</button>
+            </div>
+            
+            <div className="Update-Info-Userclose">
+              <button>회원탈퇴</button>
+            </div>
+            
+          </div>
+
+        </div>
 
         </div>
     )
