@@ -20,6 +20,10 @@ function Mypage(){
     let [Amount,setAmount] = useState('Loding')
     let [Orderlist,setOrderlist] = useState([])
     let [reviw,setreviw] = useState([])
+    const [inputusername,setinputusername] = useState('') || username
+    const [userphone,setuserphone] = useState('')
+    const [useraddress,setuseraddress] = useState('')
+    const [useraddressline2,setuseraddressline2] = useState('')
     const [upDateInfo,setupDateInfo] = useState(false)
     let navigate = useNavigate()
 
@@ -169,6 +173,38 @@ function Mypage(){
         }
 
 
+        const handleCheckUsername = async ()=>{
+        const trimmed = inputusername.trim();
+        if(trimmed.trim() === ""){alert("닉네임을 입력해주세요."); return;}
+        const {data : usernamecheck, error : usernamererror} = await supabase
+        .from('user_public')
+        .select('id')
+        .eq('username', trimmed)
+        .neq('id', userId)
+        if(usernamererror){console.log(usernamererror.message); return;}
+        if(usernamecheck.length > 0){alert("이미 사용중인 닉네임 입니다."); return;}
+        else{alert("사용 가능한 닉네임 입니다.");}
+        }
+
+
+        const UserInfoChange = async()=>{
+          if(userphone.trim() === ""){alert("휴대전화 번호를 입력해주세요"); return;}
+          if(useraddress.trim() === ""){alert("우편번호를 입력해주세요"); return;}
+          if(useraddressline2.trim() === ""){alert("상세주소를 입력해주세요"); return;}
+          const updateData = 
+          {userphone:userphone, 
+          users_address:useraddress, 
+          users_address_line2:useraddressline2}
+          if(inputusername.trim() !== ""){updateData.username = inputusername}
+          const {error: changeError} = await supabase
+          .from('users')
+          .update(updateData)
+          .eq('id',userId)
+          if(changeError){console.log(changeError.message); alert("닉네임 중복검사 시도 후 다시 시도해주세요."); return;}
+          alert("회원 정보가 변경되었습니다 🎉 !");
+          setupDateInfo(false);
+        }
+
     return(
         <div>
         
@@ -289,21 +325,21 @@ function Mypage(){
 
             <div className="Update-Info-middle-input">
               <label htmlFor="name">닉네임</label>
-              <button>중복확인</button>
-              <input id="name" type="text" placeholder={username} />
+              <button onClick={()=>{handleCheckUsername()}}>중복확인</button>
+              <input id="name" type="text" placeholder={username} value={inputusername} onChange={(e)=>{setinputusername(e.target.value)}}/>
 
               <label htmlFor="phone">휴대전화</label>
-              <input id="phone" type="text" placeholder="070-xxxx-xxxx" />
+              <input id="phone" type="text" placeholder="070-xxxx-xxxx" value={userphone} onChange={(e)=>{setuserphone(e.target.value)}}/>
 
               <label htmlFor="address">우편번호</label>
-              <input id="address" type="text" placeholder="서울 강남구" />
+              <input id="address" type="text" placeholder="서울 강남구" value={useraddress} onChange={(e)=>{setuseraddress(e.target.value)}}/>
 
               <label htmlFor="address2">상세주소</label>
-              <input id="address2" type="text" placeholder="108동 201호" />
+              <input id="address2" type="text" placeholder="108동 201호" value={useraddressline2} onChange={(e)=>{setuseraddressline2(e.target.value)}}/>
             </div>
 
             <div className="Update-Info-btn">
-              <button>정보수정</button>
+              <button onClick={()=>{UserInfoChange()}}>정보수정</button>
             </div>
             
             <div className="Update-Info-Userclose">
