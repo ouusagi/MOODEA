@@ -86,8 +86,8 @@ function SignupPage() {
 
     const handleCheckUsername = async ()=>{
       const {data : usernamecheck, error : usernamererror} = await supabase
-      .from('users')
-      .select('username')
+      .from('user_public')
+      .select('id')
       .eq('username', username)
 
       if(usernamecheck.length > 0){alert("이미 사용중인 닉네임 입니다."); return;}

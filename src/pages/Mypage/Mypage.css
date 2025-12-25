@@ -482,6 +482,126 @@ img {
 }
 /* 정보수정 모달 */
 
+/* 회원탈퇴 모달 */
+.Delete-Account-container{
+    position: fixed;
+    opacity: 0;
+    visibility:hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 500px;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    max-width: 1300px;
+    height: 700px;
+    margin: 0rem auto;
+    transition: opacity 0.8s ease-in-out, transform 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.Delete-Account-container.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%,-49%);
+}
+
+.Delete-Account-icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.Delete-Account-Top{
+    text-align: center;
+    /* margin-bottom: 0.5rem; */
+    margin-top: 2rem;
+}
+
+.Delete-Account-Top p{
+    color: #222;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.Delete-Account-middle{
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.Delete-Account-middle2{
+    text-align: left;
+    line-height: 1.6;
+    color: #555;
+    letter-spacing: 0.2px;
+    padding: 1rem 2.5rem;
+}
+
+.Delete-Account-bottom-box{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 460px;
+    margin: 1.5rem auto;
+    background-color: #fafafa;
+    height: 180px;
+    overflow-y: auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Delete-Account-bottom-box p{
+    font-size: 0.85rem;
+    padding: 1rem 0.5rem;
+    color: #ccc;
+}
+
+.Delete-Account-bottom{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #333;
+}
+
+.Delete-Account-btn{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.Delete-Account-btn button{
+    width: 400px;
+    height: 50px;
+    color: white;
+    background-color: #2B2B2B;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.3s ease;
+}
+
+.Delete-Account-btn button:hover{
+    background-color:white;
+    color: #222;
+    border: 1px solid #eee;
+}
+/* 회원탈퇴 모달 */
+
 
 /* 미디어 쿼리 */
 
@@ -507,6 +627,10 @@ img {
     max-width: 1350px;
 }
 
+.Delete-Account-container{
+    max-width: 1350px;
+}
+
 }
 
 @media screen and (min-width:1800px) {
@@ -528,6 +652,10 @@ img {
 }
 
 .Update-Info-container{
+    max-width: 1350px;
+}
+
+.Delete-Account-container{
     max-width: 1350px;
 }
 

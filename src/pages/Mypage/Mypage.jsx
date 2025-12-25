@@ -25,6 +25,7 @@ function Mypage(){
     const [useraddress,setuseraddress] = useState('')
     const [useraddressline2,setuseraddressline2] = useState('')
     const [upDateInfo,setupDateInfo] = useState(false)
+    const [deleteuser,setdeleteuser] = useState(false)
     let navigate = useNavigate()
 
 
@@ -200,7 +201,7 @@ function Mypage(){
           .from('users')
           .update(updateData)
           .eq('id',userId)
-          if(changeError){console.log(changeError.message); alert("닉네임 중복검사 시도 후 다시 시도해주세요."); return;}
+          if(changeError){console.log(changeError.message); alert("닉네임 중복검사 시도 후 혹은 휴대전화 번호의 하이폰을 제외 후 다시 시도해주세요."); return;}
           alert("회원 정보가 변경되었습니다 🎉 !");
           setupDateInfo(false);
         }
@@ -300,6 +301,7 @@ function Mypage(){
 
 
         <div className={`Modal-Overlay ${upDateInfo === true ? "open" : false}`} onClick={() => setupDateInfo(false)}></div>
+        <div className={`Modal-Overlay ${deleteuser === true ? "open" : false}`} onClick={() => setupDateInfo(false)}></div>
 
 
 
@@ -329,7 +331,7 @@ function Mypage(){
               <input id="name" type="text" placeholder={username} value={inputusername} onChange={(e)=>{setinputusername(e.target.value)}}/>
 
               <label htmlFor="phone">휴대전화</label>
-              <input id="phone" type="text" placeholder="070-xxxx-xxxx" value={userphone} onChange={(e)=>{setuserphone(e.target.value)}}/>
+              <input id="phone" type="text" placeholder="070-xxxx-xxxx (하이폰 제외)" value={userphone} onChange={(e)=>{setuserphone(e.target.value)}}/>
 
               <label htmlFor="address">우편번호</label>
               <input id="address" type="text" placeholder="서울 강남구" value={useraddress} onChange={(e)=>{setuseraddress(e.target.value)}}/>
@@ -343,11 +345,46 @@ function Mypage(){
             </div>
             
             <div className="Update-Info-Userclose">
-              <button>회원탈퇴</button>
+              <button onClick={()=>{setdeleteuser(true); setupDateInfo(false)}}>회원탈퇴</button>
             </div>
             
           </div>
 
+        </div>
+
+        <div className={`Delete-Account-container ${deleteuser === true ? "open" : ""}`}>
+           <i className="fa-solid fa-x Delete-Account-icon" onClick={()=>{setdeleteuser(false)}}></i>
+          <div className="Delete-Account-Top">
+            <p>MOODÉA</p>
+          </div>
+
+          <div className="Delete-Account-middle">
+            <p>회원탈퇴</p>
+          </div>
+
+          <div className="Delete-Account-middle2">
+            <p>회원탈퇴 시 계정 정보와 주문 내역, 보유 포인트 및 쿠폰을 포함한 <br />
+            모든 이용 기록이 삭제되며 복구가 불가능합니다. <br />
+            탈퇴 후에는 일부 서비스 이용에 제한이 있을 수 있습니다. <br />
+            </p>
+          </div>
+
+          <div className="Delete-Account-bottom-box">
+            <p>※ 회원탈퇴 시 아래 사항에 대해 확인이 필요합니다. ※ <br /></p>
+            <p>• 회원탈퇴 후 계정 정보 및 개인 설정은 모두 삭제되며 복구할 수 없습니다. <br /> </p>
+            <p>• 주문 내역, 결제 기록, 배송 정보 등 서비스 이용 기록이 삭제됩니다. <br /> </p>
+            <p>• 보유 중인 포인트 및 쿠폰은 탈퇴와 동시에 소멸되며 환불되지 않습니다. <br /> </p>
+            <p>• 탈퇴 후에는 일부 서비스 이용이 제한될 수 있습니다. <br /> </p>
+          </div>
+
+          <div className="Delete-Account-bottom">
+            <p>회원 탈퇴를 하시겠습니까?</p>
+          </div>
+
+          <div className="Delete-Account-btn">
+            <button>회원탈퇴</button>
+          </div>
+          
         </div>
 
         </div>
