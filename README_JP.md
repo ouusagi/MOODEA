@@ -219,9 +219,9 @@ usersテーブルを参照する View を作成し、id と username のみ取�
 - **Supabase**
 
 ## 企画
-| ワイヤーフレーム | デザイン案 |
+| Flowchart | Wireframe |
 |---|---|
-|<img width="500" alt="ワイヤーフレーム" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="700" alt="デザイン案" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|<img width="500" alt="Flowchart" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Flow%20Chart.png?raw=true" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
 
 ## インストールと実行
 ```bash

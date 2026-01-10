@@ -228,7 +228,7 @@ state에서도 필터링하여 화면에 즉시 반영.
 ## 기획
 | Flowchart | Wireframe |
 |---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|<img width="500" alt="Flowchart" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Flow%20Chart.png?raw=true" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
 
 ## 설치 및 실행
 ```bash
