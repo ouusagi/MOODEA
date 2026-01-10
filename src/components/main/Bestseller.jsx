@@ -15,17 +15,6 @@ function Bestseller(){
   let [best,setbest] = useState([])
   let navigate = useNavigate()
 
-  // useEffect(()=>{
-  //   fetch('/Bestseller.json')
-  //   .then(res=> res.json())
-  //   .then(data=>{
-  //     setbest(data.Bestseller)
-  //   })
-  //   .catch(err=>{
-  //     console.log(err)
-  //   })
-  // },[])
-
   useEffect(()=>{
     async function Bestseller() {
       const { data, error } = await supabase
@@ -33,13 +22,8 @@ function Bestseller(){
       .select('*')
       .order('id', {ascending: true})
 
-      if(error){
-        console.log(error)
-      }
-
-      else{
-        setbest(data)
-      }
+      if(error){console.log(error.message)}
+      else{setbest(data)}
     }
     Bestseller()
   },[])
@@ -55,13 +39,12 @@ function Bestseller(){
         </div>
 
         <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
+        breakpoints={{0:{slidesPerView:2, spaceBetween:0}, 768:{slidesPerView:5, spaceBetween:30}}}
       >
         {best.map((item,i)=>(
         <SwiperSlide key={i}>

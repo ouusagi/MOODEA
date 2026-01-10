@@ -17,8 +17,8 @@ UI/UX 설계부터 컴포넌트 구조화, 데이터 연동까지 **실무형 �
 
 
 ## 업데이트 내역
-### 2025-12-25
-- 회원탈퇴 UI : 회원탈퇴 UI 완성
+### 2026-01-10
+- 미디어쿼리 조정 : 메인페이지,로그인,회원가입 미디어쿼리 완료
 
 
 ## 파일 구조 변경
@@ -226,9 +226,9 @@ state에서도 필터링하여 화면에 즉시 반영.
 - **Supabase**: 실시간 DB 연동 데이터 바인딩 (상품 정보) & 회원가입 및 로그인
 
 ## 기획
-| 와이어프레임 | 디자인시안 |
+| Flowchart | Wireframe |
 |---|---|
-|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="700" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
+|<img width="500" alt="와이어프레임" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/Wireframe-mainpage.png" />|<img width="500" alt="시안" src="https://raw.githubusercontent.com/ouusagi/MOODEA/main/src/assets/mainpage.png" />|
 
 ## 설치 및 실행
 ```bash

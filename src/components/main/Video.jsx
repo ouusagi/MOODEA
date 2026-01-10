@@ -44,8 +44,8 @@ function Video(){
             <video src="https://www.pexels.com/ko-kr/download/video/6663340/" controls autoPlay muted loop></video>
             
               <div className={`text-container ${show ? "up" : ''}`}>
-                <h1 style={{fontSize : "40px"}}>“당신의 일상에 머무는 가장 섬세한 무드.” <div className={`hr-class ${show ? "up" : ''}`}></div></h1>
-                <h3 style={{fontSize : "25px"}}>MOODEA는 뷰티를 넘어, 감각과 무드를 디자인합니다.<br/>피부에 닿는 순간, 당신의 삶이 특별해집니다.</h3>
+                <h1>“당신의 일상에 머무는 가장 섬세한 무드.” <div className={`hr-class ${show ? "up" : ''}`}></div></h1>
+                <h3>MOODEA는 뷰티를 넘어, 감각과 무드를 디자인합니다.<br/>피부에 닿는 순간, 당신의 삶이 특별해집니다.</h3>
 
                   <div className="video-btn">
                     <button className="btn1">브랜드 철학 더보기</button>

@@ -8,17 +8,6 @@ function GiftSet(){
   const [Gift,setGift] = useState([])
   let navigate = useNavigate()
 
-    // useEffect(()=>{
-    //     fetch('/GiftSet.json')
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         setGift(data.Gifts)
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // },[])
-
     useEffect(()=>{
       async function GiftSet() {
         const {data, error} = await supabase
@@ -27,7 +16,7 @@ function GiftSet(){
         .order('id', {ascending: true})
 
         if(error){
-          console.log(error)
+          console.log(error.message)
         }
 
         else{

@@ -12,32 +12,20 @@ function NewProductList(){
     let [pluscount,setpluscount] = useState(count)
     let navigate = useNavigate()
 
-    // useEffect(()=>{
-    //     fetch('/Newproducts-items.json')
-    //     .then(res=>res.json())
-    //     .then(data =>{
-    //         setProducts(data.Newproducts)
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // },[])
-
-useEffect(() => {
-  async function loadProducts() {
+    useEffect(() => {
+    async function loadProducts() {
     const { data, error } = await supabase
       .from('Newproducts_items')
       .select('*')
       .order('id', {ascending : true})
     
     if (error){
-       console.log(error)
+       console.log(error.message)
     }
     else{
         setProducts(data)
     }
   }
-
   loadProducts()
 }, [])
 

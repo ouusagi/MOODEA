@@ -251,6 +251,92 @@ img {
 
 /* 푸터 섹션 */
 
+
+/* 모바일 UI */
+@media (max-width: 767px) {
+
+html, body{
+overflow-x: hidden;
+}
+
+/* 회원가입 쿠폰 지급 팝업창 */
+.AD-item1{
+  font-size: 0.78rem;
+}
+.AD-item2{
+  font-size: 11px;
+}
+/* 회원가입 쿠폰 지급 팝업창 */
+
+/* <!-- 상단 옵션창 --> */
+.menu-container{
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.option-container{
+  gap: 1.4rem;
+}
+
+.menuicon-container{
+  gap: 1.3rem;
+}
+
+.title-container a{
+  font-size: 2rem;
+}
+/* <!-- 상단 옵션창 --> */
+
+/* <!-- 헤더 타이틀 + 상품카테고리창  --> */
+.title-container{
+  height: 7.5rem;
+}
+
+.Category-container{
+  padding-bottom: 2.5rem;
+  height: 1rem;
+  gap: 1.4rem;
+}
+
+.Category-item a{
+  font-size: 0.90rem;
+}
+/* <!-- 헤더 타이틀 + 상품카테고리창  --> */
+
+/* 푸터 섹션 */
+
+.Footer-container{
+  width: 95%;
+}
+
+.Footer-top1 a{
+  font-size: 1.3rem;
+}
+
+.Footer-top2{
+  margin-top: 0.5rem;
+}
+
+.Footer-top2 a{
+  font-size: 0.85rem;
+}
+
+.Footer-info{
+  gap: 5px;
+  font-size: 10px;
+}
+
+.Footer-info-tell{
+  font-size: 10px;
+}
+
+/* 푸터 섹션 */
+}
+/* 모바일 UI */
+
+
+/* PC / 데스크탑 */
 @media screen and (min-width:1600px) {
 
 .Footer-container{
@@ -259,6 +345,7 @@ img {
 
 }
 
+/* PC / 데스크탑 */
 @media screen and (min-width:1800px) {
 
 .Footer-container{

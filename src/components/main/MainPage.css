@@ -23,25 +23,32 @@ img {
 /* <!-- 인디케이터 캐러셀 --> */
 .slider-container{
   position: relative;
-  display: flex;
+  /* display: flex; */
   overflow: hidden;
-  max-width: 300vw;
+  /* max-width: 300vw; */
   height: 450px;
+  width: 100vw;
 }
 
 .slide{
   display: flex;
   width: 100%;
-  height: 450px;
+  /* height: 450px; */
+  height: 100%;
   transition: all 0.5s ease;
 }
 
 .slide-img{
+  flex: 0 0 100%;
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+
   display: flex;
-  min-width: 100vw;
-  height: 450px;
+  /* min-width: 100vw; */
+  /* height: 450px; */
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size:cover;
 }
 
@@ -143,7 +150,6 @@ img {
 /* 신상품 타이틀창 */
 
 .newproduct-bg{
-  /* border-bottom: 1px solid #eee; */
   padding: 4rem 0;
 }
 
@@ -713,6 +719,14 @@ img {
   transform: translateY(0);
 }
 
+.text-container h1{
+  font-size: 40px;
+}
+
+.text-container h3{
+  font-size: 25px;
+}
+
 .hr-class{
   height: 2px;
   width: 0;
@@ -810,8 +824,6 @@ img {
 
 .fa-solid{
   font-size: 15px;
-  /* position: relative;
-  margin-top: 2px; */
 }
 
 .Reviwmore-btn:hover{
@@ -1037,6 +1049,376 @@ img {
 }
 
 /* 소셜미디어 섹션 */
+
+/* 모바일 UI */
+@media (max-width: 767px) {
+  /* <!-- 인디케이터 캐러셀 --> */
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  height: 115px;
+  width: 100%;
+}
+
+.slide{
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img{
+  height: 100%;
+  width: 100%;
+}
+
+.indicator{
+  width: 10px;
+  height: 10px;
+}
+/* <!-- 인디케이터 캐러셀 --> */
+
+/* 카테고리 섹션 */
+.CategoryBar-header {
+  margin-bottom: 1.5rem;
+}
+
+.CategoryBar-header h1{
+  font-size: 1.75rem;
+}
+
+.CategoryBar-header p{
+  font-size: 0.95rem;
+}
+
+.CategoryBar-box{
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+.CategoryBar-item{
+  text-align: center;
+  flex: 0 0 70px;
+}
+
+.CategoryBar-item h4{
+  margin: 0px 0px 10px 0px;
+  font-size: 0.85rem;
+}
+
+.CategoryBar-box img{
+  height: 70px;
+}
+/* 카테고리 섹션 */
+
+/* 신상품 타이틀창 */
+
+.newproduct-title-container h1{
+  font-size: 1.75rem;
+}
+
+.newproduct-title-container h2{
+  font-size: 0.95rem;
+}
+/* 신상품 타이틀창 */
+
+/* 신상품 리스트창 */
+
+.newproduct-item-container{
+  flex: 0 0 100px;       
+}
+
+.newproduct-item{
+  width: 100px;
+  height: 180px;   
+}
+
+.newproduct-item-container img{
+  height: 100px;
+}
+
+.newproduct-text h3 {
+  font-size: 0.95rem;
+}
+/* 신상품 리스트창 */
+
+/* 베스트셀러 섹션 */
+.Best h1{
+  font-size: 1.75rem;
+}
+
+.Best h2{
+  font-size: 0.95rem;
+}
+
+.swiper-slide {
+  padding: 0 0.4rem;
+}
+
+.image-container p{
+  font-size: 0.8rem;
+}
+
+.infobox-container h3{
+  font-size: 0.95rem;
+}
+
+.banner-container{
+  width: 98%;
+  height: 170px;
+}
+
+.banner-container h2{
+  font-size: 1.3rem;
+}
+
+.banner-container p{
+  font-size: 0.95rem;
+}
+/* 베스트셀러 섹션 */
+
+/* 기프트셋 섹션 */
+
+.GiftSet-text-container{
+  width: 95%;
+}
+
+.GiftSet-text-container h1{
+  font-size: 1.75rem;
+}
+
+.GiftSet-text-container h2{
+  font-size: 0.95rem;
+}
+
+.GiftSet-container{
+  margin: 1rem 0.5rem 0 0.5rem;
+  height: 300px;
+}
+
+.GiftSet-img-container{
+  flex: 1;
+  height: 300px;
+}
+
+.GiftSet-img-container h2{
+  left: 1rem;
+  top: 3rem;
+  font-size: 1rem;
+}
+
+.GiftSet-img-container p{
+  left: 1rem;
+  top: 7rem;
+  font-size: 0.85rem;
+}
+
+.GiftSet-img-container button{
+  left: 1rem;
+  top: 12rem;
+  width: 90px;
+  height: 50px;
+  font-size: 0.75rem;
+}
+
+.GiftSet-item-container{
+  margin-left: 0.8rem;
+  gap: 1rem;
+}
+
+.GiftSet-item-img-wrapper{
+  width: 4.1rem;
+  height: 100%;
+}
+
+.GiftSet-text h3{
+  font-size: 0.95rem;
+}
+
+.GiftSet-text p{
+  font-size: 0.90rem;
+}
+
+.GiftSet-text h4{
+  font-size: 13px;
+}
+
+.GiftSet-text2{
+  font-size: 0.86rem;
+  padding: 0 1rem 0 0;
+}
+
+/* 기프트셋 섹션 */
+
+/* 비디오 섹션 */
+
+.Brand h1{
+  font-size: 1.75rem;
+}
+
+.Brand h2{
+  font-size: 0.95rem;
+}
+
+.video-container {
+  flex-direction: column;
+}
+
+.video-container video{
+  width: 100%;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+.text-container h1{
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.text-container h3{
+  font-size: 1rem;
+}
+
+.video-btn{
+  gap: 20px;
+}
+
+.video-btn button{
+  width: 8rem;
+  height: 2.5rem;
+}
+
+/* 비디오 섹션 */
+
+/* 리뷰 섹션 */
+
+.Review-title-container{
+  width: 95%;
+  gap: 1rem;
+}
+
+.Review-title-box h1{
+  font-size: 1.75rem;
+}
+
+.Review-title-box h2{
+  font-size: 0.85rem;
+}
+
+.Reviwmore-btn{
+  padding: 1rem auto;
+  font-size: 0.75rem;
+}
+
+.fa-solid{
+  font-size: 0.75rem;
+}
+
+.Review-container{
+  width: 95%;
+}
+
+.Review-box{
+  margin: 0 3px;
+}
+
+.Review-imgbox{
+  height: 50%;
+}
+
+.Review-textbox h3{
+  font-size: 0.8rem;
+}
+
+.Review-textbox h4{
+  font-size: 11px;
+}
+
+.Review-textbox h5{
+  font-size: 10px;
+}
+
+.Review-textbox p{
+  font-size: 0.6rem;
+}
+
+.Review-textbox-miniimg img{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* 리뷰섹션 */
+
+/* 소셜미디어 섹션 */
+
+.Social-text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 5rem;
+}
+
+.Social-text-container h1{
+  font-size: 1.75rem;
+}
+
+.Social-text-container h2{
+  font-size: 0.95rem;
+}
+
+.Social-container{
+  width: 95%;
+}
+
+.Socialbox img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.item1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.item3 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.Link-container{
+  width: 95%;
+}
+
+.Link-container h1{
+  font-size: 1.4rem;
+}
+
+.Link-container a{
+  width: 30%;
+  height: 3rem;
+  font-size: 0.75rem;
+}
+
+/* 소셜미디어 섹션 */
+}
+/* 모바일 UI */
 
 @media screen and (min-width:1600px) {
   .slider-container{

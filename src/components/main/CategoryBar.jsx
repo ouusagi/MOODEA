@@ -7,17 +7,6 @@ function CategoryBar(){
 let [Category,setCategory] = useState([])
 let navigate = useNavigate()
 
-    // useEffect(()=>{
-    //     fetch('/Category.json')
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         setCategory(data.Category)
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // })
-
     useEffect(()=>{
         async function CategoryBar() {
             const {data, error} = await supabase
@@ -25,7 +14,7 @@ let navigate = useNavigate()
             .select('*')
 
             if(error){
-                console.log(error)
+                console.log(error.message)
             }
             else{
                 setCategory(data)

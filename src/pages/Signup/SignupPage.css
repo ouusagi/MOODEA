@@ -183,3 +183,12 @@ button:focus{
 }
 
 /* 경고 멘트 스타일링 */
+
+
+/* 모바일 UI */
+@media (max-width: 767px) {
+    .signup-box{
+    padding: 2rem;
+}
+}
+/* 모바일 UI */

@@ -21,7 +21,7 @@ function Footer(){
                <a href="#" className='Footer-menu'>BRAND</a>
                <a href="#" className='Footer-menu'>TERMS</a>
                <a href="#" className='Footer-menu'>PRIVACY</a>
-               <a href="#" className='Footer-menu'>HELP</a>
+               <Link to="/helpcenter" className='Footer-menu'>HELP</Link>
             </div>
 
           </div>

@@ -206,6 +206,14 @@ function Mypage(){
           setupDateInfo(false);
         }
 
+        const DeleteAccount = async()=>{
+          const {error:DeleteAccountError} = await supabase.functions.invoke("delete-user")
+          if(DeleteAccountError){console.log(DeleteAccountError.message); alert("에러가 발생하였습니다. 다시 시도해주세요"); return;}
+          alert("회원탈퇴가 완료되었습니다.");
+          await supabase.auth.signOut()
+          navigate("/")
+        }
+
     return(
         <div>
         
@@ -382,7 +390,7 @@ function Mypage(){
           </div>
 
           <div className="Delete-Account-btn">
-            <button>회원탈퇴</button>
+            <button onClick={()=>{DeleteAccount()}}>회원탈퇴</button>
           </div>
           
         </div>

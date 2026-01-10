@@ -9,12 +9,11 @@ function TopMenu(){
     let navigate = useNavigate()
 
     useEffect(()=>{
-        const checkSession = async ()=>{
-            const {data, error} = await supabase.auth.getSession()
-            if(error){console.log(error.message)}
-            else{setuser(data.session?.user ?? null)}
-        }
-        checkSession()
+        const {data:authListener} = supabase.auth.onAuthStateChange((_event,session)=>{
+            setuser(session?.user ?? null)
+        })
+
+        return()=>{authListener.subscription.unsubscribe()}
     },[])
 
     const handleLogout = async ()=>{
