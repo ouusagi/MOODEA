@@ -187,7 +187,71 @@ img {
 }
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+/* 스킨케어 타이틀창 */
 
+.SkincareList-title-container h1{
+  font-size: 1.75rem;
+}
+
+.SkincareList-title-container h2{
+  font-size: 0.95rem;
+}
+/* 스킨케어 타이틀창 */
+
+
+/* 스킨케어 베스트 제품 섹션창 */
+.Best-bg2 .swiper{
+  padding: 0 0rem;
+}
+/* 스킨케어 베스트 제품 섹션창 */
+
+/* 상품 정렬 섹션 */
+.itemarray-container{
+  margin: 2rem 0.3rem;
+  font-size: 0.90rem;
+}
+
+.itemarray-box{
+  display: flex;
+  gap: 0.6rem;
+}
+
+.itemarray{
+  font-size: 0.90rem;
+}
+
+/* 상품 정렬 섹션 */
+
+/* 스킨케어 리스트창 */
+.skincare-box{
+  gap: 0.8rem;
+}
+
+.skincare-item-container{
+  flex: 0 0 100px;       
+}
+
+.skincare-item{
+  width: 100px;
+  height: 180px;   
+}
+
+.skincare-item-container img{
+  width: 100px;
+  height: 100px;   
+}
+
+/* 스킨케어 리스트창 */
+
+.page-num{
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+}
+/* 모바일 UI */
 
 
 @media screen and (min-width:1600px) {

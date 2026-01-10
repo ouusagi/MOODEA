@@ -23,7 +23,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             .order("id", { ascending: true });
 
             if(error){
-                console.log(error)
+                console.log(error.message)
             }
 
             else{

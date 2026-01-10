@@ -17,8 +17,7 @@ function BestSlider({items, categoryName}){
     return(
         <div className="Best-bg2">
         <Swiper
-        slidesPerView={5}
-        spaceBetween={20}
+        breakpoints={{0:{slidesPerView:2, spaceBetween:0}, 768:{slidesPerView:5, spaceBetween:30}}}
         pagination={{
           clickable: true,
         }}
