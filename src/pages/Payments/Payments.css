@@ -166,8 +166,53 @@ img {
 
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+/* 결제 성공 페이지 */
+
+.Success-text-1{
+    font-size: 1.75rem;
+}
+
+.Success-text-2{
+    font-size: 0.95rem;
+}
 
 
+/* 추천 아이템 */
+
+.recommended-text-1{
+    font-size: 1.2rem;
+}
+
+.recommended-text-2{
+    font-size: 1.3rem;
+}
+/* 추천 아이템 */
+
+/* 스와이퍼 캐러셀 */
+.Effect-coverflow-Swiper {
+  height: 150px;
+}
+/* 스와이퍼 캐러셀 */
+
+
+/* 결제 성공 페이지 */
+
+
+/* 결제 실패 페이지 */
+
+.Fail-Error-text1{
+    font-size: 1.4rem;
+}
+
+.Fail-Error-text2{
+    font-size: 0.96rem;
+}
+
+/* 결제 실패 페이지 */
+}
+/* 모바일 UI */
 
 @media screen and (min-width:1600px) {
 
