@@ -1138,6 +1138,18 @@ img {
 .newproduct-text h3 {
   font-size: 0.95rem;
 }
+
+.showbtn{
+  width: 15rem;
+  height: 2.5rem;
+  color: white;
+  font-size: 13.5px;
+  font-weight: 500;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ccc;
+}
 /* 신상품 리스트창 */
 
 /* 베스트셀러 섹션 */

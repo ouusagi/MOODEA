@@ -286,7 +286,68 @@ img {
 
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+  /* 상세페이지 */
+.product-detail{
+    flex-direction: column;
+    margin: auto;
+    gap: 0px;
+}
 
+.product-detail-img img{
+    border-radius: 0px;
+}
+
+.product-detail-info h2 {
+  font-size: 1.3rem;
+}
+
+.product-detail-info h3 {
+    font-size: 0.95rem;
+}
+
+.product-detail-info .delivery{
+    font-size: 1rem;
+}
+
+.product-detail-info .info {
+  font-size: 0.90rem;
+}
+
+.count-btn-container {
+  gap: 5px;
+}
+
+.count-btn-container button {
+  width: 30px;
+  height: 30px;
+}
+
+.count-btn-container h4{
+  font-size: 0.95rem;
+}
+
+.product-detail-btn button {
+  width: 100px;
+  padding: 11px;
+  font-size: 0.8rem;
+}
+/* 상세페이지 */
+
+
+/* 상품토글 */
+
+.product-detail-box-content img{
+  min-width: 0px;
+}
+
+.product-detail-box-content button{
+  border-radius: 0px;
+}
+/* 상품토글 */
+}
+/* 모바일 UI */
 
 
 
