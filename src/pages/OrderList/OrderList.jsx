@@ -83,7 +83,7 @@ function OrderList(){
                     
                     {sliceditem.map((item,i)=>(
                 <div className="OrderList-item-box" key={i}>
-                    <p className="OrderList-item-box-title">구매완료  <h4>{item.created_at.slice(0,10)}</h4></p>
+                    <span className="OrderList-item-box-title">구매완료  <h4>{item.created_at.slice(0,10)}</h4></span>
 
                     <div className="OrderList-item-info-box">
                     <img src={item.photo} alt="product-item-photo"/>
@@ -111,13 +111,9 @@ function OrderList(){
                 ))}
 
                 <div className="OrderList-Pagination">
-                    { nowpage !== 1 &&(
-                <button onClick={()=>{if(nowpage > 1){navigate(`/orderlist/${nowpage - 1}`)}}} disabled={nowpage === 1} >이전</button>
-                )}
+                <button onClick={()=>{if(nowpage > 1){navigate(`/orderlist/${nowpage - 1}`)}}} disabled={nowpage === 1}>이전</button>
                 <p>- {nowpage} 페이지 -</p>
-                { nowpage !== totalpage &&(
                 <button onClick={()=>{if(nowpage < totalpage){navigate(`/orderlist/${nowpage + 1}`)}}} disabled={nowpage === totalpage}>다음</button>
-                )}
                 </div>
 
             </div>

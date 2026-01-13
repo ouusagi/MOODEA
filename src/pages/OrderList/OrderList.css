@@ -91,15 +91,16 @@ img {
   border: 1px solid #eee;
   border-radius: 1.4rem;
   margin: 0 0 4rem 0;
+  padding: 0rem 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .OrderList-item-box{
-  width:  95%;
+  width:  100%;
   height: 200px;
   border: 1px solid #eee;
   border-radius: 8px;
-  margin: 1.9rem 2rem;
+  margin: 2rem 0rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
@@ -127,7 +128,10 @@ img {
 
 .OrderList-item-info-box img{
   width: 100px;
-  height: 100px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
   margin-left: 1.5rem;
   border-radius: 8px;
   cursor: pointer;
@@ -147,7 +151,6 @@ img {
 .OrderList-item-info-box-btn{
   display: flex;
   gap: 0.5rem;
-  
 }
 
 .OrderList-item-info-box-btn button{
@@ -178,6 +181,7 @@ img {
 }
 
 .OrderList-option-btn button{
+  width: 100%;
   height: 30px;
   background-color: #eee;
   border: none;
@@ -227,7 +231,80 @@ img {
 
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+  /* 주문목록 컨테이너 */
+.OrderList-container{
+  margin: 0 1rem;
+}
 
+.OrderList-empty{
+  font-size: 1rem;
+}
+/* 주문목록 컨테이너 */
+
+/* 주문목록 타이틀 */
+
+.OrderList-title{
+  font-size: 0.95rem;
+}
+
+.OrderList-search-icon{
+  font-size: 0.90rem;
+}
+/* 주문목록 타이틀 */
+
+
+/* 주문목록 상품 박스 */
+
+.OrderList-item-box-title {
+  font-size: 0.95rem;
+}
+
+.OrderList-item-box-title h4{
+  margin-top: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.OrderList-item-info-box{
+  gap: 0.5rem;
+}
+
+.OrderList-item-info-box img{
+  width: 80px;
+}
+
+.OrderList-item-info-box-text p:nth-child(1){font-size: 0.90rem; font-weight: 500;}
+.OrderList-item-info-box-text p:nth-child(2){font-size: 0.80rem; font-weight: 600;}
+.OrderList-item-info-box-text p:nth-child(3){font-size: 0.75rem; font-weight: 600; color: #888;}
+
+.OrderList-item-info-box-btn{
+  gap: 0.2rem;
+}
+
+.OrderList-item-info-box-btn button{
+  width: 50px;
+  height: 25px;
+  font-size: 0.65rem;
+}
+
+.OrderList-option-btn{
+  margin: 0 1rem 0 auto;
+}
+
+.OrderList-option-btn button{
+  font-size: 0.7rem;
+}
+/* 주문목록 상품 박스 */
+
+
+/* 페이지네이션 */
+.OrderList-Pagination button{
+  width: 50px;
+}
+/* 페이지네이션 */
+}
+/* 모바일 UI */
 
 
 @media screen and (min-width:1600px) {

@@ -20,7 +20,7 @@ function Mypage(){
     let [Amount,setAmount] = useState('Loding')
     let [Orderlist,setOrderlist] = useState([])
     let [reviw,setreviw] = useState([])
-    const [inputusername,setinputusername] = useState('') || username
+    const [inputusername,setinputusername] = useState("")
     const [userphone,setuserphone] = useState('')
     const [useraddress,setuseraddress] = useState('')
     const [useraddressline2,setuseraddressline2] = useState('')
@@ -197,6 +197,18 @@ function Mypage(){
           users_address:useraddress, 
           users_address_line2:useraddressline2}
           if(inputusername.trim() !== ""){updateData.username = inputusername}
+
+          if(inputusername.trim() !== ""){
+          const { error: publicError } = await supabase
+          .from("user_public")
+          .update({ username: inputusername.trim()})
+          .eq("id", userId);
+          if (publicError) {
+          console.log(publicError.message)
+          alert("에러가 발생하였습니다. 다시 시도해주세요"); return;
+          }
+          }
+
           const {error: changeError} = await supabase
           .from('users')
           .update(updateData)

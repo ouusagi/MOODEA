@@ -54,6 +54,7 @@ function SignupPage() {
         }
 
         if(data.user){await supabase.from('users').insert({id: data.user.id, email, name, age, username, sex, point:0, profile:DEFAULT_PROFILE});
+        await supabase.from("user_public").insert({id:data.user.id, username})
         await SignupCoupon(data.user.id)
         alert(`"${data.user.user_metadata.username}"님 회원가입을 축하합니다! 🎉  신규 가입 축하 쿠폰이 지급 완료되었습니다! 🎁`); navigate('/login');}
         }
