@@ -119,13 +119,6 @@ img {
 /* 스와이퍼 캐러셀 */
 
 
-/* 결제 성공 페이지 */
-
-
-
-
-
-
 /* 결제 실패 페이지 */
 .Fail-container{
     max-width: 1300px;
@@ -177,7 +170,7 @@ img {
 .Success-text-2{
     font-size: 0.95rem;
 }
-
+/* 모바일 UI */
 
 /* 추천 아이템 */
 

@@ -155,7 +155,7 @@ function HelpCenterPage() {
         <div className='HelpCenter-FNQ-Pagination'>
             <button disabled={nowpage === 1} onClick={()=>{if(nowpage > 1){settogle(null); navigate(`/helpcenter/${nowpage - 1}`);}}}>이전</button>
             <p>- {nowpage} 페이지 -</p>
-            <button disabled={nowpage === totalpage} onClick={()=>{if(nowpage < totalpage){settogle(null); navigate(`/helpcenter/${nowpage + 1}`);}}}>디음</button>
+            <button disabled={nowpage === totalpage} onClick={()=>{if(nowpage < totalpage){settogle(null); navigate(`/helpcenter/${nowpage + 1}`);}}}>다음</button>
         </div>
 
     </div>

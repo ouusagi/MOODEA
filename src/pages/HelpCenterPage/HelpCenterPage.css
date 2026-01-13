@@ -82,12 +82,13 @@ img {
 
 /* 자주묻는 질문 BG + 항목 */
 .HelpCenter-FNQ-List-bg{
-    height: auto;
-    margin: 0 0 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .HelpCenter-FNQ-box{
-    height: 100px;
+    height: auto;
 }
 
 .FNQ-Headers{
@@ -164,8 +165,44 @@ img {
 
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+/* 고객센터 BG */
+.HelpCenter-bg{
+    margin: 0 1rem;
+}
+/* 고객센터 BG */
 
+/* 고객센터 타이틀 */
+.HelpCenter-Top-box p{
+    font-size: 1.3rem;
+}
 
+.HelpCenter-search-icon{
+  right: -10%;
+  font-size: 1rem;
+}
+/* 고객센터 타이틀 */
+
+/* 자주묻는 질문 */
+.HelpCenter-FNQ p{
+    font-size: 1.2rem;
+}
+/* 자주묻는 질문 */
+
+/* 자주묻는 질문 BG + 항목 */
+.HelpCenter-FNQ-List-bg{
+    font-size: 0.85rem;
+}
+/* 자주묻는 질문 BG + 항목 */
+
+/* 페이지네이션 버튼 */
+.HelpCenter-FNQ-Pagination button{
+    width: 50px;
+}
+/* 페이지네이션 버튼 */
+}
+/* 모바일 UI */
 
 /* 미디어 쿼리 */
 
