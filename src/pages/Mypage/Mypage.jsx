@@ -269,14 +269,14 @@ function Mypage(){
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
                 <p>포인트</p>
-                <p className="item-box-count">{point.toLocaleString()}</p>
+                <p className="item-box-count">{point.toLocaleString()}P</p>
                 </div>
               </div>
 
               <div className="profile-AssetsSection-container">
                 <div className="item-box">
                 <p onClick={()=> {if(userId){navigate("/wishlist")}else{alert("로그인이 필요한 서비스입니다."); navigate("/login")}}}>찜목록</p>
-                <p onClick={()=> {if(userId){navigate("/wishlist")}else{alert("로그인이 필요한 서비스입니다."); navigate("/login")}}} className="item-box-count">{wish.length}</p>
+                <p onClick={()=> {if(userId){navigate("/wishlist")}else{alert("로그인이 필요한 서비스입니다."); navigate("/login")}}} className="item-box-count">{wish.length}개</p>
                 </div>
               </div>
 

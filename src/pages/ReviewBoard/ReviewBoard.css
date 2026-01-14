@@ -139,11 +139,17 @@ img {
 }
 
 .ReviewBoard-Post-list > div:nth-child(1) { width: 10%; }
-.ReviewBoard-Post-list > div:nth-child(2) { width: 50%; }
+.ReviewBoard-Post-list > div:nth-child(2) { width: 50%; min-width: 0; }
 .ReviewBoard-Post-list > div:nth-child(3) { width: 10%; }
 .ReviewBoard-Post-list > div:nth-child(4) { width: 10%; }
 .ReviewBoard-Post-list > div:nth-child(5) { width: 10%; }
 .ReviewBoard-Post-list > div:nth-child(6) { width: 10%; }
+
+.ReviewBoard-Post-list > div:nth-child(2) > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 /* 리뷰게시판 게시글 백그라운드 */
 
 
@@ -195,6 +201,94 @@ img {
 /* 페이지네이션 */
 
 
+
+/* 모바일 UI */
+@media (max-width: 767px) {
+/* 리뷰게시판 컨테이너 */
+.ReviewBoard-bg{
+    margin: 0 1rem;
+}
+/* 리뷰게시판 컨테이너 */
+
+
+/* 리뷰게시판 타이틀 */
+
+.ReviewBoard-title > div{
+    gap: 1rem;
+}
+
+.ReviewBoard-title-p1{
+    font-size: 1.5rem;
+}
+
+.ReviewBoard-title-p2{
+    padding-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.Search-box{
+    width: 8rem;
+}
+
+.Review-Search{
+    font-size: 0.8rem;
+}
+/* 리뷰게시판 타이틀 */
+
+
+/* 리뷰게시판 메뉴 배너 */
+
+.ReviewBoard-banner-container{
+    padding: 0rem 0.5rem;
+    font-size: 0.85rem;
+}
+
+.ReviewBoard-banner-Contents > div:nth-child(1) { width: 10%; } /* 10 40 20 10 10 10 */
+.ReviewBoard-banner-Contents > div:nth-child(2) { width: 30%; }
+.ReviewBoard-banner-Contents > div:nth-child(3) { width: 20%; }
+.ReviewBoard-banner-Contents > div:nth-child(4) { width: 15%; }
+.ReviewBoard-banner-Contents > div:nth-child(5) { width: 15%; }
+.ReviewBoard-banner-Contents > div:nth-child(6) { width: 10%; }
+
+/* 리뷰게시판 메뉴 배너 */
+
+
+/* 리뷰게시판 게시글 백그라운드 */
+
+.ReviewBoard-Post-list{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.ReviewBoard-Post-list > div:nth-child(1) { width: 10%; }
+.ReviewBoard-Post-list > div:nth-child(2) { width: 30%; }
+.ReviewBoard-Post-list > div:nth-child(3) { width: 20%; }
+.ReviewBoard-Post-list > div:nth-child(4) { width: 15%; }
+.ReviewBoard-Post-list > div:nth-child(5) { width: 15%; }
+.ReviewBoard-Post-list > div:nth-child(6) { width: 10%; }
+/* 리뷰게시판 게시글 백그라운드 */
+
+
+/* 글쓰기 버튼 */
+.post-btn{
+    margin: 0.5rem 0rem;
+}
+
+.post-btn button{
+    font-size: 0.75rem;
+    width: 15%;
+    height: 1.5rem;
+}
+
+/* 글쓰기 버튼 */
+
+
+/* 페이지네이션 */
+.page-num-container{
+    font-size: 0.85rem;
+}
+/* 페이지네이션 */
+}
 
 @media screen and (min-width:1600px) {
 .ReviewBoard-bg{

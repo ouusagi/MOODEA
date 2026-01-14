@@ -265,11 +265,15 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  max-width: 200px;
 }
 
 .cart-preview-item-info h3 {
   font-size: 1rem;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -419,7 +423,7 @@ img {
 }
 
 .Update-Info-middle-input input{
-    height: 30px;
+    height: 35px;
     width: 100%;
     margin-bottom: 1rem;
     border: none;
@@ -604,6 +608,223 @@ img {
 
 
 /* 미디어 쿼리 */
+
+
+/* 모바일 UI */
+@media (max-width: 767px) {
+    /* 프로필 */
+
+.Mypage-container{
+    margin: 0 1rem;
+}
+
+.p-tag{
+    font-size: 1.5rem;
+}
+
+.hr-green{
+    width: 7rem;
+}
+
+.profile-container{
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+}
+
+.profile-left {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img-box{
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin-bottom: 1rem;
+}
+
+/* 프로필 */
+
+
+/* 정보칸 */
+
+.profile-right{
+    padding: 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.profile-info-box{
+    align-items: center;
+}
+
+.info-username{
+    font-size: 1.5rem;
+}
+
+.info-userEmail{
+    font-size: 0.85rem;
+}
+
+.info-userTotal{
+    font-size: 0.95rem;
+}
+
+.profile-btn{
+    padding-top: 1rem;
+}
+
+.profile-btn button{
+    font-size: 0.8rem;
+}
+/* 정보칸 */
+
+/* 쿠폰창 */
+.profile-AssetsSection-container{
+    width: 100%;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    border-left: none;
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+}
+
+.item-box{
+    width: 50%;
+    gap: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-box-count{
+    font-size: 0.95rem;
+}
+
+/* 쿠폰창 */
+
+
+/* 유저 리스트 섹션 */
+.UserSections-container{
+    margin: 0 1rem;
+}
+
+.UserSections-container .title-p-tag{
+    font-size: 1.3rem;
+}
+
+.title-box button{
+    font-size: 0.75rem;
+}
+
+.sections-list-box p{
+  font-size: 0.95rem;
+}
+/* 유저 리스트 섹션 */
+
+
+/* 마이페이지 렌더링 전용 */
+
+.cart-preview-item {
+  flex-direction: column;
+}
+
+.cart-preview-item img {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.cart-preview-item-info {
+  max-width: 90px;
+}
+
+.cart-preview-item-info h3 {
+  font-size: 0.85rem;
+}
+
+.cart-preview-item-info h5 {
+  font-size: 0.75rem;
+}
+
+.cart-preview-item-info span{
+    font-size: 0.9rem;
+}
+
+/* 마이페이지 렌더링 전용 */
+
+
+/* 정보수정 모달 */
+
+.Update-Info-container{
+    width: 90%;
+    height: auto;
+}
+
+.Update-Info-profile-change-icon{
+    top: 60%;
+}
+
+.Update-Info-Top p{
+    font-size: 1.4rem;
+}
+
+.Update-Info-level p{
+    font-size: 0.90rem;
+}
+
+.Update-Info-middle-input input{
+    height: 30px;
+}
+
+.Update-Info-middle p{
+    font-size: 1.1rem;
+}
+
+.Update-Info-btn button{
+    height: 35px;
+    font-size: 0.85rem;
+}
+
+.Update-Info-Userclose button{
+    font-size: 0.80rem;
+}
+/* 정보수정 모달 */
+
+/* 회원탈퇴 모달 */
+.Delete-Account-container{
+    width: 90%;
+}
+
+.Delete-Account-Top p{
+    font-size: 1.75rem;
+}
+
+.Delete-Account-middle{
+    font-size: 1.5rem;
+}
+
+.Delete-Account-middle2{
+    font-size: 0.95rem;
+}
+
+.Delete-Account-bottom-box{
+    width: 90%;
+}
+
+.Delete-Account-bottom-box p{
+    font-size: 0.85rem;
+}
+
+.Delete-Account-btn button{
+    width: 90%;
+    height: 45px;
+    font-size: 0.95rem;
+}
+/* 회원탈퇴 모달 */
+}
+/* 모바일 UI */
 
 @media screen and (min-width:1600px) {
 

@@ -393,8 +393,199 @@ img {
 
 
 
+/* 모바일 UI */
+@media (max-width: 767px) {
+  /* 장바구니 타이틀 */
+.cart-container{
+    margin: 0 1rem;
+}
+
+.cart-title-box{
+    gap: 1rem;
+}
+
+.cart-title-box .cart-title-p1{
+    font-size: 1.5rem;
+}
+
+.cart-title-box .cart-title-p2{
+    padding-top: 0.4rem;
+    font-size: 0.95rem;
+}
+/* 장바구니 타이틀 */
+
+/* 장바구니 아이템 타이틀 */
+
+.cart-body{
+    flex-direction: column;
+}
+
+.cart-item-list-container{
+    width: 100%;
+}
+
+.cart-item-list-title{
+    padding: 2rem 1rem;
+}
+
+.cart-item-col{
+    font-size: 0.85rem;
+}
+
+.cart-item-col:nth-child(1){
+  width: 30%;
+}
+
+.cart-item-col:nth-child(2){
+  width: 20%;
+  
+}
+
+.cart-item-col:nth-child(3){
+  width: 20%;
+}
+
+.cart-item-col:nth-child(4){
+  width: 20%;
+}
+
+.cart-item-col:nth-child(5){
+  width: 10%;
+}
+
+/* 장바구니 아이템 타이틀 */
 
 
+/* 장바구니 아이템 리스트 */
+
+.cart-item-list-info{
+    padding: 0.5rem 1rem;
+}
+
+.cart-item{
+    font-size: 0.8rem;
+}
+
+.cart-item:nth-child(1){
+    width: 30%;
+    gap: 0.2rem;
+}
+
+.cart-item:nth-child(2){
+    width: 20%;
+}
+
+.cart-item:nth-child(3){
+    width: 20%;
+    gap: 0.3rem;
+}
+
+.cart-item:nth-child(4){
+    width: 20%;
+}
+
+.cart-item.remove-btn{
+    width: 10%;
+}
+
+.cart-item-name{
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.cart-item-name h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+}
+
+.cart-item-name h5{
+    font-size: 0.65rem;
+}
+
+.cart-item img{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.cart-item button{
+    width: 1.3rem;
+    height: 1.3rem;
+    font-size: 0.8rem;
+}
+
+/* 장바구니 아이템 리스트 */
+
+
+/* 장바구니 아이템 모달 */
+.cart-total-modal{
+    gap: 0.7rem;
+    width: 100%;
+}
+
+.cart-total-modal p{
+    font-size: 0.8rem;
+}
+
+.cart-total-modal h5{
+    font-size: 0.75rem;
+}
+
+.cart-total-modal p:nth-child(1){
+    font-size: 1.2rem;
+}
+
+.cart-total-modal p:nth-child(9){
+    font-size: 1.1rem;
+}
+
+.cart-total-modal button{
+    height: 2rem;
+    font-size: 0.75rem;
+}
+/* 장바구니 아이템 모달 */
+
+/* 카트에 상품이 없을 때 ui */
+.none-cart{
+    height: 200px;
+    font-size: 1rem;
+}
+/* 카트에 상품이 없을 때 ui */
+
+
+/* 쿠폰/포인트 사용 모달 */
+.coupon-modal {
+  width: 90%;
+}
+
+.coupon-modal h3 {
+  font-size: 1.2rem;
+}
+
+.point_coupon_box {
+  gap: 0.1rem;
+  font-size: 0.95rem;
+}
+
+.coupon-input-box,
+.point-input-box {
+  font-size: 0.95rem;
+}
+
+.point-input-box button {
+  font-size: 0.75rem;
+}
+
+.coupon-input-box button,
+.close-btn {
+  font-size: 0.8rem;
+}
+
+/* ▲ 쿠폰/포인트 사용 모달 */
+}
+/* 모바일 UI */
 
 
 @media screen and (min-width:1600px) {

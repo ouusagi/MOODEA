@@ -86,7 +86,13 @@ function TopMenu(){
             if(!user){ alert("로그인이 필요한 서비스 입니다."); navigate("/login");}
             else{navigate('/cart')}
         }}><i className="fa-solid fa-basket-shopping"></i></Link>
-        <a href="#"><i className="fa-solid fa-magnifying-glass"></i></a>
+
+
+        <Link to="/wishlist" onClick={(e)=>{
+            e.preventDefault()
+            if(!user){alert("로그인이 필요한 서비스 입니다."); navigate("/login");}
+            else{navigate('/wishlist')}
+            }}><i className="fa-regular fa-heart"></i></Link>
         </div>
 
     </div>

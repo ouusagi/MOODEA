@@ -259,6 +259,10 @@ html, body{
 overflow-x: hidden;
 }
 
+.fa-solid{
+  font-size: 0.9rem;
+}
+
 /* 회원가입 쿠폰 지급 팝업창 */
 .AD-item1{
   font-size: 0.78rem;

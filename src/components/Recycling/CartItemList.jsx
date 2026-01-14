@@ -6,7 +6,7 @@ function CartItemList({ item }) {
       <div className="cart-preview-item-info">
         <h3>{item.name}</h3>
         <h5>{item.brand}</h5>
-        {item.price.toLocaleString()}원
+        <span>{item.price.toLocaleString()}원</span>
       </div>
     </div>
   )

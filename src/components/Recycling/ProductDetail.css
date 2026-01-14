@@ -344,6 +344,15 @@ img {
 
 .product-detail-box-content button{
   border-radius: 0px;
+  font-size: 0.9rem;
+}
+
+.product-detail-box-content .contents2 h3{
+  font-size: 1rem;
+}
+
+.product-detail-box-content .contents-end, .contents1, .contents2{
+  font-size: 0.9rem;
 }
 /* 상품토글 */
 }
