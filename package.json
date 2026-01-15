@@ -12,8 +12,9 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.58.0",
     "@tosspayments/payment-sdk": "^1.9.2",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^6.30.1",
     "swiper": "^11.2.10"
   },

@@ -122,6 +122,12 @@ img {
     height: auto;
 }
 
+.No-review{
+    text-align: center;
+    color: gray;
+    padding: 5rem 0;
+}
+
 .ReviewBoard-Post-list{
     display: flex;
     width: 100%;

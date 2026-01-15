@@ -52,6 +52,8 @@ import HelpCenterPage from './pages/HelpCenterPage/HelpCenterPage';
 
 // ReviewBoard
 import ReviewBoard from './pages/ReviewBoard/ReviewBoard';
+import ReviewPost from './pages/ReviewBoard/ReviewPost';
+import ReviewDetail from './pages/ReviewBoard/ReviewDetail';
 
 // common components
 import AdPopup from './components/common/AdPopup'
@@ -105,6 +107,8 @@ function App() {
         <Route path="/helpcenter" element={<Navigate to={"/helpcenter/1"} />}></Route>
         <Route path="/helpcenter/:page" element={<HelpCenterPage />}></Route>
         <Route path="/reviewboard" element={<ReviewBoard />}></Route>
+        <Route path="/reviewpost" element={<ReviewPost />}></Route>
+        <Route path='/reviewdetail/:reviewId' element={<ReviewDetail />}></Route>
 
         <Route path="/skincare" element={<Navigate to="/skincare/1" />} />
         <Route path="/skincare/:page" element={<SkincarePage />} />

@@ -10,15 +10,15 @@ UI/UX 설계부터 컴포넌트 구조화, 데이터 연동까지 **실무형 �
 ## 🧴 프로젝트 개요
 - **컨셉:** 스킨케어 및 뷰티 제품을 판매하는 웹사이트  
 - **목적:** 프론트엔드 개발 실무 감각 향상 및 컴포넌트 재활용 구조 학습  
-- **기간:** 2025.09 ~ 진행 중  
-- **주요 기술:** React, React Hooks, React Router, Vite, Supabase, JavaScript(ES6), CSS3 / Swiper.js
+- **기간:** 2025.09 ~ 2026.01 
+- **주요 기술:** React, React Hooks, React Router, ReactQuill, Vite, Supabase, JavaScript(ES6), CSS3 / Swiper.js
 
 ---
 
 
 ## 업데이트 내역
-### 2026-01-14
-- 미디어쿼리 조정 : 마이페이지, 장바구니, 후기게시판 미디어쿼리 완료 
+### 2026-01-15
+- 리뷰게시판 : CRUD 구현 완료
 
 
 ## 파일 구조 변경
