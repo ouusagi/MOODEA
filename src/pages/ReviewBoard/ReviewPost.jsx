@@ -14,6 +14,7 @@ function ReviewPost(){
     let [selectedOrderId,setSelectedOrderId] = useState("")
     const [content,setContent] = useState("");
     let navigate = useNavigate()
+    const DEFAULT_IMAGE = "https://cdn-icons-png.flaticon.com/512/2701/2701190.png";
     
     useEffect(()=>{
       async function GetUser() {
@@ -38,11 +39,18 @@ function ReviewPost(){
         GetOrders()
     },[user])
 
+    const extractImageUrls = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+      return Array.from(doc.querySelectorAll("img")).map(img => img.src);
+    };
+
     const handleSubmit = async ()=> {
       if(!user || !title || !selectedOrderId || !content){alert("모든 항목을 입력해주세요."); return;}
+      const imageUrls = extractImageUrls(content);
+      const image = imageUrls.length > 0 ? imageUrls : [DEFAULT_IMAGE]
       const { error:PostError } = await supabase
       .from("Reviews_Post")
-      .insert([{user_id:user, title:title, contents:content, order_id:selectedOrderId}])
+      .insert([{user_id:user, title:title, contents:content, order_id:selectedOrderId, images:image}])
       if(PostError){console.log(PostError.message); alert("리뷰 작성 중 에러가 발생하였습니다. 다시 시도해주세요."); return;}
 
       const { error:UpdateError } = await supabase

@@ -7,8 +7,8 @@ import supabase from "../../supabaseClient";
 function LoginPage() {  
 
     let navigate = useNavigate();
-    let [email, setemail] = useState("");
-    let [password, setpassword] = useState("");
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
     
 
     useEffect(()=>{
@@ -35,7 +35,7 @@ function LoginPage() {
                 alert("가입하신 이메일로 메일 인증 후 재로그인 해주세요.")
                 return;
             }
-            console.log(error); 
+            console.log(error.message); 
             alert("이메일 혹은 패스워드가 일치 하지 않습니다."); 
             return;
         }
@@ -61,12 +61,12 @@ function LoginPage() {
 
               <label htmlFor="email">E-mail</label>
               <input type="text" id="email" value={email} onChange={(e)=>{
-                setemail(e.target.value)
+                setEmail(e.target.value)
               }} placeholder="이메일을 입력해주세요."/>
 
               <label htmlFor="password">password</label>
               <input type="password" id="password" value={password} onChange={(e)=>{
-                setpassword(e.target.value)
+                setPassword(e.target.value)
               }} placeholder="비밀번호를 입력해주세요."/>
 
               <div className="login-btn-container">

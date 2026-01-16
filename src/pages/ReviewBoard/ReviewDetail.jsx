@@ -81,12 +81,19 @@ function ReviewDetail(){
 
     const DeletePost = async ()=>{
         if(!window.confirm("정말로 이 글을 삭제하시겠습니까?")) return;
+        const {error:deleteCommentsError} = await supabase
+        .from("Reviews_comments")
+        .delete()
+        .eq("review_id",reviewId)
+        if(deleteCommentsError){console.log(deleteCommentsError.message); alert("댓글 삭제에 실패했습니다."); return;}
+        
         const {error:deletePostError} = await supabase
         .from("Reviews_Post")
         .delete()
         .eq("id",reviewId)
         .eq("user_id",user)
         if(deletePostError){console.log(deletePostError.message); alert("글삭제에 실패했습니다. 다시 시도해주세요"); return;}
+
         alert("리뷰가 삭제되었습니다.")
         navigate("/reviewboard")
     }

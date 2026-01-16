@@ -5,6 +5,7 @@ import supabase from "../../supabaseClient"
 import './Mypage.css'
 import { useNavigate } from "react-router-dom"
 import CartItemList from "../../components/Recycling/CartItemList"
+import ReviewList from "../../components/Recycling/ReviewList"
 
 function Mypage(){
 
@@ -150,6 +151,17 @@ function Mypage(){
           setuserProfile(ProfileUpdate)
         }
 
+        const Reviewfetch = async ()=>{
+          const {data:reviewData, error:reviewError} = await supabase
+          .from("Reviews_Post")
+          .select("*")
+          .eq("user_id",userId)
+          .order('updated_at', {ascending: false})
+          .limit(3)
+          if(reviewError){console.log(reviewError.message); return;}
+          setreviw(reviewData)
+        }
+
 
 
                 useEffect(()=>{
@@ -166,6 +178,7 @@ function Mypage(){
                     Wishlist()
                     TotalAmount()
                     UserProfile()
+                    Reviewfetch()
                   }
                 },[userId, userSession])
 
@@ -308,11 +321,11 @@ function Mypage(){
 
             <div className="title-box">
             <p className="title-p-tag">나의 리뷰</p>
-            <button>더보기 +</button>
+            <button onClick={()=>{navigate("/reviewboard")}}>더보기 +</button>
             </div>
           <div className={`sections-list-box ${reviw.length === 0 ? "empty" : ""}`}>
               { reviw.length === 0 ? (<p>작성하신 리뷰가 없습니다.</p>) : (reviw.map((item,i)=>
-                <CartItemList key={i} item={item}/>
+                <ReviewList key={i} item={item}/>
               ))}
             </div>
 
