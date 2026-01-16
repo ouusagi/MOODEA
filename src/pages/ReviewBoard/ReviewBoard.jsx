@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import App from "../../App"
 import supabase from "../../supabaseClient"
 import './ReviewBoard.css'
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams, Link } from "react-router-dom"
 
 function ReviewBoard(){
 
@@ -10,6 +10,13 @@ function ReviewBoard(){
     let [user,setUser] = useState(null)
     let [review,setReview] = useState([])
     let [comments,setComments] = useState([])
+    let [search,setSearch] = useState("")
+    const filteredReview = review.filter((item)=> item.title.toLowerCase().includes(search.toLowerCase()))
+    const {page} = useParams()
+    const nowpage = Number(page) || 1
+    const pagepostcount = 10
+    const totalpage = Math.ceil(filteredReview.length / pagepostcount)
+    const slidepost = filteredReview.slice((nowpage - 1) * pagepostcount, nowpage * pagepostcount)
 
     useEffect(()=>{
         async function Userdata() {
@@ -70,8 +77,8 @@ function ReviewBoard(){
                     </div>
                     
                     <div className="abs-box">
-                    <input className="Search-box" type="text" placeholder="Search" />
-                    <i className="fa-solid fa-magnifying-glass Review-Search"></i>
+                    <input className="Search-box" type="text" placeholder="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                    <i className="fa-solid fa-magnifying-glass Review-Search" onClick={()=>{setSearch(search)}}></i>
                     </div>
                 </div>
 
@@ -87,11 +94,12 @@ function ReviewBoard(){
                 </div>
 
                 <div className="ReviewBoard-Post-box">
-                    {review.length == 0 ? <p className="No-review">작성된 리뷰가 없습니다</p> : (
-                    review.map((item,index)=>{
+                    {review.length == 0 ? (<p className="No-review">작성된 리뷰가 없습니다</p>) :
+                    filteredReview.length == 0 ? (<p className="No-review">검색결과에 일치한 리뷰가 없습니다.</p>) : (
+                    slidepost.map((item,index)=>{
                     return(
                     <div className="ReviewBoard-Post-list" key={item.id} onClick={()=>{navigate(`/reviewdetail/${item.id}`)}}>
-                    <div><p>{review.length - index}</p></div>
+                    <div><p>{filteredReview.length - ((nowpage - 1) * pagepostcount + index)}</p></div>
                     <div><p>{item.title}</p></div>
                     <div><p>{item.user_public?.username}</p></div>
                     <div><p>{new Date(item.created_at).toLocaleDateString()}</p></div>
@@ -107,14 +115,12 @@ function ReviewBoard(){
 
                 <div className="page-num-container">
                     <div className="page-num-box">
-                    -
-                    <div><p>1</p></div>
-                    <div><p>2</p></div>
-                    <div><p>3</p></div>
-                    <div><p>4</p></div>
-                    <div><p>5</p></div>
-                    -
+                        {Array.from({length : totalpage}, (_,i)=>{
+                            return <Link key={i} className="link" to={`/reviewboard/${i+1}`}>{i+1}</Link>
+                        })}
                     </div>
+
+                    <div className="now-page-info">- {nowpage} 페이지 -</div>
                 </div>
             
             </div>

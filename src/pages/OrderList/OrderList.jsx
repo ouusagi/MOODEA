@@ -94,7 +94,7 @@ function OrderList(){
 
                     <div className="OrderList-item-info-box-btn">
                     <button onClick={()=>{CartItems(item)}}>장바구니</button>
-                    <button>리뷰작성</button>
+                    <button onClick={()=>{navigate("/reviewpost")}}>리뷰작성</button>
                     </div>
 
                     </div>

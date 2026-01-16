@@ -112,7 +112,7 @@ function ReviewDetail(){
 
             { reviews.user_id === user && (
             <div className="ReviewDetail-btn">
-                <button>수정</button>
+                <button onClick={()=>{navigate(`/reviewedit/${reviewId}`)}}>수정</button>
                 <button onClick={()=> DeletePost()}>삭제</button>
             </div>
             )}

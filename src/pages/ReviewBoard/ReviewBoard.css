@@ -191,6 +191,8 @@ img {
 .page-num-container{
     width: 100%;
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     margin: 3rem 0rem;
@@ -198,7 +200,7 @@ img {
 
 .page-num-box{
     display: flex;
-    gap: 1.3rem;
+    gap: 1.5rem;
 }
 
 .page-num-box > div{
