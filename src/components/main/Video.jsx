@@ -7,6 +7,8 @@ function Video(){
   let [show, setshow] = useState(false)
   let containerRef = useRef(null)
   let navigate = useNavigate()
+  const isMobile = window.innerWidth <= 768;
+  const BrandIMG = "https://img.freepik.com/premium-photo/female-model-face_961307-40514.jpg?ga=GA1.1.358440641.1756050848&semt=ais_hybrid&w=740&q=80"
 
   useEffect(()=>{
     const obzone = new IntersectionObserver(
@@ -41,8 +43,9 @@ function Video(){
 
 
             <div className={`video-container ${show ? "up" : ''}`} ref={containerRef}>
-            <video src="https://www.pexels.com/ko-kr/download/video/6663340/" controls autoPlay muted loop></video>
-            
+              { !isMobile ? (
+            <video src="https://www.pexels.com/ko-kr/download/video/6663340/" controls autoPlay={!isMobile} muted loop></video>
+              ) : (<img className="mobile-img" src={BrandIMG} alt="brand img"/>)}
               <div className={`text-container ${show ? "up" : ''}`}>
                 <h1>“당신의 일상에 머무는 가장 섬세한 무드.” <div className={`hr-class ${show ? "up" : ''}`}></div></h1>
                 <h3>MOODEA는 뷰티를 넘어, 감각과 무드를 디자인합니다.<br/>피부에 닿는 순간, 당신의 삶이 특별해집니다.</h3>
