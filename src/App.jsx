@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import ScrollToTop from '../scrollToTop';
+import ScrollToTop from './components/common/ScrollToTop';
 
 // pages
 import {
