@@ -188,8 +188,8 @@ button:focus{
 /* 모바일 UI */
 @media (max-width: 767px) {
     .signup-box{
-    padding: 3rem;
-    transform: scale(0.85);
+    padding: 2.5rem;
+    transform: scale(0.8);
     transform-origin: center;
     }
 
