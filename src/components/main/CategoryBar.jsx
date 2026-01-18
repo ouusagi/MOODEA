@@ -1,14 +1,16 @@
 import { useState,useEffect } from 'react'
 import supabase from '../../supabaseClient'
 import { useNavigate } from 'react-router-dom'
-
+import CategoryBarSkeleton from '../Recycling/CategoryBarSkeleton'
 
 function CategoryBar(){
 let [Category,setCategory] = useState([])
 let navigate = useNavigate()
+const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
         async function CategoryBar() {
+            setIsLoading(true)
             const {data, error} = await supabase
             .from('Category')
             .select('*')
@@ -19,6 +21,7 @@ let navigate = useNavigate()
             else{
                 setCategory(data)
             }
+            setIsLoading(false)
         }
         CategoryBar()
     },[])
@@ -36,7 +39,8 @@ let navigate = useNavigate()
                 </div>
 
                 <div className='CategoryBar-box'>
-                    {Category.map((item,i)=>{
+                    {isLoading ? (<CategoryBarSkeleton count={8}/>) : (
+                    Category.map((item,i)=>{
                         return(
                             <div className='CategoryBar-item' key={i} onClick={()=>{
                                 navigate(`/${item.basePath}`)
@@ -45,7 +49,7 @@ let navigate = useNavigate()
                                 <h4>{item.Product}</h4>
                             </div>
                         )
-                    })}
+                    }))}
                 </div>
                 
             </div>

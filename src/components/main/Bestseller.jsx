@@ -46,6 +46,7 @@ function Bestseller(){
         className="mySwiper"
         breakpoints={{0:{slidesPerView:2, spaceBetween:0}, 768:{slidesPerView:5, spaceBetween:30}}}
       >
+        
         {best.map((item,i)=>(
         <SwiperSlide key={i}>
           <div className="cardbox-container" key={i} onClick={()=> navigate(`/bestseller/${item.id}`)}>

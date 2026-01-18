@@ -1,7 +1,7 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-function NewProductSkeleton({ count }) {
+function ProductSkeleton({ count }) {
   return (
     <>
       {Array.from({ length: count }).map((_, i) => (
@@ -20,4 +20,4 @@ function NewProductSkeleton({ count }) {
   );
 }
 
-export default NewProductSkeleton;
+export default ProductSkeleton;

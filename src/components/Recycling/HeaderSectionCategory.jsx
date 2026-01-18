@@ -3,7 +3,8 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import BestSlider from "./BestSlider";
 import supabase from "../../supabaseClient";
 import '../Recycling/category.css'
-import NewProductSkeleton from "./NewProductSkeleton";
+import ProductSkeleton from "./ProductSkeleton";
+import BestSliderSkeleton from "./BestSliderSkeleton"
 
 
 function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
@@ -15,6 +16,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
     let [slider,setslider] = useState([])
     let navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(true)
+    const [isSliderLoading, setIsSliderLoading] = useState(true)
 
 
     useEffect(()=>{
@@ -41,6 +43,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
 
     useEffect(()=>{
         async function BestSlider() {
+            setIsSliderLoading(true)
             const {data, error} = await supabase
             .from('BestSlider')
             .select('*')
@@ -54,6 +57,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             else{
                 setslider(data)
             }
+            setIsSliderLoading(false)
         }
 
         BestSlider()
@@ -94,7 +98,9 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             <h2>{titleBio}</h2>
         </div>
 
+        {isSliderLoading ? (<BestSliderSkeleton count={5}/>) : (
         <BestSlider items={slider} categoryName={categoryName}/>
+        )}
 
         <div className="itemarray-container">
 
@@ -111,7 +117,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
 
 
         <div className='skincare-box'>
-            {isLoading ? (<NewProductSkeleton count={15}/>) : (
+            {isLoading ? (<ProductSkeleton count={15}/>) : (
             sliceditem.map((item,i)=>(
             <div className='skincare-item-container' key={i}>
                 <div className='skincare-item'>
