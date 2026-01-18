@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import BestSlider from "./BestSlider";
 import supabase from "../../supabaseClient";
 import '../Recycling/category.css'
+import NewProductSkeleton from "./NewProductSkeleton";
 
 
 function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
@@ -13,9 +14,12 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
     let [item,setitem] = useState([]) 
     let [slider,setslider] = useState([])
     let navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(true)
+
 
     useEffect(()=>{
         async function HeaderSectionCategoryPage() {
+            setIsLoading(true)
             const {data, error} = await supabase
             .from('ProductsDB')
             .select('*')
@@ -29,6 +33,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
             else{
                 setitem(data)
             }
+            setIsLoading(false)
         }
         
         HeaderSectionCategoryPage()
@@ -106,7 +111,8 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
 
 
         <div className='skincare-box'>
-            {sliceditem.map((item,i)=>(
+            {isLoading ? (<NewProductSkeleton count={15}/>) : (
+            sliceditem.map((item,i)=>(
             <div className='skincare-item-container' key={i}>
                 <div className='skincare-item'>
                     <img src={item.photo} alt="상품 이미지" onClick={() => navigate(`/product/${categoryName}/${item.id}`)}/>
@@ -117,7 +123,7 @@ function HeaderSectionCategory({categoryName, titleBio, titleName, basePath}){
                 </div>
                 </div>
             </div>
-            ))}
+            )))}
 
         </div>
 

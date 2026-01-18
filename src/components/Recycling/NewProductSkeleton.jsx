@@ -1,7 +1,7 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-function NewProductSkeleton({ count = 10 }) {
+function NewProductSkeleton({ count }) {
   return (
     <>
       {Array.from({ length: count }).map((_, i) => (
