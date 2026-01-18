@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import supabase from '../../supabaseClient'
 import { useNavigate } from 'react-router-dom'
+import NewProductSkeleton from '../Recycling/Skeleton'
 
 
 function NewProductList(){
@@ -29,7 +30,9 @@ function NewProductList(){
   loadProducts()
 }, [])
 
-if(!products) return <p>상품 정보를 불러오는 중 입니다..</p>
+if(!products) return <div className="newproduct-box">
+        <NewProductSkeleton count={count} />
+      </div>
 
 
     const plusbtn = ()=> {
