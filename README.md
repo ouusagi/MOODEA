@@ -220,10 +220,9 @@ src/
 <Route path="/product/:category/:id" element={<ProductDetailPage />}/>
 ```
 
-5. `ProductDetailPage.jsx` にて、`useParams()` を使用し URL パラメータ（`category` / `id`）を取得
+5. `ProductDetailPage.jsx` にて、`useParams()` を使用し URL パラメータ（`category`）を取得
 
 6. 取得したパラメータをprops として `ProductDetail` コンポーネントへ渡し、データ取得・表示を行う
-
 
 
 ---

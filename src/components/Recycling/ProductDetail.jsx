@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { requestPayment } from "../../utils/payment";
 
 
-function ProductDetail({ tableName, category, id }) {
+function ProductDetail({ tableName, category }) {
 
     let [products,setproducts] = useState(null)
-    // let {id} = useParams()
+    let {id} = useParams()
     let [saveinfo, setsaveinfo] = useState(0)
     let [itemcount, setitemcount] = useState(1)
     let [btn,setbtn] = useState(false)

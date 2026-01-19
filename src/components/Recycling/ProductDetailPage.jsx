@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import ProductDetail from "../../components/Recycling/ProductDetail";
 
 function ProductDetailPage() {
-  const { category, id } = useParams();
+  const { category } = useParams();
 
 
   return (
@@ -10,7 +10,6 @@ function ProductDetailPage() {
       <ProductDetail 
         tableName="ProductsDB"
         category={category}
-        id={id}
       />
     </div>
   );
