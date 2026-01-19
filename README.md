@@ -108,7 +108,7 @@ EC（E-Commerce）Webアプリケーションです。
 ## 📝 企画
 | Flowchart | Wireframe |
 |---|---|
-|<img width="550" alt="Flowchart" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Flow%20Chart.png?raw=true" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
+|<img width="540" alt="Flowchart" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Flow%20Chart.png?raw=true" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
 
 ---
 
@@ -151,11 +151,27 @@ EC（E-Commerce）Webアプリケーションです。
 
 ---
 
-### Toss Payments SDK の競合
+### Toss Payments SDKの競合
 - **問題**：Vite環境でSDK読み込みエラーが発生
 - **解決**：SDKをCDN方式に変更し、正常動作を確認
 
 ---
+
+### 非ログイン状態での会員専用機能実行時の挙動不安定
+- **問題**：非ログイン状態で会員専用機能（購入・カート追加等）を実行した際、`confirm()` ダイアログが **間欠的に反応しない／遅延する現象**が発生
+- **解決**：React の state 管理に基づいた **カスタムモーダル UI コンポーネントを実装**
+
+---
+
+### Supabase Auth によるメール重複確認の制限
+- **問題**：Supabase Auth は認証機能のみを担当しており、 クライアント側から既存ユーザーのメールアドレスを  
+直接参照・検索することができないため、**会員登録時にメールアドレスの重複確認が行えない**という制約が発生
+- **解決**：
+1. Supabase の独自 `users` テーブルに `email` カラムを追加 <br>
+2. 会員登録前に `users` テーブルを直接 照会し、  メールアドレスの重複検証
+- 重複している場合: alert を表示、 会員登録処理を中断
+- 重複していない場合: 会員登録処理を続行 <br>
+(メール重複確認は  **`users` テーブル 照会 + Check ボタンの状態管理（state）** により実装)
 
 ## 📂 ディレクトリ構成（概要）
 
