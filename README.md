@@ -1,4 +1,4 @@
-# <img src="./public/MOODEA.png" alt="MOODÉA Logo" width="36" /> MOODÉA
+# MOODÉA <img src="./public/MOODEA.png" alt="MOODÉA Logo" width="36" />
 
 
 스킨케어 및 뷰티 제품을 판매하는 React 기반 웹사이트 프로젝트입니다.  
