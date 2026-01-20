@@ -85,8 +85,23 @@ EC（E-Commerce）Webアプリケーションです。
 ### External Services 🌐
 >- Toss Payments API
 >- GTranslate
-<hr>
 
+---
+
+## 🧠 技術選定理由
+
+- **React**
+  - コンポーネント単位でUIを分離でき、再利用性の高い設計が可能なため
+  - SPA構成における状態管理・ルーティング理解を深める目的
+
+- **Supabase**
+  - Auth / DB / Storage を一体で扱える BaaS として、
+    フロントエンド主導でサービス構成を理解するため
+
+- **Vite**
+  - 開発サーバー起動が高速で、開発体験が良いため
+
+---
 
 ## ✨ 主な機能
 
@@ -175,52 +190,158 @@ EC（E-Commerce）Webアプリケーションです。
 
 ## 📂 ディレクトリ構成（概要）
 
-```text
-src/
- ├─ components/
- │    ├─ main/               # 메인 페이지 전용
- │    │   ├─ CarouselSlider.jsx
- │    │   ├─ NewProductList.jsx
- │    │   └─ ...
- │    ├─ HeaderSectionCategory/           # 헤더섹션 카테고리 컴포넌트 (컴포넌트 제작소)
- │    │   ├─ Skincare/
- │    │   │   └─ SkincareList.jsx
- │    │   └─ category.css
- │    │   
- │    ├─ common/             # 공용 UI
- │    │   ├─ AdPopup.jsx
- │    │   ├─ Footer.jsx
- │    │   └─ ...
- │    └─ Recycling/          # 재활용 컴포넌트
- │        └─ BestSlider.jsx
- │        └─ HeaderSectionCategory.jsx
- │        └─ ProductDetail.jsx   
- │        └─ ProductDetail.css 
- │        └─ ProductDetailPage.jsx <= url파라미터로 전달 받은 값 + props로 데이터를 전달받고 바인딩해줄 페이지인 ProductDetail.jsx 에게 전달
- │
- └─ pages/     # 카테고리 페이지 
-     ├ Detail/        # 상품 상세 페이지 
-     │      └─ NewProductListDetail.jsx
-     │      └─ BestSellerDetail.jsx
-     │      └─ index.js
-     │     
-     ├─Login # 로그인 페이지
-     │   └─ LoginPage.jsx
-     │   └─ LoginPage.css
-     │
-     ├─Signup # 회원가입 페이지
-     │   └─ SignupPage.jsx
-     │   └─ SignupPage.css
-     │
-     ├─ MainPage.jsx
-     ├─ SkincarePage.jsx
-     ├─ CleansingPage.jsx
-     └─ MakeupPage.jsx
-     └─ HaircarePage.jsx
-     └─ SuncarePage.jsx
+```
+MOODEA
+├─ DEVLOG.md
+├─ README.md
+├─ README(kr).md
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ public
+│  ├─ BestSliderCleansing.json
+│  ├─ BestSliderHaircare.json
+│  ├─ BestSliderMakeup.json
+│  ├─ BestSliderSkincare.json
+│  ├─ Bestseller.json
+│  ├─ Category.json
+│  ├─ Cleansing.json
+│  ├─ Gift.png
+│  ├─ GiftSet.json
+│  ├─ Haircare.json
+│  ├─ MOODEA.png
+│  ├─ Makeup.json
+│  ├─ Newproducts-items.json
+│  ├─ Review.json
+│  ├─ Skincare.json
+│  ├─ _redirects
+│  ├─ banner1.png
+│  ├─ banner2.png
+│  ├─ banner3.png
+│  ├─ fabicon.png
+│  ├─ icon-512.png
+│  ├─ manifest.json
+│  ├─ splash-iphone.png
+│  └─ vite.svg
+├─ src
+│  ├─ App.jsx
+│  ├─ assets
+│  │  ├─ MOODEA_Flow Chart.png
+│  │  ├─ MOODEA_Wireframe_UI.png
+│  │  └─ react.svg
+│  ├─ components
+│  │  ├─ Recycling
+│  │  │  ├─ BestProductDetailPage.jsx
+│  │  │  ├─ BestSlider.jsx
+│  │  │  ├─ BestSliderSkeleton.jsx
+│  │  │  ├─ CartItemList.jsx
+│  │  │  ├─ CategoryBarSkeleton.jsx
+│  │  │  ├─ GiftsetProductDetailPage.jsx
+│  │  │  ├─ HeaderSectionCategory.jsx
+│  │  │  ├─ ProductDetail.css
+│  │  │  ├─ ProductDetail.jsx
+│  │  │  ├─ ProductDetailPage.jsx
+│  │  │  ├─ ProductSkeleton.jsx
+│  │  │  ├─ ReviewList.jsx
+│  │  │  └─ category.css
+│  │  ├─ category
+│  │  ├─ common
+│  │  │  ├─ AdPopup.jsx
+│  │  │  ├─ Footer.jsx
+│  │  │  ├─ HeaderFooter.css
+│  │  │  ├─ HeaderSection.jsx
+│  │  │  ├─ ScrollToTop.jsx
+│  │  │  └─ TopMenu.jsx
+│  │  └─ main
+│  │     ├─ Bestseller.jsx
+│  │     ├─ CarouselSlider.jsx
+│  │     ├─ CategoryBar.jsx
+│  │     ├─ GiftSet.jsx
+│  │     ├─ MainPage.css
+│  │     ├─ NewProductList.jsx
+│  │     ├─ Review.jsx
+│  │     ├─ SocialMedia.jsx
+│  │     └─ Video.jsx
+│  ├─ index.css
+│  ├─ main.jsx
+│  ├─ pages
+│  │  ├─ BodycarePage.jsx
+│  │  ├─ Cart
+│  │  │  ├─ Cart.css
+│  │  │  └─ Cart.jsx
+│  │  ├─ CleansingPage.jsx
+│  │  ├─ Detail
+│  │  │  ├─ BestSellerDetail.jsx
+│  │  │  ├─ NewProductListDetail.jsx
+│  │  │  └─ index.js
+│  │  ├─ GiftsetPage.jsx
+│  │  ├─ HaircarePage.jsx
+│  │  ├─ HelpCenterPage
+│  │  │  ├─ HelpCenterPage.css
+│  │  │  └─ HelpCenterPage.jsx
+│  │  ├─ Login
+│  │  │  ├─ LoginPage.css
+│  │  │  └─ LoginPage.jsx
+│  │  ├─ MainPage.jsx
+│  │  ├─ MakeupPage.jsx
+│  │  ├─ MaskpackPage.jsx
+│  │  ├─ Mypage
+│  │  │  ├─ Mypage.css
+│  │  │  └─ Mypage.jsx
+│  │  ├─ OrderList
+│  │  │  ├─ OrderList.css
+│  │  │  └─ OrderList.jsx
+│  │  ├─ Payments
+│  │  │  ├─ Fail.jsx
+│  │  │  ├─ Payments.css
+│  │  │  └─ Success.jsx
+│  │  ├─ PerfumePage.jsx
+│  │  ├─ ReviewBoard
+│  │  │  ├─ ReviewBoard.css
+│  │  │  ├─ ReviewBoard.jsx
+│  │  │  ├─ ReviewDetail.css
+│  │  │  ├─ ReviewDetail.jsx
+│  │  │  ├─ ReviewEdit.jsx
+│  │  │  ├─ ReviewPost.css
+│  │  │  └─ ReviewPost.jsx
+│  │  ├─ Signup
+│  │  │  ├─ SignupPage.css
+│  │  │  └─ SignupPage.jsx
+│  │  ├─ SkincarePage.jsx
+│  │  ├─ SuncarePage.jsx
+│  │  ├─ Wishlist
+│  │  │  ├─ Wishlist.css
+│  │  │  └─ Wishlist.jsx
+│  │  └─ index.js
+│  ├─ supabaseClient.js
+│  └─ utils
+│     ├─ cart.js
+│     └─ payment.js
+├─ supabase
+│  ├─ .temp
+│  │  ├─ cli-latest
+│  │  ├─ gotrue-version
+│  │  ├─ pooler-url
+│  │  ├─ postgres-version
+│  │  ├─ project-ref
+│  │  ├─ rest-version
+│  │  ├─ storage-migration
+│  │  └─ storage-version
+│  ├─ config.toml
+│  └─ functions
+│     ├─ create-order
+│     │  └─ index.ts
+│     ├─ delete-user
+│     │  ├─ .npmrc
+│     │  ├─ deno.json
+│     │  └─ index.ts
+│     └─ save-order
+│        ├─ .npmrc
+│        ├─ deno.json
+│        └─ index.ts
+└─ vite.config.js
 
-└─ utils/
-     └─ cart.js    # 장바구니 커스텀 훅
 ```
 
 ## ♻ 再利用コンポーネントにおける React Router × Props データフロー
