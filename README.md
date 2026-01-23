@@ -5,8 +5,11 @@
 ---
 
 ## 🔗 Demo / Repository
+**Deploy**: https://moodea.vercel.app/ <br>
 **Deploy**: https://moodea-beauty.netlify.app/ <br>
 **GitHub**: https://github.com/ouusagi/MOODEA 
+
+
 
 > ⚠️ **注意事項**  
 > - 本アプリケーションのデフォルト言語は韓国語です。  
