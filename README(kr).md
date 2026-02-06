@@ -139,7 +139,7 @@ EC(E-Commerce) 웹 애플리케이션입니다.
 ## 📝 기획
 | Flowchart | Wireframe |
 |---|---|
-|<img width="540" alt="Flowchart" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Flow%20Chart.png?raw=true" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
+|<img width="540" alt="Flowchart" src="https://raw.githubusercontent.com/ouusagi/MOODEA/f710564ee23f6284fa12e5d8b0249b836f524356/src/assets/MOODEA_Flow%20Chart(KR).png" />|<img width="500" alt="Wireframe" src="https://github.com/ouusagi/MOODEA/blob/main/src/assets/MOODEA_Wireframe_UI.png?raw=true" />|
 
 ---
 
